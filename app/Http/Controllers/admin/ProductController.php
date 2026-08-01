@@ -1,11 +1,10 @@
 <?php
-
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 // use App\Http\Controllers\CategoryController;
+use App\Models\Category;
 use App\Models\Product;
-use App\Models\Category;     
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -28,11 +27,11 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $category = Category::all();
+        $category     = Category::all();
         $productColor = [];
         //dd($category);
-        return view('admin.products.addproduct',compact('category','productColor'));
-        
+        return view('admin.products.addproduct', compact('category', 'productColor'));
+
     }
 
     /**
@@ -43,80 +42,53 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request->all());
         $validatedData = $request->validate([
             'product_name' => 'required',
-            'product_image' => 'required',
-            'producturl' => 'required',
-        ], [
-                'product_name.required' => 'Please enter the product name.',
-                'producturl.required' => 'Please enter the product Url.',
-                'product_image.image' => 'The product image must be an png or jpeg file.',
-            ]);
-        $post = new Product;
-        $post->category_id = $request->get('category_id');
-        $post->product_name = $request->get('product_name');
-        $post->alt = $request->get('alt');
-        $post->product_description = $request->get('product_description');
-        $post->description = $request->get('description');
-        $post->	technical_details = $request->get('technical_details')?? null;
+            'producturl'   => 'required',
+        ]);
+
+        $post                           = new Product;
+        $post->category_id              = $request->get('category_id');
+        $post->product_name             = $request->get('product_name');
+        $post->alt                      = $request->get('alt');
+        $post->product_description      = $request->get('product_description');
         $post->product_shortdescription = $request->get('product_shortdescription');
-        $post->meta_title = $request->get('meta_title');
-        $post->meta_description = $request->get('meta_description');
-        $post->producturl = $request->get('producturl');
-        $post->tab_details = $request->get('tab_details')?? null;
-        $post->tab_features = $request->get('tab_features')?? null;
-        $post->tab_app = $request->get('tab_app')?? null;
-    
-        // Update FAQs
+        $post->meta_title               = $request->get('meta_title');
+        $post->meta_description         = $request->get('meta_description');
+        $post->producturl               = $request->get('producturl');
+
+        // FAQs (unchanged)
         $faqs = [];
         if ($request->has('faq_questions') && $request->has('faq_answers')) {
-            $faqQuestions = $request->get('faq_questions');
-            $faqAnswers = $request->get('faq_answers');
-    
-            foreach ($faqQuestions as $index => $question) {
-                if (!empty($question) && !empty($faqAnswers[$index])) {
-                    $faqs[] = [
-                        'question' => $question,
-                        'answer' => $faqAnswers[$index]
-                    ];
+            foreach ($request->get('faq_questions') as $index => $question) {
+                $answer = $request->get('faq_answers')[$index] ?? null;
+                if (! empty($question) && ! empty($answer)) {
+                    $faqs[] = ['question' => $question, 'answer' => $answer];
                 }
             }
         }
-    
-        $post->faq = !empty($faqs) ? json_encode($faqs) : null;
-    
-        if ($request->hasFile('product_image')) {
-            $files = $request->file('product_image');
-            $upload_images = [];
-            foreach ($files as $file) {
-                $filename = $file->getClientOriginalName();
-                $path = public_path('/Product_Images');
-                $file->move($path, $filename);
-                $upload_images[] = $filename;
-            }
-            $post->product_image = implode(',', $upload_images);
-        }        
-        
-        if($request->hasFile('product_banner_image')) {
-            $file = $request->file('product_banner_image');
-            $filename = $file->getClientOriginalName();
-            $path = public_path('/Product_Banner_Images');
-            $file->move($path, $filename);
+        $post->faq = ! empty($faqs) ? json_encode($faqs) : null;
+
+        // NEW: repeatable tab blocks
+        $post->product_tabs = $this->buildTabs($request);
+
+        if ($request->hasFile('product_banner_image')) {
+            $file     = $request->file('product_banner_image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('/Product_Banner_Images'), $filename);
             $post->product_banner_image = $filename;
         }
-        if($request->hasFile('mobile_image')) {
-            $file = $request->file('mobile_image');
-            $filename = $file->getClientOriginalName();
-            $path = public_path('/Product_Mobile_Images');
-            $file->move($path, $filename);
+        if ($request->hasFile('mobile_image')) {
+            $file     = $request->file('mobile_image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('/Product_Mobile_Images'), $filename);
             $post->mobile_image = $filename;
         }
-        // dd($post);
+
         $post->save();
+
         return redirect('/admin/product')->with('success', 'Product Added Successfully');
     }
-
     /**
      * Display the specified resource.
      *
@@ -126,16 +98,16 @@ class ProductController extends Controller
     public function edit($id)
     {
         $category = Category::all();
-        $data = Product::find($id);
-        $values = [];
-    
+        $data     = Product::find($id);
+        $values   = [];
+
         if ($data) {
             $values = explode(',', $data->product_color);
         }
-    
+
         return view('admin.products.editproduct', compact('data', 'category', 'values'));
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
@@ -145,71 +117,45 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $post = Product::find($id);
-        $post->category_id = $request->get('category_id');
-        $post->product_name = $request->get('product_name');
-        $post->product_description = $request->get('product_description');
-        $post->description = $request->get('description');
-        $post->technical_details = $request->get('technical_details');
-        $post->alt = $request->get('alt');
+        $post                           = Product::find($id);
+        $post->category_id              = $request->get('category_id');
+        $post->product_name             = $request->get('product_name');
+        $post->alt                      = $request->get('alt');
+        $post->product_description      = $request->get('product_description');
         $post->product_shortdescription = $request->get('product_shortdescription');
-        $post->meta_title = $request->get('meta_title');
-        $post->meta_description = $request->get('meta_description');
-        $post->producturl = $request->get('producturl');
-        $post->tab_details = $request->get('tab_details')?? null;
-        $post->tab_features = $request->get('tab_features')?? null;
-        $post->tab_app = $request->get('tab_app')?? null;
-        
-        // Update FAQs
+        $post->meta_title               = $request->get('meta_title');
+        $post->meta_description         = $request->get('meta_description');
+        $post->producturl               = $request->get('producturl');
+
         $faqs = [];
         if ($request->has('faq_questions') && $request->has('faq_answers')) {
-            $faqQuestions = $request->get('faq_questions');
-            $faqAnswers = $request->get('faq_answers');
-    
-            foreach ($faqQuestions as $index => $question) {
-                if (!empty($question) && !empty($faqAnswers[$index])) {
-                    $faqs[] = [
-                        'question' => $question,
-                        'answer' => $faqAnswers[$index]
-                    ];
+            foreach ($request->get('faq_questions') as $index => $question) {
+                $answer = $request->get('faq_answers')[$index] ?? null;
+                if (! empty($question) && ! empty($answer)) {
+                    $faqs[] = ['question' => $question, 'answer' => $answer];
                 }
             }
         }
-    
-        $post->faq = !empty($faqs) ? json_encode($faqs) : null;
-    
+        $post->faq = ! empty($faqs) ? json_encode($faqs) : null;
 
-        
-        if ($request->hasFile('product_image')) {
-            $files = $request->file('product_image');
-            $upload_images = [];
-            foreach ($files as $file) {
-                $filename = $file->getClientOriginalName();
-                $path = public_path('/Product_Images');
-                $file->move($path, $filename);
-                $upload_images[] = $filename;
-            }
-            $post->product_image = implode(',', $upload_images);
-        }
-        
-        if($request->hasFile('product_banner_image')) {
-            $file = $request->file('product_banner_image');
-            $filename = $file->getClientOriginalName();
-            $path = public_path('/Product_Banner_Images');
-            $file->move($path, $filename);
+        $post->product_tabs = $this->buildTabs($request, $post->product_tabs);
+
+        if ($request->hasFile('product_banner_image')) {
+            $file     = $request->file('product_banner_image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('/Product_Banner_Images'), $filename);
             $post->product_banner_image = $filename;
         }
-        if($request->hasFile('mobile_image')) {
-            $file = $request->file('mobile_image');
-            $filename = $file->getClientOriginalName();
-            $path = public_path('/Product_Mobile_Images');
-            $file->move($path, $filename);
+        if ($request->hasFile('mobile_image')) {
+            $file     = $request->file('mobile_image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('/Product_Mobile_Images'), $filename);
             $post->mobile_image = $filename;
         }
-       // dd($post);
-        $post->update();
-        return redirect('/admin/product')->with('success', 'Product Updated Successfully');
 
+        $post->update();
+
+        return redirect('/admin/product')->with('success', 'Product Updated Successfully');
     }
 
     /**
@@ -220,14 +166,56 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-       //
-       $data = Product::find($id);
-       $data->is_delete = '1';
-       //dd($data);
-       $data->update();
-       
-       return redirect()->back()->with('success', 'Your product has been Deleted successfully!');
-      
+        //
+        $data            = Product::find($id);
+        $data->is_delete = '1';
+        //dd($data);
+        $data->update();
+
+        return redirect()->back()->with('success', 'Your product has been Deleted successfully!');
+
+    }
+
+    private function buildTabs(Request $request, $existingTabsJson = null)
+    {
+        if (! $request->has('items')) {
+            return $existingTabsJson;
+        }
+
+        $existingTabs = [];
+        if ($existingTabsJson) {
+            $existingTabs = is_array($existingTabsJson) ? $existingTabsJson : json_decode($existingTabsJson, true);
+        }
+
+        $tabs = [];
+        foreach ($request->get('items') as $index => $item) {
+            $images = [];
+
+            // keep previously uploaded images for this block if present
+            if (isset($existingTabs[$index]['product_image']) && ! empty($item['keep_existing_image'])) {
+                $images[] = $existingTabs[$index]['product_image'];
+            }
+
+            if ($request->hasFile("items.$index.product_image")) {
+                foreach ($request->file("items.$index.product_image") as $img) {
+                    $filename = time() . '_' . $img->getClientOriginalName();
+                    $img->move(public_path('/Product_Images'), $filename);
+                    $images[] = $filename;
+                }
+            }
+
+            $tabs[] = [
+                'tab_name'          => $item['tab_name'] ?? '',
+                'description'       => $item['description'] ?? '',
+                'tab_details'       => $item['tab_details'] ?? '',
+                'tab_features'      => $item['tab_features'] ?? '',
+                'tab_app'           => $item['tab_app'] ?? '',
+                'technical_details' => $item['technical_details'] ?? '',
+                'product_image'     => implode(',', $images),
+            ];
+        }
+
+        return ! empty($tabs) ? json_encode($tabs) : null;
     }
 
 }

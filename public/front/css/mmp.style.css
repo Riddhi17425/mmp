@@ -1282,7 +1282,7 @@ h3.blog-head {
     box-shadow: none
 }
 
-.fade {
+.modal.fade {
     transition: opacity .15s linear;
     background: #0000009e
 }
@@ -2756,3 +2756,26 @@ iframe.skiptranslate {
   display: none !important;
 }
 .iti__selected-country{font-size:13px!important;}
+
+.main-product-tabs-wrapper { padding: 60px 0; }
+
+.main-product-tabs-wrapper .main-product-tabs {
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+}
+
+.main-product-tabs-wrapper .main-product-tabs .nav-link {
+    padding: 12px 24px;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.details-content-pane ul {
+    list-style: disc;
+    padding-left: 22px;
+}
+
+.details-content-pane ul li {
+    line-height: 32px;
+}
+

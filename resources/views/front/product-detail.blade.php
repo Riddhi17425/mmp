@@ -10,10 +10,32 @@
    @media screen and (max-width: 769px) {
    .desk_vid{display:none;}
    .mob_desk{display:block;}
-   .video_banner h1{color:#fff;}
+.video_banner h1{color:#fff;}
    .video_banner p{color:#fff;}
    }
 </style>
+
+@php
+    // Decode the repeatable tabs saved by the new admin form.
+    $productTabs = [];
+    if (!empty($data['products']->product_tabs)) {
+        $decodedProductTabs = json_decode($data['products']->product_tabs, true);
+        if (is_array($decodedProductTabs)) {
+            $productTabs = $decodedProductTabs;
+        }
+    }
+
+    // The first tab (if any) is used for the "single tab" view, so edits
+    // made through the new form always reflect immediately, even if the
+    // product only has one tab and shows no tab navigation.
+    $primaryTab = count($productTabs) > 0 ? $productTabs[0] : [];
+
+    // Products that were never re-saved through the new form have an
+    // empty product_tabs column — those keep using the old columns exactly
+    // as before, so nothing breaks for un-migrated data.
+    $hasMultipleProductTabs = count($productTabs) > 1;
+@endphp
+
 <!-- banner -->
 @if ($data['products']->producturl == 'melt-blown-filter-cartridges')
 <!--<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#inquiryModal">-->
@@ -66,7 +88,7 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</section>-->
-@if ($data['products']->producturl != 'melt-blown-filter-cartridges') 
+@if ($data['products']->producturl != 'melt-blown-filter-cartridges')
 <section class="contact-banner position-relative">
    <img src="{{ asset('public/Product_Mobile_Images/'.$data['products']->mobile_image) }}" alt="{{ $data['products']->alt}}" class="img-fluid mobile-img" />
    <div class="container-fluid p-0">
@@ -89,12 +111,134 @@
 @endif
 <!-- banner end -->
 <!-- filter-inner -->
+
+{{-- Multiple tabs: outer "Tab 1 | Tab 2" nav, each pane reusing the exact
+     same filter-inner + products-feature-tabs design as the single-tab view --}}
+@if($hasMultipleProductTabs)
+<section class="main-product-tabs-wrapper">
+   <div class="container">
+      <ul class="nav nav-tabs details-tabs main-product-tabs" id="mainProductTab" role="tablist">
+         @foreach($productTabs as $i => $tab)
+         <li class="nav-item" role="presentation">
+            <button class="nav-link @if($i === 0) active @endif" id="main-tab-{{ $i }}" data-bs-toggle="tab" data-bs-target="#main-tab-pane-{{ $i }}" type="button" role="tab" aria-controls="main-tab-pane-{{ $i }}" aria-selected="{{ $i === 0 ? 'true' : 'false' }}">
+               <h3>{{ !empty($tab['tab_name']) ? $tab['tab_name'] : 'Tab ' . ($i + 1) }}</h3>
+            </button>
+         </li>
+         @endforeach
+      </ul>
+
+      <div class="tab-content main-product-tabs-content" id="mainProductTabContent">
+         @foreach($productTabs as $i => $tab)
+         <div class="tab-pane fade @if($i === 0) show active @endif" id="main-tab-pane-{{ $i }}" role="tabpanel" aria-labelledby="main-tab-{{ $i }}">
+
+            @php
+               $tabImages = [];
+               if (!empty($tab['product_image'])) {
+                  $tabImages = strpos($tab['product_image'], ',') !== false
+                     ? explode(',', $tab['product_image'])
+                     : [$tab['product_image']];
+               }
+            @endphp
+
+            @if($data['products']->producturl != 'wound-filter-machine' && (count($tabImages) > 0 || !empty($tab['description']) || !empty($tab['technical_details'])))
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="m-add">
+                     {!! $tab['description'] ?? '' !!}
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                  <div class="manufacturing">
+                     @foreach($tabImages as $v)
+                     <div>
+                        <img src="{{ asset('public/Product_Images/'.trim($v)) }}"
+                           alt="{{ $data['products']->alt }}"
+                           class="img-fluid">
+                     </div>
+                     @endforeach
+                  </div>
+                  @if ($data['products']->producturl == 'pleated-filter-bags' || $data['products']->producturl == 'pleated-cartridges')
+                  <p class="mt-2">
+                     Please inquire at
+                     <a href="mailto:mumbai@mmpfilter.com">mumbai@mmpfilter.com</a>
+                     for the specification sheet.
+                  </p>
+                  @endif
+               </div>
+               <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                  {!! $tab['technical_details'] ?? '' !!}
+               </div>
+            </div>
+            @endif
+
+            @if (!empty($tab['tab_app']) || !empty($tab['tab_features']) || !empty($tab['tab_details']))
+            <div class="products-feature-tabs mt-4">
+               <ul class="nav nav-tabs details-tabs" id="innerTab-{{ $i }}" role="tablist">
+                  @if (!empty($tab['tab_details']))
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link active" id="home-tab-{{ $i }}" data-bs-toggle="tab" data-bs-target="#home-{{ $i }}" type="button" role="tab" aria-controls="home-{{ $i }}" aria-selected="true">
+                        <h3>Product Description</h3>
+                     </button>
+                  </li>
+                  @endif
+                  @if (!empty($tab['tab_features']))
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link @if (empty($tab['tab_details'])) active @endif" id="profile-tab-{{ $i }}" data-bs-toggle="tab" data-bs-target="#profile-{{ $i }}" type="button" role="tab" aria-controls="profile-{{ $i }}" aria-selected="false">
+                        <h3>Features</h3>
+                     </button>
+                  </li>
+                  @endif
+                  @if (!empty($tab['tab_app']))
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link @if (empty($tab['tab_details']) && empty($tab['tab_features'])) active @endif" id="contact-tab-{{ $i }}" data-bs-toggle="tab" data-bs-target="#contact-{{ $i }}" type="button" role="tab" aria-controls="contact-{{ $i }}" aria-selected="false">
+                        <h3>Applications</h3>
+                     </button>
+                  </li>
+                  @endif
+               </ul>
+               <div class="tab-content details-tabs-content" id="innerTabContent-{{ $i }}">
+                  @if (!empty($tab['tab_details']))
+                  <div class="tab-pane details-content-pane fade show active" id="home-{{ $i }}" role="tabpanel" aria-labelledby="home-tab-{{ $i }}">
+                     {!! $tab['tab_details'] !!}
+                  </div>
+                  @endif
+                  @if (!empty($tab['tab_features']))
+                  <div class="tab-pane details-content-pane fade @if (empty($tab['tab_details'])) show active @endif" id="profile-{{ $i }}" role="tabpanel" aria-labelledby="profile-tab-{{ $i }}">
+                     {!! $tab['tab_features'] !!}
+                  </div>
+                  @endif
+                  @if (!empty($tab['tab_app']))
+                  <div class="tab-pane details-content-pane fade @if (empty($tab['tab_details']) && empty($tab['tab_features'])) show active @endif" id="contact-{{ $i }}" role="tabpanel" aria-labelledby="contact-tab-{{ $i }}">
+                     {!! $tab['tab_app'] !!}
+                  </div>
+                  @endif
+               </div>
+            </div>
+            @endif
+
+         </div>
+         @endforeach
+      </div>
+   </div>
+</section>
+@endif
+
+{{-- 0 or 1 tab: identical design to before, but now data-sourced from
+     product_tabs[0] first so edits via the new form actually show up,
+     with the legacy columns only used as a fallback for un-migrated products --}}
+@if(!$hasMultipleProductTabs)
 @php
+$description = !empty($primaryTab['description']) ? $primaryTab['description'] : $data['products']->description;
+$technicalDetails = !empty($primaryTab['technical_details']) ? $primaryTab['technical_details'] : $data['products']->technical_details;
+$productImageRaw = !empty($primaryTab['product_image']) ? $primaryTab['product_image'] : $data['products']->product_image;
+
 $image = [];
-if (!empty($data['products']->product_image)) {
-$image = strpos($data['products']->product_image, ',') !== false 
-? explode(',', $data['products']->product_image) 
-: [$data['products']->product_image];
+if (!empty($productImageRaw)) {
+   $image = strpos($productImageRaw, ',') !== false
+       ? explode(',', $productImageRaw)
+       : [$productImageRaw];
 }
 @endphp
 @if(count($image) > 0)
@@ -105,7 +249,7 @@ $image = strpos($data['products']->product_image, ',') !== false
       <div class="row">
          <div class="col-md-12">
             <div class="m-add">
-               {!! $data['products']->description !!}
+               {!! $description !!}
             </div>
          </div>
       </div>
@@ -115,30 +259,31 @@ $image = strpos($data['products']->product_image, ',') !== false
             <div class="manufacturing">
                @foreach($image as $v)
                <div>
-                  <img src="{{ asset('public/Product_Images/'.$v) }}" 
-                     alt="{{ $data['products']->alt }}" 
+                  <img src="{{ asset('public/Product_Images/'.trim($v)) }}"
+                     alt="{{ $data['products']->alt }}"
                      class="img-fluid">
                </div>
                @endforeach
             </div>
-            @if ($data['products']->producturl == 'pleated-filter-bags' || $data['products']->producturl == 'pleated-cartridges') 
+            @if ($data['products']->producturl == 'pleated-filter-bags' || $data['products']->producturl == 'pleated-cartridges')
             <p class="mt-2">
-               Please inquire at 
-               <a href="mailto:mumbai@mmpfilter.com">mumbai@mmpfilter.com</a> 
+               Please inquire at
+               <a href="mailto:mumbai@mmpfilter.com">mumbai@mmpfilter.com</a>
                for the specification sheet.
             </p>
             @endif
          </div>
          <!-- RIGHT: Technical Details -->
          <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
-            {!! $data['products']->technical_details !!}
+            {!! $technicalDetails !!}
          </div>
       </div>
    </div>
 </section>
 @endif
 @endif
-@if ($data['products']->producturl == 'melt-blown-filter-cartridges') 
+@endif
+@if ($data['products']->producturl == 'melt-blown-filter-cartridges')
 <!-- filter-inner end -->
 <!--<video autoplay muted loop playsinline width="100%">-->
 <!--         <source src="{{ asset('public/front/images/melt_blown_gif.mp4') }}" type="video/mp4">-->
@@ -149,13 +294,13 @@ $image = strpos($data['products']->product_image, ',') !== false
 <!--</video>-->
 <!--</a>-->
 @endif
-@if ($data['products']->producturl == 'pleated-filter-bags') 
+@if ($data['products']->producturl == 'pleated-filter-bags')
 <video autoplay muted loop playsinline width="100%">
    <source src="{{ asset('public/front/images/Gif_Animation_3.mp4') }}" type="video/mp4">
 </video>
 @endif
 <!-- anti-microbial-wound-filter-cartridge -->
-@if ($data['products']->producturl == 'anti-microbial-wound-filter-cartridges') 
+@if ($data['products']->producturl == 'anti-microbial-wound-filter-cartridges')
 <div class="application-item">
    <div class="container">
       <div class="theme-btn justify-content-start ">
@@ -188,7 +333,7 @@ $image = strpos($data['products']->product_image, ',') !== false
 <!-- high-flow-pleated-filter -->
 <section>
    <div class="container">
-      @if ($data['products']->producturl == 'high-flow-pleated-filter') 
+      @if ($data['products']->producturl == 'high-flow-pleated-filter')
       <div class="row">
          <div class="col-md-7">
             <h3 class="dref-text">Application</h3>
@@ -215,11 +360,11 @@ $image = strpos($data['products']->product_image, ',') !== false
    </div>
 </section>
 <!-- pph -->
-@if ($data['products']->producturl == 'pph') 
+@if ($data['products']->producturl == 'pph')
 <section>
    <div class="container">
       <div class="row align-items-center">
-         <p class="category-content">These filter housings find widespread application across various industries including pharmaceuticals, food and beverage production, water treatment, and chemical processing Their versatility is reflected in the range of sizes and configurations available, accommodating different types of filter cartridges and flow rates to suit specific operational requirements In pharmaceutical settings, these housings play a crucial role in maintaining purity during drug manufacturing processes. 
+         <p class="category-content">These filter housings find widespread application across various industries including pharmaceuticals, food and beverage production, water treatment, and chemical processing Their versatility is reflected in the range of sizes and configurations available, accommodating different types of filter cartridges and flow rates to suit specific operational requirements In pharmaceutical settings, these housings play a crucial role in maintaining purity during drug manufacturing processes.
          </p>
          <p class="category-content">They also contribute to the cleanliness and safety of products in the food and beverage industry by effectively removing contaminants Water treatment facilities rely on them to ensure the quality of drinking water, while chemical processing plants use them to separate impurities and maintain operational efficiency.
          </p>
@@ -353,20 +498,20 @@ $image = strpos($data['products']->product_image, ',') !== false
          </div>
          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
             <img src="{{ asset('public/front/images/ProductParameters6.jpg') }}" alt="ProductParameters" class="img-fluid" />
-            <p class="short_dis text-center">The screw-in upper cover allows the process of opening and closing the filter cartridge that results in quick filter bag replacement, enhancing efficiency and minimizing 
+            <p class="short_dis text-center">The screw-in upper cover allows the process of opening and closing the filter cartridge that results in quick filter bag replacement, enhancing efficiency and minimizing
                maintenance downtime.
             </p>
          </div>
          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
             <img src="{{ asset('public/front/images/ProductParameters7.jpg') }}" alt="ProductParameters" class="img-fluid" />
-            <p class="short_dis text-center">The screw-in upper cover allows the process of opening and closing the filter cartridge that results in quick filter bag replacement, enhancing efficiency and minimizing 
+            <p class="short_dis text-center">The screw-in upper cover allows the process of opening and closing the filter cartridge that results in quick filter bag replacement, enhancing efficiency and minimizing
                maintenance downtime.
             </p>
          </div>
          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
             <img src="{{ asset('public/front/images/ProductParameters8.jpg') }}" alt="ProductParameters" class="img-fluid" />
             <p class="short_dis text-center">
-               The increased space between the 
+               The increased space between the
                net basket, the inner wall, and the bottom of the barrel enhances the liquid filtration flow channel, thereby reducing pump energy consumption.
             </p>
          </div>
@@ -386,7 +531,7 @@ $image = strpos($data['products']->product_image, ',') !== false
             <img src="{{ asset('public/front/images/ProductParameters11.jpg') }}" alt="ProductParameters" class="img-fluid" />
             <p class="short_dis text-center">
                The water inlet and outlet feature flanges are robust and durable,
-               and compatible with standard pipe flanges used in various countries.    
+               and compatible with standard pipe flanges used in various countries.
             </p>
          </div>
          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
@@ -400,9 +545,9 @@ $image = strpos($data['products']->product_image, ',') !== false
       </div>
    </div>
 </section>
-@endif 
+@endif
 <!--polypropylene-yarns-->
-@if ($data['products']->producturl == 'polypropylene-yarns') 
+@if ($data['products']->producturl == 'polypropylene-yarns')
 <section class="products-feature-tabs" style="padding:35px 0">
    <div class="container">
       <ul class="nav nav-tabs details-tabs" id="myTab" role="tablist">
@@ -426,7 +571,7 @@ $image = strpos($data['products']->product_image, ',') !== false
                widespread use across various industries due to excellent strength, durability, and lightweight
                properties. Because it's manufactured from polypropylene, a thermoplastic polymer, this yarn is
                superior in terms of chemical, moisture, and abrasion resistance, making it perfect for demanding
-               applications. 
+               applications.
             </p>
          </div>
          <div class="tab-pane details-content-pane fade" id="profile" role="tabpanel"
@@ -468,9 +613,9 @@ $image = strpos($data['products']->product_image, ',') !== false
       </div>
    </div>
 </section>
-@endif  
+@endif
 <!-- anti-microbial-polypropylene-filtration-yarn -->
-@if ($data['products']->producturl == 'anti-microbial-polypropylene-filtration-yarn') 
+@if ($data['products']->producturl == 'anti-microbial-polypropylene-filtration-yarn')
 <div class="application-item">
    <div class="container">
       <!-- <a href="{{ asset('public/front/images/ANTI MICROBIAL WOUND FILTER CARTRIDGE CERTIFICATE.png') }}"> -->
@@ -485,7 +630,7 @@ $image = strpos($data['products']->product_image, ',') !== false
       </a>
    </div>
 </div>
-@endif  
+@endif
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
    <div class="modal-dialog">
@@ -502,51 +647,58 @@ $image = strpos($data['products']->product_image, ',') !== false
    </div>
 </div>
 <!-- filter-inner end -->
-@if (!empty($data['products']->tab_app) || !empty($data['products']->tab_features) || !empty($data['products']->tab_details))
+@if(!$hasMultipleProductTabs)
+@php
+$tabDetails = !empty($primaryTab['tab_details']) ? $primaryTab['tab_details'] : $data['products']->tab_details;
+$tabFeatures = !empty($primaryTab['tab_features']) ? $primaryTab['tab_features'] : $data['products']->tab_features;
+$tabApp = !empty($primaryTab['tab_app']) ? $primaryTab['tab_app'] : $data['products']->tab_app;
+@endphp
+@if (!empty($tabApp) || !empty($tabFeatures) || !empty($tabDetails))
 <section class="products-feature-tabs">
    <div class="container">
       <ul class="nav nav-tabs details-tabs" id="myTab" role="tablist">
-         @if (!empty($data['products']->tab_details))
+         @if (!empty($tabDetails))
          <li class="nav-item" role="presentation">
             <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
                <h3>Product Description </h3>
             </button>
          </li>
          @endif
-         @if (!empty($data['products']->tab_features))
+         @if (!empty($tabFeatures))
          <li class="nav-item" role="presentation">
-            <button class="nav-link @if (empty($data['products']->tab_app)) active @endif" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+            <button class="nav-link @if (empty($tabApp)) active @endif" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
                <h3>Features</h3>
             </button>
          </li>
          @endif
-         @if (!empty($data['products']->tab_app))
+         @if (!empty($tabApp))
          <li class="nav-item" role="presentation">
-            <button class="nav-link @if (empty($data['products']->tab_app) && empty($data['products']->tab_features)) active @endif" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+            <button class="nav-link @if (empty($tabApp) && empty($tabFeatures)) active @endif" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
                <h3>Applications</h3>
             </button>
          </li>
          @endif
       </ul>
       <div class="tab-content details-tabs-content" id="myTabContent">
-         @if (!empty($data['products']->tab_details))
+         @if (!empty($tabDetails))
          <div class="tab-pane details-content-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            {!! $data['products']->tab_details !!}
+            {!! $tabDetails !!}
          </div>
          @endif
-         @if (!empty($data['products']->tab_features))
-         <div class="tab-pane details-content-pane fade @if (empty($data['products']->tab_app)) show active @endif" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            {!! $data['products']->tab_features !!}
+         @if (!empty($tabFeatures))
+         <div class="tab-pane details-content-pane fade @if (empty($tabApp)) show active @endif" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            {!! $tabFeatures !!}
          </div>
          @endif
-         @if (!empty($data['products']->tab_app))
-         <div class="tab-pane details-content-pane fade @if (empty($data['products']->tab_app) && empty($data['products']->tab_features)) show active @endif" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            {!! $data['products']->tab_app !!}
+         @if (!empty($tabApp))
+         <div class="tab-pane details-content-pane fade @if (empty($tabApp) && empty($tabFeatures)) show active @endif" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            {!! $tabApp !!}
          </div>
          @endif
       </div>
    </div>
 </section>
+@endif
 @endif
 <!--certificate image -->
 @if ($data['products']->producturl == 'pleated-filter-bags')
@@ -629,7 +781,7 @@ $image = strpos($data['products']->product_image, ',') !== false
 </section>
 @endif
 
-@if ($data['products']->producturl == 'mrb-series') 
+@if ($data['products']->producturl == 'mrb-series')
 <section class="order-wrapper">
    <div class="container">
       <div class="row">
@@ -740,7 +892,7 @@ $image = strpos($data['products']->product_image, ',') !== false
                <div class="mid-box">
                   <img src="{{ asset('public/front/images/mrb-images/mrb-pendulam.png') }}" class="mid-img" >
                   <p class="mrb-pera text-center text-white">Cross-sectional view for
-                     graded porosity of MRB series 
+                     graded porosity of MRB series
                      resin bonded filter
                   </p>
                </div>
@@ -799,7 +951,7 @@ $image = strpos($data['products']->product_image, ',') !== false
    </div>
 </section>
 @endif
-@if ($data['products']->producturl == 'mab-series') 
+@if ($data['products']->producturl == 'mab-series')
 <section class="order-wrapper">
    <div class="container">
       <div class="row">
@@ -969,7 +1121,7 @@ $image = strpos($data['products']->product_image, ',') !== false
    </div>
 </section>
 @endif
-@if ($data['products']->producturl == 'wound-filter-machine') 
+@if ($data['products']->producturl == 'wound-filter-machine')
 <section>
    <div class="container">
       <div class="row">
@@ -1134,7 +1286,7 @@ $image = strpos($data['products']->product_image, ',') !== false
       <div class="mt-4">
           <h2 class="text-start inner-head mb-3">Filter Cartridge Making Machine Manufacturer</h2>
           <p>With over <b>3 decades of expertise, mmp filter</b> is a trusted manufacturer of industrial filter cartridges and advanced cartridge production machines. To meet the growing global demand in countries like the <b>USA, UK, UAE, Australia,</b> and more, mmp has introduced the <b>SMARTWIND 360° (20” Cartridge Machine)</b> designed for high-speed and precision output. This innovative machine features a <b>3-spindle system</b> that produces <b>three 20-inch filter cartridges simultaneously,</b> ensuring faster production, micron-level accuracy, and consistent winding quality. It is an ideal solution for industries looking to improve productivity, reduce manufacturing time, and maintain superior filtration performance.  </p>
-          
+
           <h3 class="custom_pera">Operation of the SMARTWIND 360° 3-Spindle Machine</h3>
           <p>The <b>SMARTWIND 360°</b> offers complete flexibility to design your own cartridge winding patterns, multi-layer structures, and micron ratings, making it an ideal solution for the <b>modern filtration industry</b> focused on quality, speed, and performance. </p>
           <b>SMARTWIND Machine Key Advantages </b>
@@ -1147,7 +1299,7 @@ $image = strpos($data['products']->product_image, ',') !== false
               <li>Energy-Saving Operation with Minimal Maintenance </li>
           </ul>
       </div>
-      
+
       <!--<div class="row">-->
       <!--    <h2 class="text-start inner-head mb-3">3rd Generation: Smartwind 360 Fully Automatic Multi-Layer Winding-->
       <!--        Machine</h2>-->
@@ -1194,19 +1346,37 @@ $image = strpos($data['products']->product_image, ',') !== false
 @endif
 <script>
    document.addEventListener("DOMContentLoaded", function () {
-   
+
        const banner_btn = document.getElementById("banner_btn");
        const enquiryPopup = document.getElementById("enqpoup");
-   
+
        if (!banner_btn || !whatsappPopup) return;
-   
+
        // Open popup from header button
        banner_btn.addEventListener("click", function (e) {
-        
+
            e.preventDefault();
            enquiryPopup.classList.add("active");
        });
-   
+
    });
+
+   document.addEventListener("DOMContentLoaded", function () {
+    // Re-trigger slick's layout calc whenever a main product tab is shown
+    const mainTabButtons = document.querySelectorAll('#mainProductTab button[data-bs-toggle="tab"]');
+    mainTabButtons.forEach(function (btn) {
+        btn.addEventListener('shown.bs.tab', function (e) {
+            const targetPaneSelector = e.target.getAttribute('data-bs-target');
+            const targetPane = document.querySelector(targetPaneSelector);
+            if (targetPane) {
+                const slider = targetPane.querySelector('.manufacturing');
+                if (slider && window.jQuery && jQuery(slider).hasClass('slick-initialized')) {
+                    jQuery(slider).slick('setPosition');
+                }
+            }
+        });
+    });
+});
+
 </script>
 @include('layouts.frontfooter')
