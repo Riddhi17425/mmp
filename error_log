@@ -1,0 +1,5 @@
+[10-Jun-2024 05:31:52 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Route as Route because the name is already in use in /home/twev01sk18av/public_html/routes/web.php on line 47
+[11-Sep-2025 13:23:21 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\dashboardController::casestudy() in /home/twev01sk18av/public_html/app/Http/Controllers/dashboardController.php on line 745
+[11-Sep-2025 13:23:22 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\dashboardController::casestudy() in /home/twev01sk18av/public_html/app/Http/Controllers/dashboardController.php on line 745
+[11-Sep-2025 13:23:23 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\dashboardController::casestudy() in /home/twev01sk18av/public_html/app/Http/Controllers/dashboardController.php on line 745
+[17-Feb-2026 07:13:53 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Route as Route because the name is already in use in /home/hgbwk9a94wuf/public_html/mmpfilter.com/routes/web.php on line 23

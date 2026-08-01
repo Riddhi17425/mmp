@@ -1,0 +1,230 @@
+.hamburger-icon {
+    cursor: pointer;
+}
+
+/*  Offcanvas Css */
+.offcanvas {
+    width: 500px !important;
+}
+
+.btn-close {
+    filter: invert(0) !important;
+}
+
+.offcanvas-header {
+    padding: 20px;
+}
+
+.offcanvas-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #17367F;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.offcanvas-body {
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Menu Container */
+.menu-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.menu-level::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+.menu-level::-webkit-scrollbar-track {
+    background: #00A3FF;
+}
+
+/* Handle */
+.menu-level::-webkit-scrollbar-thumb {
+    background: #17367F;
+}
+
+
+/* Menu Levels */
+.menu-level {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: #fff;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+.menu-level.hidden {
+    display: none;
+}
+
+.menu-level.slide-out-right {
+    transform: translateX(100%);
+}
+
+.menu-level.slide-in-left {
+    transform: translateX(-100%);
+}
+
+.menu-level.active {
+    transform: translateX(0);
+    display: block;
+}
+
+/* Submenu Header */
+.submenu-header {
+    display: flex;
+    align-items: center;
+    padding: 18px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #e0e0e0;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.submenu-header:hover {
+    background-color: #f0f0f0;
+}
+
+.back-arrow {
+    margin-right: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.submenu-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Menu List */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    border-bottom: 1px solid #eee;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-list li a,
+.menu-list li .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-color: #fff;
+}
+
+.menu-list li a:hover,
+.menu-list li .menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-item-text {
+    flex: 1;
+    font-size: 15px;
+}
+
+.arrow-right {
+    font-size: 20px;
+    color: #666;
+    margin-left: 10px;
+}
+
+/* Submenu Items */
+.submenu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu-list li {
+    border-bottom: 1px solid #eee;
+}
+
+.submenu-list li:last-child {
+    border-bottom: none;
+}
+
+.submenu-list li a {
+    display: block;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s ease;
+    font-size: 15px;
+}
+
+.submenu-list li a:hover {
+    background-color: #f5f5f5;
+}
+
+@media screen and (max-width:576px) {
+    .offcanvas {
+        width: 100%;
+    }
+}
+
+.customaccordion {
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  padding: 16px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.customaccordion::after {
+    position: absolute;
+    right:20px;
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+}
+.customaccordion.active::after {
+    transform: rotate(-180deg);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+ul.header_product_list li:first-child .panel {transition: max-height 0.8s ease;}

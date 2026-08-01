@@ -1,0 +1,25 @@
+@media screen and (max-width: 1441px) {
+    .header-container {
+        max-width: calc(100% - 50px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header-container {
+        max-width: calc(100% - 10px);
+    }
+    .language-select {
+    gap: 0px;
+    padding: 5px 6px;
+    width: 160px;
+  }
+
+  .logo {
+    width: 110px;
+  }
+    .btn_3 {
+    font-size: 14px;
+  }
+  
+
+}

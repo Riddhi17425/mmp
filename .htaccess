@@ -1,0 +1,60 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Existing Redirects
+    Redirect 301 /product-detail/pleatex-pleated-cartridges https://mmpfilter.com/product-detail/pleated-cartridges
+    Redirect 301 /product-detail/mtex-conventional-filter-bags https://mmpfilter.com/product-detail/conventional-filter-bags 
+    Redirect 301 /product-detail/cartridge https://mmpfilter.com/product-detail/core-for-filter-cartridge
+    Redirect 301 /vintage-lladro-figurine-443511.html https://mmpfilter.com/
+    Redirect 301 /product/polypropylene-yarns https://mmpfilter.com/product-detail/polypropylene-yarns
+    Redirect 301 /public/front/images/mmp-master-brochure-2025.pdf https://mmpfilter.com/public/front/images/mmp-master-brochure-2026.pdf
+    
+
+    # New Redirects
+    Redirect 301 /watertreatment-industry https://mmpfilter.com/water-treatment-industry
+    Redirect 301 /partnership-oppurtunities https://mmpfilter.com/partnership-opportunities
+  
+    Redirect 301 /foodbeverage-industry  https://mmpfilter.com/food-and-beverage-industry
+    
+    Redirect 301 /oilandgas-industry  https://mmpfilter.com/oil-and-gas-industry 
+    Redirect 301 /powerplant-industry  https://mmpfilter.com/power-plant-industry  
+    Redirect 301 /zerofoaming  https://mmpfilter.com/zero-foaming-yarn  
+     Redirect 301 /machinery-we-manufacture  https://mmpfilter.com/water-and-air-filtration-products  
+     Redirect 301 /product/dref-spinning-yarn https://mmpfilter.com/product/polypropylene-yarns
+     
+     Redirect 301 /product-detail/conventional-filter-bags https://mmpfilter.com/product-detail/dust-collector-filter-bag
+     
+      Redirect 301 /product/air-filter https://mmpfilter.com/product/air-filter-cartridges
+      Redirect 301 /product/air-filters https://mmpfilter.com/product/air-filter-cartridges
+      Redirect 301 /blogdetail/filter-bags https://mmpfilter.com/blogdetail/filter-bags-for-dust-filtration
+
+Redirect 301 /product-detail/mrb-series /product-detail/resin-bonded-filter-cartridges
+Redirect 301 /high-flow-pleated-filter /product/high-flow-pleated-filter
+Redirect 301 /air-filters /product/air-filter-cartridges
+Redirect 301 /polypropylene-yarns /product/polypropylene-yarns
+Redirect 301 /water-filter-cartridges /product/water-filter-cartridges
+Redirect 301 /4017225600 /
+    RewriteCond %{HTTPS} !on
+    RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

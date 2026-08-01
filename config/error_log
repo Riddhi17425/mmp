@@ -1,0 +1,96 @@
+[02-Jun-2024 21:47:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[31-Aug-2024 09:44:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[08-Sep-2024 11:21:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[09-Sep-2024 16:23:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[10-Sep-2024 16:18:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[11-Sep-2024 19:50:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[13-Sep-2024 18:23:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[14-Sep-2024 09:16:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[16-Sep-2024 04:59:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[17-Sep-2024 08:37:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[18-Sep-2024 10:41:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[19-Sep-2024 12:54:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[20-Sep-2024 08:36:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[04-Oct-2024 16:57:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[20-Mar-2025 20:00:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[10-Apr-2025 23:35:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[21-Apr-2025 14:48:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/twev01sk18av/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/twev01sk18av/public_html/config/cache.php on line 21
+[01-Jan-2026 17:34:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/database.php on line 18
+[04-Jan-2026 16:38:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/database.php on line 18
+[04-Jan-2026 16:56:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/database.php on line 18
+[31-Jan-2026 13:45:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/services.php on line 18
+[16-Mar-2026 07:33:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/services.php on line 18
+[16-Mar-2026 07:33:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/services.php on line 18
+[22-Mar-2026 22:08:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/hgbwk9a94wuf/public_html/mmpfilter.com/config/services.php on line 18
