@@ -754,12 +754,12 @@ $tabApp = !empty($primaryTab['tab_app']) ? $primaryTab['tab_app'] : $data['produ
       @endif
       <!--<h3 class="inner-head">FAQs About {{ $data['products']->product_name }}-->
       <!--</h3>-->
-      <h3 class="inner-head">@if($data['products']->product_name == 'Dust Collector Filter Bags')
+      <h2 class="inner-head">@if($data['products']->product_name == 'Dust Collector Filter Bags')
          {{ 'FAQs About Dust Collector Bags' }}
          @else
          FAQs About {{ $data['products']->product_name }}
          @endif
-      </h3>
+      </h2>
       <div class="accordion accordion-flush" id="accordionFlushExample">
          @php
          $faqs = json_decode($data['products']->faq);
