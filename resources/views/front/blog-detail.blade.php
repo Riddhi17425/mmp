@@ -157,8 +157,8 @@ line-height: 28px !important;
 <div class="container">
     @if(!empty($faqItems))
     <div class="FAQ_productList mb-5">
-            <h4 class="mb-5">FAQs
-            </h4>
+            <h2 class="mb-5">FAQs
+            </h2>
         <div class="accordion" id="accordionExample">
                 @foreach($faqItems as $key => $item)
                     <div class="accordion-item">
