@@ -118,6 +118,13 @@
     margin-left:5px;
     margin-top: 0px;
 }
+#submittingMsg{
+    text-align:center;
+    font-weight:bold;
+    color:#17367f;
+    padding:10px;
+    display:none;
+}
 @media screen and (max-width: 1440px) {
     .ft_eq_btn{bottom:0!important;}
 }
@@ -224,7 +231,8 @@ input[type="number"] {
                 <div class="error-message" id="err_captcha"></div>
             </div>
 
-            <button type="submit" class="wa-btn">Send Message</button>
+            <div id="submittingMsg">Submitting your message...</div>
+            <button type="submit" class="wa-btn" id="submitBtn">Send Message</button>
         </form>
     </div>
 </div>
@@ -325,6 +333,15 @@ document.getElementById("headerinquiry1").addEventListener("submit", function (e
         return;
     }
 
+    // ---- Prevent duplicate submissions ----
+    const submitBtn = document.getElementById("submitBtn");
+    const submittingMsg = document.getElementById("submittingMsg");
+
+    submitBtn.disabled = true;
+    submitBtn.style.display = "none";
+    submittingMsg.style.display = "block";
+    // ----------------------------------------
+
     fetch(this.action, {
         method: "POST",
         headers: {
@@ -345,6 +362,11 @@ document.getElementById("headerinquiry1").addEventListener("submit", function (e
         console.error("Submission error:", err);
         document.getElementById("err_captcha").textContent = 
             "Something went wrong on the server. Please try again.";
+
+        // Re-enable button so user can retry on failure
+        submittingMsg.style.display = "none";
+        submitBtn.style.display = "block";
+        submitBtn.disabled = false;
     });
 });
 
@@ -381,6 +403,8 @@ window.addEventListener("pageshow", function (event) {
 
     const form = document.getElementById("headerinquiry1");
     const popup = document.getElementById("enqpoup");
+    const submitBtn = document.getElementById("submitBtn");
+    const submittingMsg = document.getElementById("submittingMsg");
 
     if (!form) return;
 
@@ -389,6 +413,14 @@ window.addEventListener("pageshow", function (event) {
         form.reset();
 
         document.querySelectorAll(".error-message").forEach(el => el.textContent = "");
+
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.style.display = "block";
+        }
+        if (submittingMsg) {
+            submittingMsg.style.display = "none";
+        }
 
         if (typeof refreshCaptcha === "function") {
             refreshCaptcha();

@@ -18,93 +18,6 @@
   <div class="container">
     <h3 class="mb-3">Let's Talk</h3>
     <div class="row">
-      <!--<div class="col-md-6">-->
-      <!--  <div>-->
-      <!--    <h3>Let’s Talk</h3>-->
-      <!--    <b>HEAD OFFICE (KOLKATA)</b>-->
-      <!--    <ul class="p-0">-->
-      <!--      <li class="d-flex align-items-start mb-3">-->
-      <!--        <span-->
-      <!--          ><img-->
-      <!--            src="{{ asset('public/front/images/contact-map.png') }}"-->
-      <!--            alt=""-->
-      <!--            class="img-fluid me-2"-->
-      <!--        /></span>-->
-      <!--         <a target="_blank" class="m-0" href="https://www.google.com/maps/place/34c,+Grey+St,+Raja+Nabakrishna+Street,+Sovabazar,+Darjipara,+Shobhabazar,+Kolkata,+West+Bengal+700005/@22.5954936,88.3657081,17z/data=!4m6!3m5!1s0x3a027633a36d6fcb:0x30b918d03a92edee!8m2!3d22.5954936!4d88.3657081!16s%2Fg%2F11v06pksdn"> 34 C, Sri Aurobindo Sarani Kolkata – 700005 West Bengal, India</a>-->
-      <!--      </li>-->
-      <!--      <li class="d-flex align-items-start mb-3">-->
-      <!--        <span-->
-      <!--          ><img-->
-      <!--            src="{{ asset('public/front/images/contact-phone.png') }}"-->
-      <!--            alt="Contact"-->
-      <!--            class="img-fluid me-2"-->
-      <!--        /></span>-->
-              <!--<a href="tel:+91-9051821218" class="me-1">+91-9051821218</a><span>-->
-              <!--</span>  -->
-              <!--<a href="tel:+91 9051821219" class="ms-1">  +91 9051821219</a>-->
-      <!--        <a href="tel:919830030614">+91 9830030614</a>-->
-      <!--      </li>-->
-      <!--      <li class="d-flex align-items-start mb-3">-->
-      <!--        <span-->
-      <!--          ><img-->
-      <!--            src="{{ asset('public/front/images/contact-mail.png') }}"-->
-      <!--            alt=""-->
-      <!--            class="img-fluid me-2"-->
-      <!--        /></span>-->
-      <!--        <a href="mailto:sales@mmpfilter.com">sales@mmpfilter.com</a>-->
-      <!--      </li>-->
-      <!--    </ul>-->
-      <!--  </div>-->
-      <!--  <div>-->
-      <!--    <div class="mapouter">-->
-      <!--      <div class="gmap_canvas">-->
-      <!--        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7367.123219131235!2d88.365708!3d22.595494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027633a30d9d9b%3A0x7e529ad96c65cac0!2sMMP%20Filtration%20Private%20Limited!5e0!3m2!1sen!2sin!4v1698930200879!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><a href="https://connectionsgame.org/">Connections NYT</a>-->
-      <!--      </div>-->
-      <!--    </div>-->
-      <!--  </div>-->
-      <!--</div>-->
-     <!-- <div class="col-md-6">-->
-     <!--<form method="post" action="{{ route('contactstore') }}" class="my-4">-->
-     <!--      @csrf-->
-     <!--       <div class="form-container">-->
-     <!--           <div class="form-group">-->
-     <!--             <input type="text" placeholder="" id="name"  name="name" />-->
-     <!--             <label for="name">Name</label>-->
-                 
-     <!--           </div>-->
-     <!--           <div class="form-group">-->
-     <!--             <input type="email" placeholder=" "  id="email" name="email"/>-->
-     <!--             <label for="inputField">Email</label>-->
-     <!--           </div>-->
-     <!--           <div class="form-group">-->
-     <!--             <input type="text" placeholder=" " id="phone" name="phone"/>-->
-     <!--             <label for="">Contact No.</label>-->
-     <!--           </div>-->
-     <!--           <div class="form-group">-->
-                    <!--<select class="form-select" id="product_type"  name="product_type" placeholder="">-->
-     <!--               <select class="inquiry_select" id="product_type"  name="product_type" placeholder="">-->
-     <!--                <option value="">Select</option>-->
-     <!--                 @foreach($productname as $val)-->
-     <!--                 <option value="{{$val->product_name}}">{{$val->product_name}}</option>-->
-     <!--                 @endforeach-->
-     <!--               </select>-->
-     <!--               <label for="floatingSelect">Product Types</label>-->
-     <!--             </div>-->
-     <!--           <div class="form-group">-->
-     <!--              <textarea name="message" id="message" cols=""  rows="10" class="w-100" placeholder=" "></textarea>-->
-     <!--               <label for="">Message</label>-->
-                    
-     <!--             </div>-->
-     <!--                <div class="form-group">-->
-     <!--                   <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site') }}"></div>-->
-     <!--                   <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" >-->
-                          
-     <!--               </div>-->
-     <!--           <button class="submit-button" type="submit">Submit</button>-->
-     <!--         </div>-->
-     <!--   </form>    -->
-
-     <!-- </div>-->
         <div class="col-md-6">
             @php
             $a = rand(1,9);
@@ -171,7 +84,8 @@
                         <!-- Dedicated div for captcha errors -->
                         <div id="captcha-error" class="text-danger"></div>
                     </div>
-                    <button class="submit-button" type="submit">Submit</button>
+                    <div id="submittingMsg" style="display:none;text-align:center;font-weight:bold;color:#17367f;padding:10px;">Submitting your message...</div>
+                    <button class="submit-button" type="submit" id="submitBtn">Submit</button>
                 </div>
             </form>
         </div>
@@ -195,9 +109,6 @@
                   alt="Contact"
                   class="img-fluid me-2"
               /></span>
-              <!--<a href="tel:+91-9051821218" class="me-1">+91-9051821218</a><span>-->
-              <!--</span>  -->
-              <!--<a href="tel:+91 9051821219" class="ms-1">  +91 9051821219</a>-->
               <a href="tel:919830030614">+91 9830030614</a>
             </li>
             <li class="d-flex align-items-start mb-3">
@@ -348,9 +259,6 @@
                         class="img-fluid me-2"
                     /></span>
                      <a href="tel:917738823434">+91-7738823434</a>
-                  <!--  <li class="contact-2">-->
-                   <!--<a href="tel:+02502452075">+0250-2452075/80</a>,-->
-                  <!--</li>-->
                   </li>
                   
                   <li class="d-flex align-items-start mb-3">
@@ -365,8 +273,6 @@
                 </ul>
               </div>
               <div>
-                
-                
                  <div class="mapouter">
                   <div class="gmap_canvas">
                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7526.282364350818!2d72.849844!3d19.406305!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c86e0f3ea19d%3A0x5676e85c8ddfaf63!2sMmp%20Filtration%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1698405649237!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -402,29 +308,13 @@
                         class="img-fluid me-2"
                     /></span>
                      <a href="tel:1(401)8719315">+1 (401) 871-9315</a>
-                  <!--  <li class="contact-2">-->
-                   <!--<a href="tel:+02502452075">+0250-2452075/80</a>,-->
-                  <!--</li>-->
                   </li>
-                  
-                  <!--<li class="d-flex align-items-start mb-3">-->
-                  <!--  <span-->
-                  <!--    ><img-->
-                  <!--      src="{{ asset('public/front/images/contact-mail.png') }}"-->
-                  <!--      alt="Contact Mail"-->
-                  <!--      class="img-fluid me-2"-->
-                  <!--  /></span>-->
-                  <!--  <a href="mailto:mumbai@mmpfilter.com">mumbai@mmpfilter.com</a>-->
-                  <!--</li>-->
                 </ul>
               </div>
               <div>
-                
-                
                  <div class="mapouter">
                   <div class="gmap_canvas">
                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11916.655284009861!2d-71.58302811821515!3d41.69539905926616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e435810b34373b%3A0x1fe99da1413c5030!2sAquaTex%20Solutions%20Veteran%20owned!5e0!3m2!1sen!2sin!4v1761649733216!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              
 
                     <a href="https://connectionsgame.org/">Connections NYT</a>
                   </div>
@@ -458,25 +348,10 @@ Pawtucket, RI 02860, USA</a>
                         class="img-fluid me-2"
                     /></span>
                      <a href="tel:(401)7225600">+1 (401) 722-5600</a>
-                  <!--  <li class="contact-2">-->
-                   <!--<a href="tel:+02502452075">+0250-2452075/80</a>,-->
-                  <!--</li>-->
                   </li>
-                  
-                  <!--<li class="d-flex align-items-start mb-3">-->
-                  <!--  <span-->
-                  <!--    ><img-->
-                  <!--      src="{{ asset('public/front/images/contact-mail.png') }}"-->
-                  <!--      alt="Contact Mail"-->
-                  <!--      class="img-fluid me-2"-->
-                  <!--  /></span>-->
-                  <!--  <a href="mailto:mumbai@mmpfilter.com">mumbai@mmpfilter.com</a>-->
-                  <!--</li>-->
                 </ul>
               </div>
               <div>
-                
-                
                  <div class="mapouter">
                   <div class="gmap_canvas">
                
@@ -513,32 +388,13 @@ Pawtucket, RI 02860, USA</a>
                         class="img-fluid me-2"
                     /></span>
                      <a href="tel:+393286959896 ">+39 3286959896 </a>
-                  <!--  <li class="contact-2">-->
-                   <!--<a href="tel:+02502452075">+0250-2452075/80</a>,-->
-                  <!--</li>-->
                   </li>
-                  
-                  <!--<li class="d-flex align-items-start mb-3">-->
-                  <!--  <span-->
-                  <!--    ><img-->
-                  <!--      src="{{ asset('public/front/images/contact-mail.png') }}"-->
-                  <!--      alt="Contact Mail"-->
-                  <!--      class="img-fluid me-2"-->
-                  <!--  /></span>-->
-                  <!--  <a href="mailto:mumbai@mmpfilter.com">mumbai@mmpfilter.com</a>-->
-                  <!--</li>-->
                 </ul>
               </div>
               <div>
-                
-                
                  <div class="mapouter">
                   <div class="gmap_canvas">
                       <img src ="{{ asset('public/front/images/map.png') }}" alt="map" class="map-img-contact">
-               
-                <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.5186721377086!2d9.276333075407582!3d45.53989072838647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786b813483b83bd%3A0x20fa116cfb6d635c!2sM.f.%20Filtri%20S.r.l.!5e0!3m2!1sen!2sin!4v1755931511282!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-
-                    <!--<a href="https://connectionsgame.org/">Connections NYT</a>-->
                   </div>
                 </div>
               </div>
@@ -623,6 +479,15 @@ form.addEventListener("submit", function(e){
 
     if(!valid) return;
 
+    // ---- Prevent duplicate submissions ----
+    const submitBtn = document.getElementById("submitBtn");
+    const submittingMsg = document.getElementById("submittingMsg");
+
+    submitBtn.disabled = true;
+    submitBtn.style.display = "none";
+    submittingMsg.style.display = "block";
+    // ----------------------------------------
+
     // AJAX submission
     fetch(this.action,{
         method:"POST",
@@ -640,6 +505,11 @@ form.addEventListener("submit", function(e){
     .catch(err => {
         console.error(err);
         document.getElementById("captcha-error").textContent="Something went wrong. Try again.";
+
+        // Re-enable button so user can retry on failure
+        submittingMsg.style.display = "none";
+        submitBtn.style.display = "block";
+        submitBtn.disabled = false;
     });
 });
 </script>
