@@ -1965,3 +1965,13 @@
 #19 C:\\xampp\\htdocs\\mmp\\server.php(18): require_once('C:\\\\xampp\\\\htdocs...')
 #20 {main}
 "} 
+[2026-08-04 12:30:29] local.ERROR: There are no commands defined in the "chach" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"chach\" namespace. at C:\\xampp\\htdocs\\mmp\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\mmp\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace('chach')
+#1 C:\\xampp\\htdocs\\mmp\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('chach:clear')
+#2 C:\\xampp\\htdocs\\mmp\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\mmp\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\xampp\\htdocs\\mmp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 C:\\xampp\\htdocs\\mmp\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 

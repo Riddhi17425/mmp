@@ -1,4 +1,25 @@
 @include('layouts.frontheader')
+
+//-- CSS FOR SUBMITTING MESSAGE --//
+<style>
+#submittingMsg{
+    display:none;
+    width:auto;
+    max-width:220px;
+    margin:10px 0 0 0;
+    padding:10px 20px;
+    text-align:center;
+    background:#17367f;
+    color:#fff;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
+    border:1px solid #17367f;
+    
+}
+</style>
+
+
 <section class="contact-banner position-relative">
   <div class="container-fluid p-0">
     <img src="{{ asset('public/front/images/contact-banner-bg.jpg') }}" alt="Contact Banner" class="img-fluid product-page-header" />
@@ -84,8 +105,8 @@
                         <!-- Dedicated div for captcha errors -->
                         <div id="captcha-error" class="text-danger"></div>
                     </div>
-                    <div id="submittingMsg" style="display:none;text-align:center;font-weight:bold;color:#17367f;padding:10px;">Submitting your message...</div>
-                    <button class="submit-button" type="submit" id="submitBtn">Submit</button>
+          <div id="submittingMsg">Submitting...</div>           
+            <button class="submit-button" type="submit" id="submitBtn">Submit</button>
                 </div>
             </form>
         </div>

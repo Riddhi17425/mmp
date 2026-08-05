@@ -119,11 +119,17 @@
     margin-top: 0px;
 }
 #submittingMsg{
-    text-align:center;
-    font-weight:bold;
-    color:#17367f;
-    padding:10px;
     display:none;
+    width:100%;
+    margin-top:10px;
+    padding:5px;
+    text-align:center;
+    background:#17367f;
+    color:#fff;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    border:1px solid #17367f;
 }
 @media screen and (max-width: 1440px) {
     .ft_eq_btn{bottom:0!important;}
@@ -231,7 +237,7 @@ input[type="number"] {
                 <div class="error-message" id="err_captcha"></div>
             </div>
 
-            <div id="submittingMsg">Submitting your message...</div>
+            <div id="submittingMsg">Submitting...</div>
             <button type="submit" class="wa-btn" id="submitBtn">Send Message</button>
         </form>
     </div>
