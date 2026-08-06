@@ -1975,3 +1975,13 @@
 #5 C:\\xampp\\htdocs\\mmp\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #6 {main}
 "} 
+[2026-08-06 09:10:24] local.ERROR: __VSCODE_LARAVEL_STARTUP_ERROR__: rename(C:\xampp\htdocs\mmp\bootstrap\cache\pacED82.tmp,C:\xampp\htdocs\mmp\bootstrap\cache\packages.php): Access is denied (code: 5) {"exception":"[object] (Error(code: 0): __VSCODE_LARAVEL_STARTUP_ERROR__: rename(C:\\xampp\\htdocs\\mmp\\bootstrap\\cache\\pacED82.tmp,C:\\xampp\\htdocs\\mmp\\bootstrap\\cache\\packages.php): Access is denied (code: 5) at C:\\xampp\\htdocs\\mmp\\vendor\\_laravel_ide\\discover-5c3cbe5e47b16e6c5fd1967f09c399da.php:33)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\mmp\\vendor\\_laravel_ide\\discover-5c3cbe5e47b16e6c5fd1967f09c399da.php(62): LaravelVsCode::startupError(Object(ErrorException))
+#1 {main}
+"} 
+[2026-08-06 09:10:24] local.ERROR: __VSCODE_LARAVEL_STARTUP_ERROR__: rename(C:\xampp\htdocs\mmp\bootstrap\cache\pacED93.tmp,C:\xampp\htdocs\mmp\bootstrap\cache\packages.php): Access is denied (code: 5) {"exception":"[object] (Error(code: 0): __VSCODE_LARAVEL_STARTUP_ERROR__: rename(C:\\xampp\\htdocs\\mmp\\bootstrap\\cache\\pacED93.tmp,C:\\xampp\\htdocs\\mmp\\bootstrap\\cache\\packages.php): Access is denied (code: 5) at C:\\xampp\\htdocs\\mmp\\vendor\\_laravel_ide\\discover-ec2e9975ebf5755f76a162b3dce99361.php:33)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\mmp\\vendor\\_laravel_ide\\discover-ec2e9975ebf5755f76a162b3dce99361.php(62): LaravelVsCode::startupError(Object(ErrorException))
+#1 {main}
+"} 

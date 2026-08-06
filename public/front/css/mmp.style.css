@@ -1166,7 +1166,18 @@ h3.blog-head {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%
+    height: 100%;
+}
+
+.image-container {
+    position: relative;
+    z-index: 1;
+}
+
+.image-container .after {
+    z-index: 2;
+    background: transparent;
+    display: none;
 }
 
 .event-inner b {

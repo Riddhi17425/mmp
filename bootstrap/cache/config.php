@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:8fl86CzSvJgkzVlJmaptCrKSgm5YVFgnFJ5ARW4IvDE=',
+    'key' => 'base64:c0TOh7Xnt/MvgpSqPdM/uXdzMZk5II+pIc4mTqY2Qq4=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -264,7 +264,7 @@
       array (
         'driver' => 'mysql',
         'url' => NULL,
-        'host' => '127.0.0.1',
+        'host' => 'localhost',
         'port' => '3306',
         'database' => 'mmp',
         'username' => 'root',
@@ -284,7 +284,7 @@
       array (
         'driver' => 'pgsql',
         'url' => NULL,
-        'host' => '127.0.0.1',
+        'host' => 'localhost',
         'port' => '3306',
         'database' => 'mmp',
         'username' => 'root',
@@ -299,7 +299,7 @@
       array (
         'driver' => 'sqlsrv',
         'url' => NULL,
-        'host' => '127.0.0.1',
+        'host' => 'localhost',
         'port' => '3306',
         'database' => 'mmp',
         'username' => 'root',
@@ -463,17 +463,17 @@
   ),
   'mail' => 
   array (
-    'default' => 'smtp',
+    'default' => 'sendmail',
     'mailers' => 
     array (
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'smtp.mailtrap.io',
-        'port' => '2525',
-        'encryption' => NULL,
-        'username' => NULL,
-        'password' => NULL,
+        'host' => 'mail.mmpfilter.com',
+        'port' => '465',
+        'encryption' => 'ssl',
+        'username' => 'career@mmpfilter.com',
+        'password' => '9TAVjSHCP2zV',
         'timeout' => NULL,
         'auth_mode' => NULL,
       ),
@@ -506,8 +506,8 @@
     ),
     'from' => 
     array (
-      'address' => NULL,
-      'name' => 'Laravel',
+      'address' => 'career@mmpfilter.com',
+      'name' => 'MMP Filter',
     ),
     'markdown' => 
     array (
@@ -588,8 +588,8 @@
     ),
     'recaptcha' => 
     array (
-      'site' => NULL,
-      'secret' => NULL,
+      'site' => '6Lcrw_4pAAAAAKFnbxxXtyUZUa12DlHursCRjuak',
+      'secret' => '6Lcrw_4pAAAAAMgnZKgY8fhOxZ4omWiuXSLMpuyG',
     ),
   ),
   'session' => 
@@ -631,7 +631,7 @@
     array (
       'font_dir' => 'C:\\xampp\\htdocs\\mmp\\storage\\fonts',
       'font_cache' => 'C:\\xampp\\htdocs\\mmp\\storage\\fonts',
-      'temp_dir' => 'C:\\Users\\Dell\\AppData\\Local\\Temp',
+      'temp_dir' => 'C:\\Users\\Lenovo\\AppData\\Local\\Temp',
       'chroot' => 'C:\\xampp\\htdocs\\mmp',
       'allowed_protocols' => 
       array (
