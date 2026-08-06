@@ -379,9 +379,7 @@
         <div class="our_patent_wrapper">
 
             <div>
-
-                <p class="mb-0">Our Patented <br>Brands</p>
-
+                <p class="mb-0">Our Registered <br>Brands</p>
             </div>
 
             <div>
@@ -430,7 +428,7 @@
 
             <div>
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/nsf.webp') }}" alt="Our Patented Brands" class="img-fluid">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/nsf.webp') }}" alt="" class="img-fluid">
 
             </div>
 
