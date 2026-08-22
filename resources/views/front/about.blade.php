@@ -79,7 +79,7 @@
           <div class="brand-head">
             <div class="row">
               <div class="col-md-12">
-                <h3 class="inner-head">Our Patented Brands</h3>
+                <h3 class="inner-head">Our Registered Brands</h3>
               </div>
             </div>
           </div>

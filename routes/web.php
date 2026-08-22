@@ -33,15 +33,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/clear-app-cache', function () {
-    Artisan::call('cache:clear');
-    return "Application cache cleared!";
-});
-
-Route::get('/test', function () {
-    return view('front.testheader');
-});
-
 Route::get('/user-country', function () {
 
     try {
