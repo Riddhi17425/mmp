@@ -28,7 +28,7 @@
 
                     <div class="hero_title">
 
-                        <h2 class="title_80">PP YARN EXCELLENCE</h2>
+                        <h2 class="title_80">PP YARN </h2>
 
                         <p class="text-white">100% Premium virgin yarn for filter cartridges.<br> Durable,
 

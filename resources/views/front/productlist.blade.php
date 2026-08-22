@@ -110,7 +110,7 @@
         </div>
 
         @endforeach
-        @if($category->category_name == 'Water Filtration')
+        @if($category->category_name == 'Air Filtration')
         <div class="col-md-4">
            <div>
                 <a href="{{ url('/product-detail/liquid-filter-bags') }}">

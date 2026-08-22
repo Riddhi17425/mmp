@@ -436,7 +436,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                         <div class="language-select">
 
-                            <svg width="20" height="20" viewBox="0 0 32 32" fill="none"
+                            <svg style="cursor: pointer;" width="20" height="20" viewBox="0 0 32 32" fill="none"
 
                                 xmlns="http://www.w3.org/2000/svg">
 
@@ -452,43 +452,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-                            <div class="dropdown-wrapper notranslate">
-
-                                <!--<input type="text" id="dropdownInput" class="dropdown-input-lan"-->
-
-                                <!--    placeholder="Select Language" readonly />-->
-
-                                   @include('layouts.language')
-
-                                <div class="dropdown-list" id="dropdownList">
-
-                                    <div class="search-box">
-
-                                        <input type="text" id="searchInput" placeholder="Search language..." />
-
-                                    </div>
-
-                                    <div class="list-items" id="listItems"></div>
-
-                                </div>
-
-                                <svg class="lang_arr" id="lang-arr" width="12" height="7" viewBox="0 0 12 7" fill="none"
-
-                                xmlns="http://www.w3.org/2000/svg">
-
-                                <path d="M11.3491 0.5L5.92456 5.92456L0.5 0.5" stroke="white" stroke-linecap="round"
-
-                                    stroke-linejoin="round" />
-
-                            </svg>
-
-                            </div>
+                            @include('layouts.language')
 
                             
 
 
 
-                            <div id="google_translate_element" style="display:none;"></div>
 
                         </div>
 
