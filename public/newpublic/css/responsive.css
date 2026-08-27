@@ -438,6 +438,11 @@
     gap: 20px;
   }
 
+    .extended-links
+  {
+     flex-direction: column;
+  }
+
   .home_abt_counter .counter_box:not(:first-child) {
     margin-left: 0px;
     padding-inline: 10px;

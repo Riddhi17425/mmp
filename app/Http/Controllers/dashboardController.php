@@ -28,10 +28,10 @@ class dashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function login()
-    {
-        return view('auth.login');
-    }
+    // public function login()
+    // {
+    //     return view('auth.login');
+    // }
     public function admin()
     {
         return view('admin.admin');

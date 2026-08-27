@@ -96,6 +96,14 @@
     opacity: 1;
     visibility: visible;
 }
+
+#eq_btn {
+    position: fixed !important;
+    z-index: 999999 !important;
+}
+.enq_poup, .enq_poup.active {
+    z-index: 999999 !important;
+}
 .wa-btn{margin-top:10px;width:100%;padding:5px;text-align:center;
         background: #17367f;
     color: #fff;
@@ -435,6 +443,14 @@ window.addEventListener("pageshow", function (event) {
         if (popup) {
             popup.classList.remove("active");
         }
+    }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const eqBtn = document.getElementById("eq_btn");
+    if (eqBtn && eqBtn.parentElement !== document.body) {
+        document.body.appendChild(eqBtn);
     }
 });
 </script>

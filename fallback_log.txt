@@ -1,2 +1,6 @@
 public/front/css/style.css GET
 public/front/css/responsive.css GET
+public/Product_Images/lagoon-melt-blown-filter-cartridges.webp GET
+public/Product_Images/1785741206_1785581126_Portal%20Image2.jpg GET
+public/Product_Banner_Images/core_for_filter_cartridge.webp GET
+public/Product_Images/1785741206_1785581126_Portal%20Image1.jpg GET

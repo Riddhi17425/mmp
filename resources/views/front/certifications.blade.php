@@ -31,9 +31,13 @@
        <div class="certificate-gallery">
         <div class="row">
             @foreach ($data['certificates'] as $key => $val)
-            <div class="col-md-4">
-                <img src="{{ asset('public/CertificateFiles/'.$val->certificate_file) }}" style="width:100%" onclick="openModal({{ $key }});currentSlide({{ $key + 1 }})" alt="{{ $val->certificate_name }}">
-                <h3>{{ $val->certificate_name }}</h3>
+            <div class="col-md-4 mb-4">
+                <div class="d-flex flex-column h-100">
+                    <div class="d-flex align-items-center justify-content-center" style="flex-grow: 1;">
+                        <img src="{{ asset('public/CertificateFiles/'.$val->certificate_file) }}" style="width:100%; object-fit: contain;" onclick="openModal({{ $key }});currentSlide({{ $key + 1 }})" alt="{{ $val->certificate_name }}">
+                    </div>
+                    <h3 class="mt-auto mb-0">{{ $val->certificate_name }}</h3>
+                </div>
             </div>
             @endforeach
         </div>
