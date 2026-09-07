@@ -255,7 +255,7 @@ if (!empty($productImageRaw)) {
       </div>
       <div class="row">
          <!-- LEFT: Image Section -->
-         <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+         <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 desktop-sticky">
             <div class="manufacturing">
                @foreach($image as $v)
                <div>
@@ -768,7 +768,7 @@ $tabApp = !empty($primaryTab['tab_app']) ? $primaryTab['tab_app'] : $data['produ
          <div class="accordion-item">
             <h4 class="accordion-header" id="flush-heading{{ $index + 1 }}">
                <button class="accordion-button {{ $index === 0 ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $index + 1 }}" aria-expanded="{{ $index === 0 ? 'true' : 'false' }}" aria-controls="flush-collapse{{ $index + 1 }}">
-               {!! $faq->question !!}
+               <span>{!! $faq->question !!}</span>
                </button>
             </h4>
             <div id="flush-collapse{{ $index + 1 }}" class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}" aria-labelledby="flush-heading{{ $index + 1 }}" data-bs-parent="#accordionFlushExample">

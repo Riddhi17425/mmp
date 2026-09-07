@@ -111,14 +111,12 @@
                 </a>
                 <p class="navigation_pera"><b>mmp</b>, a trusted supplier, offers quality PP String would filter cartridges that are specifically made to match the needs of the industry for precise cleaning for a longer period</p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 desktop-sticky">
                 <div class="mg_area">
                     <div class="row">
                         <div class="col-lg-12 col-md-12">
                             <img class="img-fluid" src="{{ asset('public/front/images/Cement-Industry-product.jpg') }}" alt="Cement Industry Product">
-                            
                         </div>
-                       
                     </div>
                 </div>
             </div>

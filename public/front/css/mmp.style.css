@@ -2790,3 +2790,13 @@ iframe.skiptranslate {
     line-height: 32px;
 }
 
+/* Common Sticky Class for Desktop Only */
+@media (min-width: 992px) {
+    .desktop-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 120px; /* Adjust top offset to account for fixed header */
+        z-index: 10;
+        align-self: flex-start; /* Useful if used inside a flex container */
+    }
+}
