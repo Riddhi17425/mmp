@@ -2118,7 +2118,7 @@ ul.point_benefit li {
 }
 
 .products-feature-tabs {
-    padding: 80px 0
+    padding: 40px 0
 }
 
 .product-page-header {
@@ -2768,7 +2768,7 @@ iframe.skiptranslate {
 }
 .iti__selected-country{font-size:13px!important;}
 
-.main-product-tabs-wrapper { padding: 60px 0; }
+.main-product-tabs-wrapper { padding: 60px 0 20px; }
 
 .main-product-tabs-wrapper .main-product-tabs {
     flex-wrap: nowrap;

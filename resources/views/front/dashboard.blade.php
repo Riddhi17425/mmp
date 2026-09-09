@@ -20,7 +20,8 @@
 
                     <source media="(max-width:465px)" srcset="{{ asset('public/newpublic/images/pp-yarn-m.webp') }}">
 
-                    <img loading="eager" src="{{ asset('public/newpublic/images/PP-YARN-EXCELLENCE.webp') }}" alt="ppyarn" class="img-fluid hero_img">
+                    <img loading="eager" src="{{ asset('public/newpublic/images/PP-YARN-EXCELLENCE.webp') }}"
+                        alt="ppyarn" class="img-fluid hero_img">
 
                 </picture>
 
@@ -44,7 +45,7 @@
 
                             </a>
 
-                            <a href="{{ url('product-detail/polypropylene-yarns')}}" class="btn_3">
+                            <a href="{{ url('product-detail/polypropylene-yarns') }}" class="btn_3">
 
                                 <span>View Product</span>
 
@@ -70,9 +71,11 @@
 
                 <picture>
 
-                    <source media="(max-width:465px)" srcset="{{ asset('public/newpublic/images/water-filter-m.webp') }}">
+                    <source media="(max-width:465px)"
+                        srcset="{{ asset('public/newpublic/images/water-filter-m.webp') }}">
 
-                    <img loading="eager" src="{{ asset('public/newpublic/images/Water-Filter-Cartridges.webp') }}" alt="water filter" class="img-fluid hero_img">
+                    <img loading="eager" src="{{ asset('public/newpublic/images/Water-Filter-Cartridges.webp') }}"
+                        alt="water filter" class="img-fluid hero_img">
 
                 </picture>
 
@@ -82,9 +85,11 @@
 
                         <h2 class="title_80">Water Filter Cartridges</h2>
 
-                        <p class="text-white">High-performance water filter cartridges for <b>industrial</b>,<br> <b>commercial</b>
+                        <p class="text-white">High-performance water filter cartridges for <b>industrial</b>,<br>
+                            <b>commercial</b>
 
-                            and <b>domestic</b> applications.</p>
+                            and <b>domestic</b> applications.
+                        </p>
 
                         <div class="btn_wrapper">
 
@@ -124,7 +129,8 @@
 
                     <source media="(max-width:465px)" srcset="{{ asset('public/newpublic/images/air-filter-m.webp') }}">
 
-                    <img loading="eager" src="{{ asset('public/newpublic/images/Air-Filter-Cartridges.webp') }}" alt="air filter" class="img-fluid hero_img">
+                    <img loading="eager" src="{{ asset('public/newpublic/images/Air-Filter-Cartridges.webp') }}"
+                        alt="air filter" class="img-fluid hero_img">
 
                 </picture>
 
@@ -176,9 +182,11 @@
 
                 <picture>
 
-                    <source media="(max-width:465px)" srcset="{{ asset('public/newpublic/images/Wound-Filter-Machine-m.webp') }}">
+                    <source media="(max-width:465px)"
+                        srcset="{{ asset('public/newpublic/images/Wound-Filter-Machine-m.webp') }}">
 
-                    <img loading="eager" src="{{ asset('public/newpublic/images/Wound_Filter_Machine.webp') }}" alt="Wound Filter Machine" class="img-fluid hero_img">
+                    <img loading="eager" src="{{ asset('public/newpublic/images/Wound_Filter_Machine.webp') }}"
+                        alt="Wound Filter Machine" class="img-fluid hero_img">
 
                 </picture>
 
@@ -244,12 +252,12 @@
 
                 <div class="pagination-arrow">
 
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
 
                         <rect width="36" height="36" rx="18" fill="#17367F" />
 
                         <path d="M15.3535 23.9336L20.6458 18.0002L15.3535 12.0668" stroke="white" stroke-linecap="round"
-
                             stroke-linejoin="round" />
 
                     </svg>
@@ -279,14 +287,12 @@
                 </div>
 
                 <div class="pagination-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
-
                         xmlns="http://www.w3.org/2000/svg">
 
                         <rect width="36" height="36" rx="18" fill="#17367F" />
 
-                        <path d="M15.3535 23.9336L20.6458 18.0002L15.3535 12.0668" stroke="white" stroke-linecap="round"
-
-                            stroke-linejoin="round" />
+                        <path d="M15.3535 23.9336L20.6458 18.0002L15.3535 12.0668" stroke="white"
+                            stroke-linecap="round" stroke-linejoin="round" />
 
                     </svg>
 
@@ -313,14 +319,12 @@
                 </div>
 
                 <div class="pagination-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
-
                         xmlns="http://www.w3.org/2000/svg">
 
                         <rect width="36" height="36" rx="18" fill="#17367F" />
 
-                        <path d="M15.3535 23.9336L20.6458 18.0002L15.3535 12.0668" stroke="white" stroke-linecap="round"
-
-                            stroke-linejoin="round" />
+                        <path d="M15.3535 23.9336L20.6458 18.0002L15.3535 12.0668" stroke="white"
+                            stroke-linecap="round" stroke-linejoin="round" />
 
                     </svg>
 
@@ -347,14 +351,12 @@
                 </div>
 
                 <div class="pagination-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
-
                         xmlns="http://www.w3.org/2000/svg">
 
                         <rect width="36" height="36" rx="18" fill="#17367F" />
 
-                        <path d="M15.3535 23.9336L20.6458 18.0002L15.3535 12.0668" stroke="white" stroke-linecap="round"
-
-                            stroke-linejoin="round" />
+                        <path d="M15.3535 23.9336L20.6458 18.0002L15.3535 12.0668" stroke="white"
+                            stroke-linecap="round" stroke-linejoin="round" />
 
                     </svg>
 
@@ -388,37 +390,43 @@
 
                     <div>
 
-                        <img loading="lazy" src="{{ asset('public/newpublic/images/hw.png') }}" alt="hydro wound" class="img-fluid">
+                        <img loading="lazy" src="{{ asset('public/newpublic/images/hw.png') }}" alt="hydro wound"
+                            class="img-fluid">
 
                     </div>
 
                     <div>
 
-                        <img loading="lazy" src="{{ asset('public/newpublic/images/lagon.png') }}" alt="hydro wound" class="img-fluid">
+                        <img loading="lazy" src="{{ asset('public/newpublic/images/lagon.png') }}" alt="hydro wound"
+                            class="img-fluid">
 
                     </div>
 
                     <div>
 
-                        <img loading="lazy" src="{{ asset('public/newpublic/images/ocean.png') }}" alt="hydro wound" class="img-fluid">
+                        <img loading="lazy" src="{{ asset('public/newpublic/images/ocean.png') }}" alt="hydro wound"
+                            class="img-fluid">
 
                     </div>
 
                     <div>
 
-                        <img loading="lazy" src="{{ asset('public/newpublic/images/mtex.png') }}" alt="hydro wound" class="img-fluid">
+                        <img loading="lazy" src="{{ asset('public/newpublic/images/mtex.png') }}" alt="hydro wound"
+                            class="img-fluid">
 
                     </div>
 
                     <div>
 
-                        <img loading="lazy" src="{{ asset('public/newpublic/images/Pleatex.png') }}" alt="hydro wound" class="img-fluid">
+                        <img loading="lazy" src="{{ asset('public/newpublic/images/Pleatex.png') }}"
+                            alt="hydro wound" class="img-fluid">
 
                     </div>
 
                     <div>
 
-                        <img loading="lazy" src="{{ asset('public/newpublic/images/pyoorote.png') }}" alt="hydro wound" class="img-fluid">
+                        <img loading="lazy" src="{{ asset('public/newpublic/images/pyoorote.png') }}"
+                            alt="hydro wound" class="img-fluid">
 
                     </div>
 
@@ -428,7 +436,8 @@
 
             <div>
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/nsf.webp') }}" alt="" class="img-fluid">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/nsf.webp') }}" alt=""
+                    class="img-fluid">
 
             </div>
 
@@ -452,7 +461,8 @@
 
             <div class="home_abt_left">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/home_about.png') }}" alt="Advanced Filtration Solutions" class="img-fluid h-100">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/home_about.png') }}"
+                    alt="Advanced Filtration Solutions" class="img-fluid h-100">
 
             </div>
 
@@ -572,7 +582,8 @@
 
                         performance.
 
-                        We also offer <strong>NSF-certified</strong> melt blown filter cartridges, ensuring trusted quality
+                        We also offer <strong>NSF-certified</strong> melt blown filter cartridges, ensuring trusted
+                        quality
 
                         for
 
@@ -600,433 +611,312 @@
 
         </div>
 
-        <div class="home_water_wrapper">
+        <div class="home_water_slider">
 
-            <div class="home_water_slider">
+            <div>
+                <div class="home_water_slide">
+                    <div>
+                        <a href="{{ url('product-detail/melt-blown-filter-cartridges') }}">
+                            <img loading="lazy"
+                                src="{{ asset('public/Product_Images/melt-blown-filter-cartridges.jpg') }}"
+                                alt="Melt Blown Filter Cartridges" class="img-fluid">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ url('product-detail/melt-blown-filter-cartridges') }}">
+                            <h4 class="title_20">Melt Blown Filter Cartridges</h4>
+                        </a>
+                        <br>
+                        <button type="button" class="btn_3 btn_2 homepd">
+                            <span>Enquire Now</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="home_water_slide">
+                    <div>
+                        <a href="{{ url('product-detail/wound-filter-cartridges') }}">
+                            <img loading="lazy"
+                                src="{{ asset('public/Product_Images/wound-filter-cartridges%20(1).jpg') }}"
+                                alt="Wound Filter Cartridges" class="img-fluid">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ url('product-detail/wound-filter-cartridges') }}">
+                            <h4 class="title_20">Wound Filter Cartridges</h4>
+                        </a>
+                        <br>
+                        <button type="button" class="btn_3 btn_2 homepd">
+                            <span>Enquire Now</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="home_water_slide">
+                    <div>
+                        <a href="{{ url('product-detail/core-for-filter-cartridge') }}">
+                            <img loading="lazy"
+                                src="{{ asset('public/Product_Images/Core-for-filter-Cartridges.jpg') }}"
+                                alt="Core for Filter Cartridge" class="img-fluid">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ url('product-detail/core-for-filter-cartridge') }}">
+                            <h4 class="title_20">Core for Filter Cartridge</h4>
+                        </a>
+                        <br>
+                        <button type="button" class="btn_3 btn_2 homepd">
+                            <span>Enquire Now</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="home_water_slide">
+                    <div>
+                        <a href="{{ url('product-detail/wound-filter-machine') }}">
+                            <img loading="lazy" src="{{ asset('public/Product_Images/wound-filter-machine.jpg') }}"
+                                alt="Wound Filter Production Machine" class="img-fluid">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ url('product-detail/wound-filter-machine') }}">
+                            <h4 class="title_20">Wound Filter Production Machine</h4>
+                        </a>
+                        <br>
+                        <button type="button" class="btn_3 btn_2 homepd">
+                            <span>Enquire Now</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="home_water_slide">
+                    <div>
+                        <a href="{{ url('product-detail/high-flow-pleated-filter') }}">
+                            <img loading="lazy" src="{{ asset('public/Product_Images/highflow-product.jpg') }}"
+                                alt="High Flow Pleated Filter" class="img-fluid">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ url('product-detail/high-flow-pleated-filter') }}">
+                            <h4 class="title_20">High Flow Pleated Filter</h4>
+                        </a>
+                        <br>
+                        <button type="button" class="btn_3 btn_2 homepd">
+                            <span>Enquire Now</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="home_water_slide">
+                    <div>
+                        <a href="{{ url('product-detail/pp-pleated-filter-cartridges') }}">
+                            <img loading="lazy"
+                                src="{{ asset('public/Product_Images/pp-pleated-filter-cartridges.jpg') }}"
+                                alt="PP Pleated Filter Cartridges" class="img-fluid">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ url('product-detail/pp-pleated-filter-cartridges') }}">
+                            <h4 class="title_20">PP Pleated Filter Cartridges</h4>
+                        </a>
+                        <br>
+                        <button type="button" class="btn_3 btn_2 homepd">
+                            <span>Enquire Now</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="home_water_slide">
+                    <div>
+                        <a href="{{ url('product-detail/pph-one-piece-filter-housing') }}">
+                            <img loading="lazy"
+                                src="{{ asset('public/Product_Images/PPH-PVDF-One-Piece-Filter_2.jpg') }}"
+                                alt="PPH One Piece Filter Housing" class="img-fluid">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ url('product-detail/pph-one-piece-filter-housing') }}">
+                            <h4 class="title_20">PPH One Piece Filter Housing</h4>
+                        </a>
+                        <br>
+                        <button type="button" class="btn_3 btn_2 homepd">
+                            <span>Enquire Now</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="home_water_slide">
+                    <div>
+                        <a href="{{ url('product-detail/resin-bonded-filter-cartridges') }}">
+                            <img loading="lazy" src="{{ asset('public/Product_Images/mrb-product-img.jpg') }}"
+                                alt="Resin Bonded Filter Cartridges" class="img-fluid">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ url('product-detail/resin-bonded-filter-cartridges') }}">
+                            <h4 class="title_20">Resin Bonded Filter Cartridges</h4>
+                        </a>
+                        <br>
+                        <button type="button" class="btn_3 btn_2 homepd">
+                            <span>Enquire Now</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="home_water_slide">
+                    <div>
+                        <a href="{{ url('product-detail/grooved-resin-bonded-filter-cartridges') }}">
+                            <img loading="lazy" src="{{ asset('public/Product_Images/mab-product.jpg') }}"
+                                alt="Grooved Resin Bonded Filter Cartridges" class="img-fluid">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ url('product-detail/grooved-resin-bonded-filter-cartridges') }}">
+                            <h4 class="title_20">Grooved Resin Bonded Filter Cartridges</h4>
+                        </a>
+                        <br>
+                        <button type="button" class="btn_3 btn_2 homepd">
+                            <span>Enquire Now</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="home_water_slide">
+                    <div>
+                        <a href="{{ url('product-detail/anti-microbial-wound-filter-cartridges') }}">
+                            <img loading="lazy"
+                                src="{{ asset('public/Product_Images/anti_microbial_cartidage.png') }}"
+                                alt="Anti-Microbial Wound Filter Cartridge" class="img-fluid">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ url('product-detail/anti-microbial-wound-filter-cartridges') }}">
+                            <h4 class="title_20">Anti-Microbial Wound Filter Cartridge</h4>
+                        </a>
+                        <br>
+                        <button type="button" class="btn_3 btn_2 homepd">
+                            <span>Enquire Now</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div>
+
+                <div class="home_water_slide">
 
                     <div>
 
-                        <div class="home_water_slide">
-
-                            <div>
-
-                                <img loading="lazy"
-
-                                     src="{{ asset('public/Product_Images/melt-blown-filter-cartridges.jpg') }}"
-
-                                     alt="Melt Blown Filter Cartridges"
-
-                                     class="img-fluid">
-
-                            </div>
-
-                            <div>
-
-                                <a href="{{ url('product-detail/melt-blown-filter-cartridges') }}">
-
-                                    <h4 class="title_20">Melt Blown Filter Cartridges</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
+                        <a href="{{ url('product-detail/grooved-resin-bonded-filter-cartridges') }}">
+                            <img loading="lazy" src="{{ asset('public/Product_Images/mab-product.jpg') }}"
+                                alt="Grooved Resin Bonded Filter Cartridges" class="img-fluid">
+                        </a>
+                        {{-- <img loading="lazy" src="{{ asset('public/Product_Images/mab-product.jpg') }}"
+                            alt="Grooved Resin Bonded Filter Cartridges" class="img-fluid"> --}}
 
                     </div>
-
-
 
                     <div>
 
-                        <div class="home_water_slide">
+                        <a href="{{ url('product-detail/grooved-resin-bonded-filter-cartridges') }}">
 
-                            <div>
+                            <h4 class="title_20">Grooved Resin Bonded Filter Cartridges</h4>
 
-                                <img loading="lazy"
+                        </a>
 
-                                     src="{{ asset('public/Product_Images/wound-filter-cartridges%20(1).jpg') }}"
+                        <br>
 
-                                     alt="Wound Filter Cartridges"
+                        <button type="button" class="btn_3 btn_2 homepd">
 
-                                     class="img-fluid">
+                            <span>Enquire Now</span>
 
-                            </div>
+                            <span></span>
 
-                            <div>
-
-                                <a href="{{ url('product-detail/wound-filter-cartridges') }}">
-
-                                    <h4 class="title_20">Wound Filter Cartridges</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
+                        </button>
 
                     </div>
 
-
-
-                    <div>
-
-                        <div class="home_water_slide">
-
-                            <div>
-
-                                <img loading="lazy"
-
-                                     src="{{ asset('public/Product_Images/Core-for-filter-Cartridges.jpg') }}"
-
-                                     alt="Core for Filter Cartridge"
-
-                                     class="img-fluid">
-
-                            </div>
-
-                            <div>
-
-                                <a href="{{ url('product-detail/core-for-filter-cartridge') }}">
-
-                                    <h4 class="title_20">Core for Filter Cartridge</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <div class="home_water_slide">
-
-                            <div>
-
-                                <img loading="lazy"
-
-                                     src="{{ asset('public/Product_Images/wound-filter-machine.jpg') }}"
-
-                                     alt="Wound Filter Production Machine"
-
-                                     class="img-fluid">
-
-                            </div>
-
-                            <div>
-
-                                <a href="{{ url('product-detail/wound-filter-machine') }}">
-
-                                    <h4 class="title_20">Wound Filter Production Machine</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <div class="home_water_slide">
-
-                            <div>
-
-                                <img loading="lazy"
-
-                                     src="{{ asset('public/Product_Images/highflow-product.jpg') }}"
-
-                                     alt="High Flow Pleated Filter"
-
-                                     class="img-fluid">
-
-                            </div>
-
-                            <div>
-
-                                <a href="{{ url('product-detail/high-flow-pleated-filter') }}">
-
-                                    <h4 class="title_20">High Flow Pleated Filter</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <div class="home_water_slide">
-
-                            <div>
-
-                                <img loading="lazy"
-
-                                     src="{{ asset('public/Product_Images/pp-pleated-filter-cartridges.jpg') }}"
-
-                                     alt="PP Pleated Filter Cartridges"
-
-                                     class="img-fluid">
-
-                            </div>
-
-                            <div>
-
-                                <a href="{{ url('product-detail/pp-pleated-filter-cartridges') }}">
-
-                                    <h4 class="title_20">PP Pleated Filter Cartridges</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <div class="home_water_slide">
-
-                            <div>
-
-                                <img loading="lazy"
-
-                                     src="{{ asset('public/Product_Images/PPH-PVDF-One-Piece-Filter_2.jpg') }}"
-
-                                     alt="PPH One Piece Filter Housing"
-
-                                     class="img-fluid">
-
-                            </div>
-
-                            <div>
-
-                                <a href="{{ url('product-detail/pph-one-piece-filter-housing') }}">
-
-                                    <h4 class="title_20">PPH One Piece Filter Housing</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <div class="home_water_slide">
-
-                            <div>
-
-                                <img loading="lazy"
-
-                                     src="{{ asset('public/Product_Images/mrb-product-img.jpg') }}"
-
-                                     alt="Resin Bonded Filter Cartridges"
-
-                                     class="img-fluid">
-
-                            </div>
-
-                            <div>
-
-                                <a href="{{ url('product-detail/resin-bonded-filter-cartridges') }}">
-
-                                    <h4 class="title_20">Resin Bonded Filter Cartridges</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <div class="home_water_slide">
-
-                            <div>
-
-                                <img loading="lazy"
-
-                                     src="{{ asset('public/Product_Images/mab-product.jpg') }}"
-
-                                     alt="Grooved Resin Bonded Filter Cartridges"
-
-                                     class="img-fluid">
-
-                            </div>
-
-                            <div>
-
-                                <a href="{{ url('product-detail/grooved-resin-bonded-filter-cartridges') }}">
-
-                                    <h4 class="title_20">Grooved Resin Bonded Filter Cartridges</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <div class="home_water_slide">
-
-                            <div>
-
-                                <img loading="lazy"
-
-                                     src="{{ asset('public/Product_Images/anti_microbial_cartidage.png') }}"
-
-                                     alt="Anti-Microbial Wound Filter Cartridge"
-
-                                     class="img-fluid">
-
-                            </div>
-
-                            <div>
-
-                                <a href="{{ url('product-detail/anti-microbial-wound-filter-cartridges') }}">
-
-                                    <h4 class="title_20">Anti-Microbial Wound Filter Cartridge</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
+                </div>
 
             </div>
 
+
+
+            <div>
+
+                <div class="home_water_slide">
+
+                    <div>
+
+                        <a href="{{ url('product-detail/anti-microbial-wound-filter-cartridges') }}">
+                            <img loading="lazy"
+                                src="{{ asset('public/Product_Images/anti_microbial_cartidage.png') }}"
+                                alt="Anti-Microbial Wound Filter Cartridge" class="img-fluid">
+                        </a>
+                        {{-- <img loading="lazy" src="{{ asset('public/Product_Images/anti_microbial_cartidage.png') }}"
+                            alt="Anti-Microbial Wound Filter Cartridge" class="img-fluid"> --}}
+
+                    </div>
+
+                    <div>
+
+                        <a href="{{ url('product-detail/anti-microbial-wound-filter-cartridges') }}">
+
+                            <h4 class="title_20">Anti-Microbial Wound Filter Cartridge</h4>
+
+                        </a>
+
+                        <br>
+
+                        <button type="button" class="btn_3 btn_2 homepd">
+
+                            <span>Enquire Now</span>
+
+                            <span></span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
         </div>
+
+    </div>
 
     </div>
 
@@ -1080,85 +970,47 @@
 
             <div class="home_water_wrapper">
 
-            <div class="home_water_slider">
+                <div class="home_water_slider">
+                    @foreach ($data['airProducts'] as $item)
+                        @php
+                            $imgSrc = asset('public/front/images/no-image.png');
 
-                @foreach($data['airProducts'] as $item)
+                            if (!empty($item->product_image)) {
+                                $images = explode(',', $item->product_image);
+                                $firstImage = trim($images[0]);
 
-                    @php
-
-                        $imgSrc = asset('public/front/images/no-image.png');
-
-
-
-                        if (!empty($item->product_image)) {
-
-                            $images = explode(',', $item->product_image);
-
-                            $firstImage = trim($images[0]);
-
-
-
-                            if (filter_var($firstImage, FILTER_VALIDATE_URL)) {
-
-                                $imgSrc = $firstImage;
-
-                            } else {
-
-                                $imgSrc = asset('public/Product_Images/' . $firstImage);
-
+                                if (filter_var($firstImage, FILTER_VALIDATE_URL)) {
+                                    $imgSrc = $firstImage;
+                                } else {
+                                    $imgSrc = asset('public/Product_Images/' . $firstImage);
+                                }
                             }
+                        @endphp
 
-                        }
-
-                    @endphp
-
-
-
-                    <div>
-
-                        <div class="home_water_slide">
-
-                            <div>
-
-                                <img loading="lazy"
-
-                                     src="{{ $imgSrc }}"
-
-                                     alt="{{ $item->product_alt ?? $item->product_name }}"
-
-                                     class="img-fluid">
-
+                        <div>
+                            <div class="home_water_slide">
+                                <div>
+                                    <a href="{{ url('product-detail/' . $item->producturl) }}">
+                                        <img loading="lazy" src="{{ $imgSrc }}"
+                                            alt="{{ $item->product_alt ?? $item->product_name }}" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="{{ url('product-detail/' . $item->producturl) }}">
+                                        <h4 class="title_20">{{ $item->product_name }}</h4>
+                                    </a>
+                                    <br>
+                                    <button type="button" class="btn_3 btn_2 homepd">
+                                        <span>Enquire Now</span>
+                                        <span></span>
+                                    </button>
+                                </div>
                             </div>
-
-                            <div>
-
-                                <a href="{{ url('product-detail/' . $item->producturl) }}">
-
-                                    <h4 class="title_20">{{ $item->product_name }}</h4>
-
-                                </a>
-
-                                <br>
-
-                                <button type="button" class="btn_3 btn_2 homepd">
-
-                                    <span>Enquire Now</span>
-
-                                    <span></span>
-
-                                </button>
-
-                            </div>
-
                         </div>
-
-                    </div>
-
-                @endforeach
+                    @endforeach
+                </div>
 
             </div>
-
-        </div>
 
         </div>
 
@@ -1218,7 +1070,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-pharma.svg') }}" alt="Pharma" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-pharma.svg') }}" alt="Pharma"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1235,15 +1088,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1253,15 +1102,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1282,7 +1127,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-chemical.svg') }}" alt="Chemical" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-chemical.svg') }}" alt="Chemical"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1299,15 +1145,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1317,15 +1159,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1346,7 +1184,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-water-treatment.svg') }}" alt="Water-Treatment" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-water-treatment.svg') }}"
+                    alt="Water-Treatment" height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1363,15 +1202,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1381,15 +1216,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1410,7 +1241,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-food&bevrages.svg') }}" alt="Food & Beverages" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-food&bevrages.svg') }}"
+                    alt="Food & Beverages" height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1427,15 +1259,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1445,15 +1273,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1474,7 +1298,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-textile.svg') }}" alt="Textile" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-textile.svg') }}" alt="Textile"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1491,15 +1316,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1509,15 +1330,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1542,7 +1359,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-dairy.svg') }}" alt="Dairy" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-dairy.svg') }}" alt="Dairy"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1559,15 +1377,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1577,15 +1391,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1606,7 +1416,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-oil&gas.svg') }}" alt="Oil & Gas" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-oil&gas.svg') }}" alt="Oil & Gas"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1623,15 +1434,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1641,15 +1448,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1670,7 +1473,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-cement.svg') }}" alt="Cement" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-cement.svg') }}" alt="Cement"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1687,15 +1491,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1705,15 +1505,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1734,7 +1530,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-poer-plant.svg') }}" alt="Power Plant" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-poer-plant.svg') }}"
+                    alt="Power Plant" height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1751,15 +1548,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1769,15 +1562,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1804,7 +1593,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-pharma.svg') }}" alt="Pharma" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-pharma.svg') }}" alt="Pharma"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1821,15 +1611,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1839,15 +1625,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1868,7 +1650,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-chemical.svg') }}" alt="Chemical" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-chemical.svg') }}" alt="Chemical"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1885,15 +1668,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1903,15 +1682,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1932,7 +1707,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-water-treatment.svg') }}" alt="Water-Treatment" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-water-treatment.svg') }}"
+                    alt="Water-Treatment" height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -1949,15 +1725,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1967,15 +1739,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -1996,7 +1764,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-food&bevrages.svg') }}" alt="Food & Beverages" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-food&bevrages.svg') }}"
+                    alt="Food & Beverages" height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -2013,15 +1782,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2031,15 +1796,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2060,7 +1821,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-textile.svg') }}" alt="Textile" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-textile.svg') }}" alt="Textile"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -2077,15 +1839,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2095,15 +1853,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2126,7 +1880,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-dairy.svg') }}" alt="Dairy" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-dairy.svg') }}" alt="Dairy"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -2143,15 +1898,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2161,15 +1912,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2190,7 +1937,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-oil&gas.svg') }}" alt="Oil & Gas" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-oil&gas.svg') }}" alt="Oil & Gas"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -2207,15 +1955,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2225,15 +1969,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2254,7 +1994,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-cement.svg') }}" alt="Cement" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-cement.svg') }}" alt="Cement"
+                    height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -2271,15 +2012,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2289,15 +2026,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2318,7 +2051,8 @@
 
             <div class="iws_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-poer-plant.svg') }}" alt="Power Plant" height="70" width="70">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/iws-poer-plant.svg') }}"
+                    alt="Power Plant" height="70" width="70">
 
                 <div class="d-flex align-items-center justify-content-between">
 
@@ -2335,15 +2069,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2353,15 +2083,11 @@
                                     <span class="button-elem">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-
                                             viewBox="0 0 26 26" fill="none">
 
                                             <path
-
                                                 d="M7 1L18.7115 12.3538C18.8025 12.4367 18.8751 12.5368 18.9248 12.6479C18.9744 12.7591 19 12.8789 19 13C19 13.1211 18.9744 13.2409 18.9248 13.3521C18.8751 13.4632 18.8025 13.5633 18.7115 13.6462L7 25"
-
                                                 stroke="#00A3FF" stroke-width="2" stroke-linecap="round"
-
                                                 stroke-linejoin="round"></path>
 
                                         </svg>
@@ -2404,7 +2130,8 @@
 
             <div class="usp_grid_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/usp1.svg') }}" alt="usp" height="60" width="60">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/usp1.svg') }}" alt="usp"
+                    height="60" width="60">
 
                 <p class="mb-0 title_24">More than 3 Decades of Experience in Filtration Solutions</p>
 
@@ -2412,7 +2139,8 @@
 
             <div class="usp_grid_box">
 
-                <img style="object-fit: contain; width:fit-content" loading="lazy" src="{{ asset('public/newpublic/images/nsf.webp') }}" alt="usp" height="60">
+                <img style="object-fit: contain; width:fit-content" loading="lazy"
+                    src="{{ asset('public/newpublic/images/nsf.webp') }}" alt="usp" height="60">
 
                 <p class="mb-0 title_24">NSF Certified Products</p>
 
@@ -2420,7 +2148,8 @@
 
             <div class="usp_grid_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/usp3.svg') }}" alt="usp" height="60" width="60">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/usp3.svg') }}" alt="usp"
+                    height="60" width="60">
 
                 <p class="mb-0 title_24">Experienced and Dedicated Team</p>
 
@@ -2428,7 +2157,8 @@
 
             <div class="usp_grid_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/usp4.svg') }}" alt="usp" height="60" width="60">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/usp4.svg') }}" alt="usp"
+                    height="60" width="60">
 
                 <p class="mb-0 title_24">Global Service Provider</p>
 
@@ -2436,7 +2166,8 @@
 
             <div class="usp_grid_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/usp5.svg') }}" alt="usp" height="60" width="60">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/usp5.svg') }}" alt="usp"
+                    height="60" width="60">
 
                 <p class="mb-0 title_24">Customizable Filtration Solutions</p>
 
@@ -2444,7 +2175,8 @@
 
             <div class="usp_grid_box">
 
-                <img loading="lazy" src="{{ asset('public/newpublic/images/usp6.svg') }}" alt="usp" height="60" width="60">
+                <img loading="lazy" src="{{ asset('public/newpublic/images/usp6.svg') }}" alt="usp"
+                    height="60" width="60">
 
                 <p class="mb-0 title_24">Wide Industry Coverage</p>
 
@@ -2591,107 +2323,117 @@
 </section>
 
 <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-
-
-            const request_btn = document.getElementById("request_btn");
-
-            const enquiryPopup = document.getElementById("enqpoup");
+    document.addEventListener("DOMContentLoaded", function() {
 
 
 
-            if (!request_btn || !whatsappPopup) return;
+        const request_btn = document.getElementById("request_btn");
+
+        const enquiryPopup = document.getElementById("enqpoup");
 
 
 
-            // Open popup from header button
-
-            request_btn.addEventListener("click", function (e) {
+        if (!request_btn || !whatsappPopup) return;
 
 
 
-                e.preventDefault();
+        // Open popup from header button
 
-                enquiryPopup.classList.add("active");
-
-            });
+        request_btn.addEventListener("click", function(e) {
 
 
+
+            e.preventDefault();
+
+            enquiryPopup.classList.add("active");
 
         });
 
-    </script>
 
 
-@if($data['reviewCount'] > 0)
-<section class="home_rating mt-100">
-    <div class="ym-container">
-        <div class="home_rating_head">
-            <h2 class="title_54">The Trust We've Earned</h2>
+    });
+</script>
 
-            <div class="overall_rating">
-                <span class="rating_number">{{ $data['avgRating'] }}</span>
 
-                <div class="rating_stars">
-                    @for($i = 1; $i <= 5; $i++)
-                        <span>★</span>
-                    @endfor
+@if ($data['reviewCount'] > 0)
+    <section class="home_rating mt-100">
+        <div class="ym-container">
+            <div class="home_rating_head">
+                <h2 class="title_54">The Trust We've Earned</h2>
+
+                <div class="overall_rating">
+                    <span class="rating_number">{{ $data['avgRating'] }}</span>
+
+                    <div class="rating_stars">
+                        @for ($i = 1; $i <= 5; $i++)
+                            <span>★</span>
+                        @endfor
+                    </div>
+
+                    <span class="rating_count">{{ $data['reviewCount'] }} reviews</span>
                 </div>
-
-                <span class="rating_count">{{ $data['reviewCount'] }} reviews</span>
             </div>
-        </div>
 
-        <div class="home_water_slider" data-show="3">
-            @foreach($data['reviews'] as $review)
-                <div class="rating_card">
-                    <div class="rating_card_top">
-                        @if($review->image)
-                        <img src="{{ asset('public/reviews/'.$review->image) }}" alt="{{ $review->customer_name }}">
-                    @else
-                        @php
-                            $nameParts = explode(' ', trim($review->customer_name));
-                            $initials = strtoupper(substr($nameParts[0] ?? '', 0, 1) . substr(end($nameParts), 0, 1));
+            <div class="home_water_slider" data-show="3">
+                @foreach ($data['reviews'] as $review)
+                    <div class="rating_card">
+                        <div class="rating_card_top">
+                            @if ($review->image)
+                                <img src="{{ asset('public/reviews/' . $review->image) }}"
+                                    alt="{{ $review->customer_name }}">
+                            @else
+                                @php
+                                    $nameParts = explode(' ', trim($review->customer_name));
+                                    $initials = strtoupper(
+                                        substr($nameParts[0] ?? '', 0, 1) . substr(end($nameParts), 0, 1),
+                                    );
 
-                            // Generate a consistent color based on the name
-                            $colors = ['#F87171','#FBBF24','#34D399','#60A5FA','#A78BFA','#F472B6','#FB923C','#4ADE80','#38BDF8','#C084FC'];
-                            $colorIndex = crc32($review->customer_name) % count($colors);
-                            $bgColor = $colors[$colorIndex];
-                        @endphp
-                        <div class="avatar-initials" style="background-color: {{ $bgColor }};">
-                            {{ $initials }}
-                        </div>
-                    @endif
-                        <div>
-                            <h4>{{ $review->customer_name }}</h4>
-                            <div class="card_star">
-                                @for($i = 1; $i <= $review->rating; $i++)
-                                    <span>★</span>
-                                @endfor
+                                    // Generate a consistent color based on the name
+                                    $colors = [
+                                        '#F87171',
+                                        '#FBBF24',
+                                        '#34D399',
+                                        '#60A5FA',
+                                        '#A78BFA',
+                                        '#F472B6',
+                                        '#FB923C',
+                                        '#4ADE80',
+                                        '#38BDF8',
+                                        '#C084FC',
+                                    ];
+                                    $colorIndex = crc32($review->customer_name) % count($colors);
+                                    $bgColor = $colors[$colorIndex];
+                                @endphp
+                                <div class="avatar-initials" style="background-color: {{ $bgColor }};">
+                                    {{ $initials }}
+                                </div>
+                            @endif
+                            <div>
+                                <h4>{{ $review->customer_name }}</h4>
+                                <div class="card_star">
+                                    @for ($i = 1; $i <= $review->rating; $i++)
+                                        <span>★</span>
+                                    @endfor
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!--<p>{{ $review->review_text }}</p>-->
-                     <p class="review-text">
-                        <span class="review-content">
-                            {{ $review->review_text }}
-                        </span>
+                        <!--<p>{{ $review->review_text }}</p>-->
+                        <p class="review-text">
+                            <span class="review-content">
+                                {{ $review->review_text }}
+                            </span>
 
-                        <span class="read-more"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="{{ $review->review_text }}">
-                            Read More
-                        </span>
-                    </p>
-                </div>
-            @endforeach
+                            <span class="read-more" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="{{ $review->review_text }}">
+                                Read More
+                            </span>
+                        </p>
+                    </div>
+                @endforeach
+            </div>
+
         </div>
-        
-    </div>
-</section>
+    </section>
 @endif
 
 
@@ -2719,7 +2461,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/otsuka.png') }}" alt="otsuka" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/otsuka.png') }}" alt="otsuka"
+                        class="img-fluid">
 
                 </div>
 
@@ -2729,7 +2472,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/ongc.png') }}" alt="ongc" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/ongc.png') }}" alt="ongc"
+                        class="img-fluid">
 
                 </div>
 
@@ -2739,7 +2483,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/hp.png') }}" alt="hp" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/hp.png') }}" alt="hp"
+                        class="img-fluid">
 
                 </div>
 
@@ -2749,7 +2494,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/murugappa.png') }}" alt="murugappa" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/murugappa.png') }}"
+                        alt="murugappa" class="img-fluid">
 
                 </div>
 
@@ -2759,7 +2505,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/rswm.png') }}" alt="rswm" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/rswm.png') }}" alt="rswm"
+                        class="img-fluid">
 
                 </div>
 
@@ -2769,7 +2516,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/abd.png') }}" alt="abd" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/abd.png') }}" alt="abd"
+                        class="img-fluid">
 
                 </div>
 
@@ -2779,7 +2527,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/gfl.png') }}" alt="gfl" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/gfl.png') }}" alt="gfl"
+                        class="img-fluid">
 
                 </div>
 
@@ -2789,7 +2538,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/ramdev.png') }}" alt="ramdev" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/ramdev.png') }}" alt="ramdev"
+                        class="img-fluid">
 
                 </div>
 
@@ -2799,7 +2549,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/rspl.png') }}" alt="rspl" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/rspl.png') }}" alt="rspl"
+                        class="img-fluid">
 
                 </div>
 
@@ -2809,7 +2560,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/indian-oil.png') }}" alt="indian-oil" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/indian-oil.png') }}"
+                        alt="indian-oil" class="img-fluid">
 
                 </div>
 
@@ -2819,7 +2571,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/reliance.png') }}" alt="reliance" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/reliance.png') }}" alt="reliance"
+                        class="img-fluid">
 
                 </div>
 
@@ -2829,7 +2582,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/adani.png') }}" alt="adani" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/adani.png') }}" alt="adani"
+                        class="img-fluid">
 
                 </div>
 
@@ -2839,7 +2593,8 @@
 
                 <div class="cus_slide">
 
-                    <img loading="lazy" src="{{ asset('public/newpublic/images/bayer.png') }}" alt="bayer" class="img-fluid">
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/bayer.png') }}" alt="bayer"
+                        class="img-fluid">
 
                 </div>
 
@@ -2865,42 +2620,42 @@
 
         <div class="home_blogslider">
 
-            @foreach($data['blog'] as $val)
+            @foreach ($data['blog'] as $val)
+                <div>
 
-            <div>
+                    <div class="home_blog_slide">
 
-                <div class="home_blog_slide">
+                        <div class="blog_card">
 
-                    <div class="blog_card">
+                            <div>
 
-                        <div>
+                                <img loading="lazy" src="{{ asset('public/blog/' . $val->image) }}"
+                                    alt="{{ $val->alt_banner }}" class="img-fluid">
 
-                            <img loading="lazy" src="{{ asset('public/blog/'.$val->image) }}" alt="{{ $val->alt_banner }}" class="img-fluid">
+                            </div>
 
-                        </div>
+                            <div class="blog_card_info">
 
-                        <div class="blog_card_info">
+                                <h3 class="title_24">{{ $val->title }}</h3>
 
-                            <h3 class="title_24">{{ $val->title }}</h3>
+                                <p>{!! $val->short_description !!}</p>
 
-                            <p>{!! $val->short_description !!}</p>
+                                <a href="{{ url('/blogdetail/' . $val->url) }}" target="_blank"
+                                    class="btn_3 btn_2">
 
-                            <a href="{{ url('/blogdetail/'.$val->url)}}" target="_blank" class="btn_3 btn_2">
+                                    <span>Read More</span>
 
-                                <span>Read More</span>
+                                    <span></span>
 
-                                <span></span>
+                                </a>
 
-                            </a>
+                            </div>
 
                         </div>
 
                     </div>
 
                 </div>
-
-            </div>
-
             @endforeach
 
         </div>
@@ -2918,88 +2673,82 @@
 
 
 <style>
+    .modal_home_video .modal-backdrop.show {
 
+        opacity: 0.7 !important;
 
+        backdrop-filter: blur(5px);
 
-.modal_home_video .modal-backdrop.show {
+        transition: opacity 0.4s ease;
 
-    opacity: 0.7 !important;
-
-    backdrop-filter: blur(5px);
-
-    transition: opacity 0.4s ease;
-
-}
-
-
-
-
-
-.modal_home_video.fade .modal-dialog {
-
-    transform: translateY(30px) scale(0.95);
-
-    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-    opacity: 0;
-
-}
-
-
-
-.modal_home_video.show .modal-dialog {
-
-    transform: translateY(0) scale(1);
-
-    opacity: 1;
-
-}
+    }
 
 
 
 
 
-.modal_home_video .promoVideo {
+    .modal_home_video.fade .modal-dialog {
 
-    display: block;
+        transform: translateY(30px) scale(0.95);
 
-    border-radius: 12px;
+        transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        opacity: 0;
 
-    opacity: 0;
-
-    transition: opacity 0.8s ease-in-out;
-
-}
+    }
 
 
 
-.modal_home_video .promoVideo.video-ready {
+    .modal_home_video.show .modal-dialog {
 
-    opacity: 1;
+        transform: translateY(0) scale(1);
 
-    border:2px solid white;
+        opacity: 1;
 
-}
-
-.avatar-initials {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: 600;
-    font-size: 24px;
-    font-family: inherit;
-    flex-shrink: 0;
-    text-transform: uppercase;
-}
+    }
 
 
 
+
+
+    .modal_home_video .promoVideo {
+
+        display: block;
+
+        border-radius: 12px;
+
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+
+        opacity: 0;
+
+        transition: opacity 0.8s ease-in-out;
+
+    }
+
+
+
+    .modal_home_video .promoVideo.video-ready {
+
+        opacity: 1;
+
+        border: 2px solid white;
+
+    }
+
+    .avatar-initials {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 600;
+        font-size: 24px;
+        font-family: inherit;
+        flex-shrink: 0;
+        text-transform: uppercase;
+    }
 </style>
 
 
@@ -3013,14 +2762,15 @@
             <div class="modal-body p-0">
 
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-
-                        style="position: absolute; right: 15px; top: 15px; z-index: 999; filter: invert(1) !important;"></button>
-
+                    style="position: absolute; right: 15px; top: 15px; z-index: 999; filter: invert(1) !important;"></button>
 
 
-                <video muted loop playsinline class="w-100 d-none d-lg-block promoVideo" id="desktopVideo" preload="auto">
 
-                    <source src="{{ asset('public/newpublic/images/mmp-filter-home-page-video.mp4') }}" type="video/mp4">
+                <video muted loop playsinline class="w-100 d-none d-lg-block promoVideo" id="desktopVideo"
+                    preload="auto">
+
+                    <source src="{{ asset('public/newpublic/images/mmp-filter-home-page-video.mp4') }}"
+                        type="video/mp4">
 
                     Your browser does not support the video tag.
 
@@ -3028,9 +2778,11 @@
 
 
 
-                <video muted loop playsinline class="w-100 d-lg-none promoVideo" id="mobileVideo" preload="auto" poster="{{ asset('public/newpublic/images/mmp-filter-home-page-video-phone.png') }}">
+                <video muted loop playsinline class="w-100 d-lg-none promoVideo" id="mobileVideo" preload="auto"
+                    poster="{{ asset('public/newpublic/images/mmp-filter-home-page-video-phone.png') }}">
 
-                    <source src="{{ asset('public/newpublic/images/mmp-filter-home-page-video-phone.mp4') }}" type="video/mp4">
+                    <source src="{{ asset('public/newpublic/images/mmp-filter-home-page-video-phone.mp4') }}"
+                        type="video/mp4">
 
                     Your browser does not support the video tag.
 
@@ -3049,74 +2801,72 @@
 
 
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
 
-document.addEventListener("DOMContentLoaded", function() {
+        const modalElement = document.getElementById('autoOpenModal');
 
-    const modalElement = document.getElementById('autoOpenModal');
+        const videos = document.querySelectorAll('.promoVideo'); // Dono videos ko select kiya
 
-    const videos = document.querySelectorAll('.promoVideo'); // Dono videos ko select kiya
-
-    const myModal = new bootstrap.Modal(modalElement);
-
-
-
-    // 1. Modal open delay
-
-    setTimeout(() => {
-
-        myModal.show();
-
-    }, 1000);
+        const myModal = new bootstrap.Modal(modalElement);
 
 
 
-    // 2. Jab modal show ho
+        // 1. Modal open delay
 
-    modalElement.addEventListener('shown.bs.modal', function() {
+        setTimeout(() => {
 
-        videos.forEach(video => {
+            myModal.show();
 
-            // Sirf wahi video play hogi jo screen par visible hai
+        }, 1000);
 
-            if (window.getComputedStyle(video).display !== 'none') {
 
-                video.play().then(() => {
 
-                    video.classList.add('video-ready');
+        // 2. Jab modal show ho
 
-                }).catch(error => {
+        modalElement.addEventListener('shown.bs.modal', function() {
 
-                    console.log("Autoplay blocked", error);
+            videos.forEach(video => {
 
-                });
+                // Sirf wahi video play hogi jo screen par visible hai
 
-            }
+                if (window.getComputedStyle(video).display !== 'none') {
+
+                    video.play().then(() => {
+
+                        video.classList.add('video-ready');
+
+                    }).catch(error => {
+
+                        console.log("Autoplay blocked", error);
+
+                    });
+
+                }
+
+            });
+
+        });
+
+
+
+        // 3. Jab modal band ho
+
+        modalElement.addEventListener('hidden.bs.modal', function() {
+
+            videos.forEach(video => {
+
+                video.pause();
+
+                video.currentTime = 0;
+
+                video.classList.remove('video-ready');
+
+            });
 
         });
 
     });
-
-
-
-    // 3. Jab modal band ho
-
-    modalElement.addEventListener('hidden.bs.modal', function() {
-
-        videos.forEach(video => {
-
-            video.pause();
-
-            video.currentTime = 0;
-
-            video.classList.remove('video-ready');
-
-        });
-
-    });
-
-});
-
-    </script>
+</script>
 
 
 
@@ -3127,120 +2877,114 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <script>
+    document.addEventListener("click", function(e) {
 
-document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".homepd");
 
-    const btn = e.target.closest(".homepd");
-
-    if (!btn) return;
-
-
-
-    e.preventDefault();
+        if (!btn) return;
 
 
 
-    const popup = document.getElementById("enqpoup");
-
-    if (!popup) return;
+        e.preventDefault();
 
 
 
-    popup.classList.add("active");
+        const popup = document.getElementById("enqpoup");
 
-});
+        if (!popup) return;
 
+
+
+        popup.classList.add("active");
+
+    });
 </script>
 
 <style>
+    .review-text {
+        margin: 0;
+    }
 
-.review-text{
-    margin:0;
-}
+    .review-content {
+        display: block;
+        overflow: hidden;
+        line-height: 28px;
+        max-height: 140px;
+        word-break: break-word;
+        transition: .3s;
+    }
 
-.review-content{
-    display:block;
-    overflow:hidden;
-    line-height:28px;
-    max-height:140px; 
-    word-break:break-word;
-    transition:.3s;
-}
+    .read-more {
+        display: none;
+        color: #00a3ff;
+        cursor: pointer;
+        font-weight: 600;
+        margin-left: 5px;
+    }
 
-.read-more{
-    display:none;
-    color:#00a3ff;
-    cursor:pointer;
-    font-weight:600;
-    margin-left:5px;
-}
-
-.tooltip-inner{
-    max-width:350px;
-    white-space:normal;
-    text-align:left;
-}
-
+    .tooltip-inner {
+        max-width: 350px;
+        white-space: normal;
+        text-align: left;
+    }
 </style>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    // Bootstrap Tooltip
-    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (el) {
-        new bootstrap.Tooltip(el);
-    });
-
-    function checkReviewHeight(){
-
-        document.querySelectorAll(".review-text").forEach(function(item){
-
-            let content = item.querySelector(".review-content");
-            let readMore = item.querySelector(".read-more");
-
-            // Save original height
-            let originalHeight = content.style.maxHeight;
-
-            // Remove max-height temporarily
-            content.style.maxHeight = "none";
-
-            let fullHeight = content.scrollHeight;
-
-            // Restore 5 line height
-            content.style.maxHeight = originalHeight || "140px";
-
-            if(fullHeight > 145){
-                readMore.style.display = "inline";
-            }else{
-                readMore.style.display = "none";
-            }
-
+        // Bootstrap Tooltip
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function(el) {
+            new bootstrap.Tooltip(el);
         });
 
-    }
+        function checkReviewHeight() {
 
-    // First Load
-    checkReviewHeight();
+            document.querySelectorAll(".review-text").forEach(function(item) {
 
-    // Window Resize
-    window.addEventListener("resize", function(){
+                let content = item.querySelector(".review-content");
+                let readMore = item.querySelector(".read-more");
+
+                // Save original height
+                let originalHeight = content.style.maxHeight;
+
+                // Remove max-height temporarily
+                content.style.maxHeight = "none";
+
+                let fullHeight = content.scrollHeight;
+
+                // Restore 5 line height
+                content.style.maxHeight = originalHeight || "140px";
+
+                if (fullHeight > 145) {
+                    readMore.style.display = "inline";
+                } else {
+                    readMore.style.display = "none";
+                }
+
+            });
+
+        }
+
+        // First Load
         checkReviewHeight();
-    });
 
-    // If Slick Slider Exists
-    if(window.jQuery){
-
-        $('.home_water_slider').on('init afterChange setPosition', function(){
-            setTimeout(function(){
-                checkReviewHeight();
-            },100);
+        // Window Resize
+        window.addEventListener("resize", function() {
+            checkReviewHeight();
         });
 
-    }
+        // If Slick Slider Exists
+        if (window.jQuery) {
 
-});
+            $('.home_water_slider').on('init afterChange setPosition', function() {
+                setTimeout(function() {
+                    checkReviewHeight();
+                }, 100);
+            });
 
+        }
+
+    });
 </script>
 
 @include('layouts.frontfooter')
