@@ -130,7 +130,7 @@
                   alt="Contact"
                   class="img-fluid me-2"
               /></span>
-              <a href="tel:919830030614">+91 9830030614</a>
+              <a href="tel:919925601108">+91 9925601108</a>
             </li>
             <li class="d-flex align-items-start mb-3">
               <span

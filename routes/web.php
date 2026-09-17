@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\adminController;
+use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\CaseStudyController;
 use App\Http\Controllers\admin\CategoryController;
@@ -22,6 +23,7 @@ use App\Models\Review;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SitemapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,8 +56,12 @@ Route::get('/clear-cache', function () {
     Artisan::call('route:clear');
     Artisan::call('view:clear');
 
-    return '✅ All Laravel caches cleared successfully!';
+    return 'All Laravel caches cleared successfully!';
 });
+
+// START - DYNAMIC SITEMAP
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+// END - DYNAMIC SITEMAP
 
 //Front route
 Route::get('/', [dashboardController::class, 'index']);

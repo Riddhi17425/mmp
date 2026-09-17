@@ -22,5 +22,3 @@ require_once __DIR__.'/public/index.php';
 
 ob_start();
 ?>
-
-<script></script>

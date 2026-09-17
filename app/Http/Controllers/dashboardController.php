@@ -725,7 +725,7 @@ class dashboardController extends Controller
             ]);
         }
 
-        $number      = '919830030614'; // Or use $request->number if needed
+        $number      = '919925601108'; // Or use $request->number if needed
         $message     = 'Inquiry from the website.';
         $whatsappUrl = "https://api.whatsapp.com/send/?phone={$number}&text=" . urlencode($message) . "&type=phone_number&app_absent=0";
 

@@ -112,7 +112,7 @@
                                         stroke="#00A3FF" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
 
-                                <a href="tel:919830030614">+91 9830030614</a>
+                                <a href="tel:919925601108">+91 9925601108</a>
                             </div>
                         </li>
                     </ul>
