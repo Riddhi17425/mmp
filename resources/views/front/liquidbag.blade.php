@@ -476,7 +476,7 @@
 
             built to withstand the rigors of demanding applications.</p>
 
-        <img src="{{ asset('public/newpublic/images/liquid/filter-bg.png')}}" alt="Filter bags" class="img-fluid">
+        <img src="{{ asset('public/newpublic/images/liquid/filter-bg-2.png')}}" alt="Filter bags" class="img-fluid">
 
         <div class="filter_key_grid">
 

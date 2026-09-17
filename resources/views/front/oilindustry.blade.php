@@ -65,7 +65,7 @@
                 <p class="navigation_pera">Ensure reliability in filtration with our wound filter cartridges. As a trusted wound filter cartridges Supplier, <b>mmp</b> delivers quality products like PP String wound filter cartridges, meeting the specific needs of the oil and gas industry.</p>
                 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 desktop-sticky">
                 <div class="mg_area">
                     <div class="row">
                         <div class="col-lg-12 col-md-12">

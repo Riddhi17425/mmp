@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 
 
 
 <head>
 
-     <!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
 
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
 
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
 
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
 
-})(window,document,'script','dataLayer','GTM-5P83LKH6');</script>
+        })(window, document, 'script', 'dataLayer', 'GTM-5P83LKH6');
+    </script>
 
-<!-- End Google Tag Manager -->
+    <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
 
@@ -30,103 +42,267 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <link href="{{ asset('public/front/images/favicon.png') }}" rel="icon">
 
-    
+    <link rel="alternate" hreflang="en" href="{{ url()->current() }}" />
+
+    @if (request()->is('/'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/" />
+    @elseif(request()->is('about'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/chi-siamo" />
+    @elseif(request()->is('certifications'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/certificazioni" />
+    @elseif(request()->is('partnership-opportunities'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/Opportunit%C3%A0-di-partnership" />
+    @elseif(request()->is('contact'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/contatto" />
+    @elseif(request()->is('water-and-air-filtration-products'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/prodotti-filtrazione-acqua-e-aria" />
+    @elseif(request()->is('events'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/eventi" />
+    @elseif(request()->is('case-studies'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/casi-studio" />
+
+        {{-- Row 11 --}}
+    @elseif(request()->is('product/water-filter-cartridges'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/prodotto/cartucce-filtranti-acqua" />
+
+        {{-- Row 12 --}}
+    @elseif(request()->is('product/air-filter-cartridges'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/prodotto/cartucce-filtranti-aria" />
+
+        {{-- Row 13 --}}
+    @elseif(request()->is('product/filtration-yarns'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/prodotto/filati-filtranti" />
+
+        {{-- Row 14 --}}
+    @elseif(request()->is('wound-filter-cartridge-machine'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/macchina-cartucce-filtranti-avvolte" />
+
+        {{-- Row 15 --}}
+    @elseif(request()->is('product-detail/melt-blown-filter-cartridges'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/cartucce-filtranti-soffiate-a-fusione" />
+
+        {{-- Row 16 --}}
+    @elseif(request()->is('product-detail/wound-filter-cartridges'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/cartucce-filtranti-avvolte" />
+
+        {{-- Row 17 --}}
+    @elseif(request()->is('product-detail/lagoon-melt-blown-filter-cartridges'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/cartucce-filtranti-soffiate-lagoon" />
+
+        {{-- Row 18 --}}
+    @elseif(request()->is('product-detail/oceanic-melt-blown-filter-cartridges'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/cartucce-filtranti-soffiate-oceanic" />
+
+        {{-- Row 19 --}}
+    @elseif(request()->is('product-detail/core-for-filter-cartridge'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/anima-per-cartucce-filtranti" />
+
+        {{-- Row 20 --}}
+    @elseif(request()->is('product-detail/wound-filter-machine'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/macchina-per-cartucce-filtranti-avvolte" />
+
+        {{-- Row 21 --}}
+    @elseif(request()->is('product-detail/pp-pleated-filter-cartridges'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/dettaglio-prodotto/cartucce-pleat-pp" />
+
+        {{-- Row 22 --}}
+    @elseif(request()->is('product-detail/pp-spun-filters'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/dettaglio-prodotto/filtri-pp-spun" />
+
+        {{-- Row 23 --}}
+    @elseif(request()->is('product-detail/resin-bonded-filter-cartridges'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/cartucce-filtranti-legante-resina" />
+
+        {{-- Row 24 --}}
+    @elseif(request()->is('product-detail/grooved-resin-bonded-filter-cartridges'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/cartucce-filtranti-legante-resina-con-scanalature" />
+
+        {{-- Row 25 --}}
+    @elseif(request()->is('product-detail/sediment-filter'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/dettaglio-prodotto/filtro-sedimenti" />
+
+        {{-- Row 26 --}}
+    @elseif(request()->is('product-detail/anti-microbial-wound-filter-cartridges'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/cartuccia-filtrante-antimicrobica-per-ferite" />
+
+        {{-- Row 27 --}}
+    @elseif(request()->is('product-detail/high-flow-pleated-filter'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/cartucce-filtranti-avvolte-antimicrobiche" />
+
+        {{-- Row 28 --}}
+    @elseif(request()->is('product-detail/pph-one-piece-filter-housing'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/alloggiamento-monoblocco-pph" />
+
+        {{-- Row 29 --}}
+    @elseif(request()->is('product-detail/pleated-filter-bags'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/sacchetti-filtranti-pleat" />
+
+        {{-- Row 30 --}}
+    @elseif(request()->is('product-detail/pleated-cartridges'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/dettaglio-prodotto/cartucce-pleat" />
+        {{-- Row 31 --}}
+    @elseif(request()->is('product-detail/dust-collector-filter-bag'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/sacco-filtro-raccogli-polvere" />
+
+        {{-- Row 32 --}}
+    @elseif(request()->is('product-detail/dust-collector-filter-cages'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/gabbie-filtranti-raccogli-polvere" />
+
+        {{-- Row 33 --}}
+    @elseif(request()->is('product-detail/filter-bags'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/sacchetti-filtranti" />
+
+        {{-- Row 34 --}}
+    @elseif(request()->is('product-detail/polypropylene-yarns'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/filati-polipropilene" />
+
+        {{-- Row 35 --}}
+    @elseif(request()->is('product-detail/anti-microbial-polypropylene-filtration-yarn'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/filato-filtrante-polipropilene-antimicrobico" />
+
+        {{-- Row 36 --}}
+    @elseif(request()->is('product-detail/absorbent-bleached-cotton-yarn'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/filato-cotone-sbiancato-assorbente" />
+
+        {{-- Row 37 --}}
+    @elseif(request()->is('product-detail/zero-foaming-polypropylene-yarn'))
+        <link rel="alternate" hreflang="it"
+            href="https://italy.mmpfilter.com/dettaglio-prodotto/filato-polipropilene-zero-schiuma" />
+
+        {{-- Row 38 --}}
+    @elseif(request()->is('pharma-industry'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/industria-farmaceutica" />
+
+        {{-- Row 39 --}}
+    @elseif(request()->is('chemical-industry'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/industria-chimica" />
+
+        {{-- Row 40 --}}
+    @elseif(request()->is('water-treatment-industry'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/industria-trattamento-acque" />
+
+        {{-- Row 41 --}}
+    @elseif(request()->is('food-and-beverage-industry'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/industria-alimentare-e-bevande" />
+
+        {{-- Row 42 --}}
+    @elseif(request()->is('textile-industry'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/industria-tessile" />
+
+        {{-- Row 43 --}}
+    @elseif(request()->is('dairy-industry'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/industria-casearia" />
+
+        {{-- Row 44 --}}
+    @elseif(request()->is('oil-and-gas-industry'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/industria-petrolifera-e-gas" />
+
+        {{-- Row 45 --}}
+    @elseif(request()->is('cement-industry'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/industria-cemento" />
+
+        {{-- Row 46 --}}
+    @elseif(request()->is('power-plant-industry'))
+        <link rel="alternate" hreflang="it" href="https://italy.mmpfilter.com/industria-centrale-elettrica" />
+    @endif
+
+    <link rel="alternate" hreflang="x-default" href="{{ url()->current() }}" />
+
+
+
+    @if (request()->is('/'))
+        <!-- new dashboard links -->
+
+        <!-- bootstrap -->
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous">
+
+
+
+        <!-- slick slider css -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+            integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+            integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
 
 
-@if (request()->is('/'))
+        <!-- end new dashboard links -->
+    @else
+        <!-- internal pages -->
 
-    <!-- new dashboard links -->
-
-    <!-- bootstrap -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-
-          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 
 
-    <!-- slick slider css -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-
-          integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
 
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        <link rel="stylesheet" href="{{ asset('public/front/css/slick.css') }}?v={{ time() }}" />
 
-          integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        <link rel="stylesheet" href="{{ asset('public/front/css/slick-theme.css') }}?v={{ time() }}" />
 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{{ asset('public/front/css/fancybox.min.css') }}?v={{ time() }}" />
 
+        <link rel="stylesheet" href="{{ asset('public/front/css/mmp.style.css') }}?v={{ time() }}" />
 
+        <link rel="stylesheet" href="{{ asset('public/front/css/mmp.responsive.css') }}?v={{ time() }}" />
 
-
-
-    <!-- end new dashboard links -->
-
-
-
-@else
-
-    <!-- internal pages -->
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-
-            crossorigin="anonymous"></script>
-
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-
-          rel="stylesheet"
-
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-
-          crossorigin="anonymous">
-
-
-
-    <link rel="stylesheet" href="{{ asset('public/front/css/slick.css') }}?v={{ time() }}" />
-
-    <link rel="stylesheet" href="{{ asset('public/front/css/slick-theme.css') }}?v={{ time() }}" />
-
-    <link rel="stylesheet" href="{{ asset('public/front/css/fancybox.min.css') }}?v={{ time() }}" />
-
-    <link rel="stylesheet" href="{{ asset('public/front/css/mmp.style.css') }}?v={{ time() }}" />
-
-    <link rel="stylesheet" href="{{ asset('public/front/css/mmp.responsive.css') }}?v={{ time() }}" />
-
-    <!-- internal pages end -->
-
-@endif
+        <!-- internal pages end -->
+    @endif
 
 
 
     <!-- comman links -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-     <!-- google fonts -->
+    <!-- google fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-
         rel="stylesheet">
 
     <!-- css -->
 
-     <link rel="stylesheet" href="{{ asset('public/newpublic/css/offcanvas.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/newpublic/css/offcanvas.css') }}">
 
     <link rel="stylesheet" href="{{ asset('public/newpublic/css/header.css') }}">
 
@@ -160,31 +336,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <meta property="og:image:height" content="627">
 
-    <meta property="og:url" content="{{url()->current()}}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
 
     <meta property="og:type" content="website">
 
-    @if(!empty($og_image))
-
+    @if (!empty($og_image))
         <meta property="og:image" content="{{ asset('public/blog_og_image/' . $blogdetail->og_image) }}" />
-
     @elseif(!empty($data['products']->mobile_image))
-
-     <meta property="og:image" content="{{ asset('public/Product_Mobile_Images/'.$data['products']->mobile_image) }}" />
-
-    
-
+        <meta property="og:image"
+            content="{{ asset('public/Product_Mobile_Images/' . $data['products']->mobile_image) }}" />
     @else
-
-         <meta property="og:image" content="{{ isset($ogimage) ? $ogimage : asset('public/front/images/air-filters.png') }}" />
-
+        <meta property="og:image"
+            content="{{ isset($ogimage) ? $ogimage : asset('public/front/images/air-filters.png') }}" />
     @endif
 
     <!--og tags ends-->
 
 
 
-      <link rel="canonical" href="{{ url()->current() }}"> 
+    <link rel="canonical" href="{{ url()->current() }}">
 
     <!--Schema tags start-->
 
@@ -251,34 +421,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Meta Pixel Code -->
 
     <script>
+        ! function(f, b, e, v, n, t, s)
 
-    !function(f,b,e,v,n,t,s)
+        {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
 
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
 
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
 
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
 
-    n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
 
-    t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
 
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
 
-    'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1683095025802352');
 
-    fbq('init', '1683095025802352');
-
-    fbq('track', 'PageView');
-
+        fbq('track', 'PageView');
     </script>
 
     <noscript><img height="1" width="1" style="display:none"
-
-    src="https://www.facebook.com/tr?id=1683095025802352&ev=PageView&noscript=1"
-
-    /></noscript>
+            src="https://www.facebook.com/tr?id=1683095025802352&ev=PageView&noscript=1" /></noscript>
 
     <!-- End Meta Pixel Code -->
 
@@ -288,7 +464,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<!--Schema tags ends-->
+    <!--Schema tags ends-->
 
 
 
@@ -298,283 +474,260 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P83LKH6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P83LKH6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <style>
-
-        .lang_arr{position:absolute;right:5px;top:10px;z-index:-1;}
-
+        .lang_arr {
+            position: absolute;
+            right: 5px;
+            top: 10px;
+            z-index: -1;
+        }
     </style>
 
     @php
 
-    $categories = DB::table('categories')
+        $categories = DB::table('categories')
 
-        ->leftJoin('product', function($join) {
+            ->leftJoin('product', function ($join) {
+                $join
+                    ->on('categories.id', '=', 'product.category_id')
 
-            $join->on('categories.id', '=', 'product.category_id')
+                    ->where('product.is_delete', '=', '0');
+            })
 
-                 ->where('product.is_delete', '=', '0');
+            ->where('categories.is_delete', '0')
 
-        })
+            ->select(
+                'categories.id as category_id',
+                'categories.category_name',
+                'categories.category_url',
+                'product.id as product_id',
+                'product.product_name',
+                'product.producturl',
+            )
 
-        ->where('categories.is_delete', '0')
+            ->get()
 
-        ->select('categories.id as category_id', 'categories.category_name','categories.category_url', 'product.id as product_id', 'product.product_name', 'product.producturl')
-
-        ->get()
-
-        ->groupBy('category_id');
+            ->groupBy('category_id');
 
     @endphp
 
-    
+
 
     @if (request()->is('liquid-bag'))
-
         <header>
-
-    @else
-
-        <header class="{{ request()->is('/') ? '' : 'is-white' }}">
-
+        @else
+            <header class="{{ request()->is('/') ? '' : 'is-white' }}">
     @endif
 
-        <div class="header-container">
+    <div class="header-container">
 
-            <nav>
-
-                
-
-                 @include('layouts.new_frontheader')
-
-                <!-- LEFT MENU (DESKTOP) -->
-
-                <ul class="nav-links d-none">
-
-                    <li><span class="hamburger-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
-
-                                xmlns="http://www.w3.org/2000/svg">
-
-                                <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" />
-
-                                <line x1="9.5" y1="12.5" x2="26.5" y2="12.5" stroke-linecap="round" />
-
-                                <line x1="9.5" y1="17.5" x2="26.5" y2="17.5" stroke-linecap="round" />
-
-                                <line x1="9.5" y1="22.5" x2="26.5" y2="22.5" stroke-linecap="round" />
-
-                            </svg>
+        <nav>
 
 
 
-                        </span></li>
+            @include('layouts.new_frontheader')
 
-                    <li>
+            <!-- LEFT MENU (DESKTOP) -->
 
-                        <a data-menu-target="productsMenu">Products</a>
+            <ul class="nav-links d-none">
 
-                    </li>
+                <li><span class="hamburger-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
 
-                    <li>
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
 
-                        <a data-menu-target="industriesMenu">Industries</a>
+                            <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" />
 
-                    </li>
+                            <line x1="9.5" y1="12.5" x2="26.5" y2="12.5"
+                                stroke-linecap="round" />
 
-                    <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                            <line x1="9.5" y1="17.5" x2="26.5" y2="17.5"
+                                stroke-linecap="round" />
 
-                </ul>
-
-                <div class="mobile_hamburger">
-
-                    <span class="hamburger-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                            <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="white" />
-
-                            <line x1="9.5" y1="12.5" x2="26.5" y2="12.5" stroke="white" stroke-linecap="round" />
-
-                            <line x1="9.5" y1="17.5" x2="26.5" y2="17.5" stroke="white" stroke-linecap="round" />
-
-                            <line x1="9.5" y1="22.5" x2="26.5" y2="22.5" stroke="white" stroke-linecap="round" />
+                            <line x1="9.5" y1="22.5" x2="26.5" y2="22.5"
+                                stroke-linecap="round" />
 
                         </svg>
 
 
 
-                    </span>
+                    </span></li>
 
-                </div>
+                <li>
 
+                    <a data-menu-target="productsMenu">Products</a>
 
+                </li>
 
-                <!-- LOGO -->
+                <li>
 
-                <div class="mb_header logo d-lg-none">
+                    <a data-menu-target="industriesMenu">Industries</a>
 
-                    <a href="{{ url('/') }}">
+                </li>
 
-                        <img loading="lazy" src="{{ asset('public/newpublic/images/head-logo.svg') }}" alt="mmp" class="img-fluid logo_white">
+                <li><a href="{{ route('contact') }}">Contact Us</a></li>
 
-                        <img loading="lazy" src="{{ asset('public/newpublic/images/head-logo-blue.svg') }}" alt="mmp" class="img-fluid logo_blue">
+            </ul>
 
-                    </a>
+            <div class="mobile_hamburger">
 
-                </div>
+                <span class="hamburger-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
 
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
 
+                        <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="white" />
 
-                <div class="d-flex align-items-center gap-3">
+                        <line x1="9.5" y1="12.5" x2="26.5" y2="12.5" stroke="white"
+                            stroke-linecap="round" />
 
-                    <div>
+                        <line x1="9.5" y1="17.5" x2="26.5" y2="17.5" stroke="white"
+                            stroke-linecap="round" />
 
-                        <div class="language-select">
+                        <line x1="9.5" y1="22.5" x2="26.5" y2="22.5" stroke="white"
+                            stroke-linecap="round" />
 
-                            <svg width="20" height="20" viewBox="0 0 32 32" fill="none"
-
-                                xmlns="http://www.w3.org/2000/svg">
-
-                                <path
-
-                                    d="M16 28C18.66 27.9998 21.2446 27.1163 23.348 25.488C25.4515 23.8598 26.9546 21.5791 27.6213 19.004M16 28C13.34 27.9998 10.7554 27.1163 8.65197 25.488C6.54854 23.8598 5.04544 21.5791 4.37867 19.004M16 28C19.3133 28 22 22.6267 22 16C22 9.37334 19.3133 4 16 4M16 28C12.6867 28 10 22.6267 10 16C10 9.37334 12.6867 4 16 4M27.6213 19.004C27.868 18.044 28 17.0373 28 16C28.0033 13.9361 27.4718 11.9067 26.4573 10.1093M27.6213 19.004C24.0656 20.9752 20.0656 22.0064 16 22C11.784 22 7.82267 20.9133 4.37867 19.004M4.37867 19.004C4.12633 18.0226 3.9991 17.0133 4 16C4 13.86 4.56 11.8493 5.54267 10.1093M16 4C18.1283 3.99911 20.2186 4.56448 22.0563 5.63809C23.894 6.71169 25.4129 8.25489 26.4573 10.1093M16 4C13.8717 3.99911 11.7814 4.56448 9.94375 5.63809C8.10606 6.71169 6.58708 8.25489 5.54267 10.1093M26.4573 10.1093C23.5542 12.6239 19.8407 14.0055 16 14C12.0027 14 8.34667 12.5333 5.54267 10.1093"
-
-                                    stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"
-
-                                    stroke-linejoin="round" />
-
-                            </svg>
+                    </svg>
 
 
 
-                            <div class="dropdown-wrapper notranslate">
+                </span>
 
-                                <!--<input type="text" id="dropdownInput" class="dropdown-input-lan"-->
-
-                                <!--    placeholder="Select Language" readonly />-->
-
-                                   @include('layouts.language')
-
-                                <div class="dropdown-list" id="dropdownList">
-
-                                    <div class="search-box">
-
-                                        <input type="text" id="searchInput" placeholder="Search language..." />
-
-                                    </div>
-
-                                    <div class="list-items" id="listItems"></div>
-
-                                </div>
-
-                                <svg class="lang_arr" id="lang-arr" width="12" height="7" viewBox="0 0 12 7" fill="none"
-
-                                xmlns="http://www.w3.org/2000/svg">
-
-                                <path d="M11.3491 0.5L5.92456 5.92456L0.5 0.5" stroke="white" stroke-linecap="round"
-
-                                    stroke-linejoin="round" />
-
-                            </svg>
-
-                            </div>
-
-                            
+            </div>
 
 
 
-                            <div id="google_translate_element" style="display:none;"></div>
+            <!-- LOGO -->
 
-                        </div>
+            <div class="mb_header logo d-lg-none">
 
-                    </div>
+                <a href="{{ url('/') }}">
+
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/head-logo.svg') }}" alt="mmp"
+                        class="img-fluid logo_white">
+
+                    <img loading="lazy" src="{{ asset('public/newpublic/images/head-logo-blue.svg') }}"
+                        alt="mmp" class="img-fluid logo_blue">
+
+                </a>
+
+            </div>
 
 
 
-                    <!-- RIGHT MENU (DESKTOP) -->
+            <div class="d-flex align-items-center gap-3">
 
-                    <div class="right_menu_desktop">
+                <div>
 
-                        <button type="button" class="btn_3" id="openEnquiryPopup">
+                    <div class="language-select">
 
-                            <span>Enquire Now</span>
+                        <svg style="cursor: pointer;" width="20" height="20" viewBox="0 0 32 32"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                            <span></span>
+                            <path
+                                d="M16 28C18.66 27.9998 21.2446 27.1163 23.348 25.488C25.4515 23.8598 26.9546 21.5791 27.6213 19.004M16 28C13.34 27.9998 10.7554 27.1163 8.65197 25.488C6.54854 23.8598 5.04544 21.5791 4.37867 19.004M16 28C19.3133 28 22 22.6267 22 16C22 9.37334 19.3133 4 16 4M16 28C12.6867 28 10 22.6267 10 16C10 9.37334 12.6867 4 16 4M27.6213 19.004C27.868 18.044 28 17.0373 28 16C28.0033 13.9361 27.4718 11.9067 26.4573 10.1093M27.6213 19.004C24.0656 20.9752 20.0656 22.0064 16 22C11.784 22 7.82267 20.9133 4.37867 19.004M4.37867 19.004C4.12633 18.0226 3.9991 17.0133 4 16C4 13.86 4.56 11.8493 5.54267 10.1093M16 4C18.1283 3.99911 20.2186 4.56448 22.0563 5.63809C23.894 6.71169 25.4129 8.25489 26.4573 10.1093M16 4C13.8717 3.99911 11.7814 4.56448 9.94375 5.63809C8.10606 6.71169 6.58708 8.25489 5.54267 10.1093M26.4573 10.1093C23.5542 12.6239 19.8407 14.0055 16 14C12.0027 14 8.34667 12.5333 5.54267 10.1093"
+                                stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
 
-                        </button>
+                        </svg>
+
+
+
+                        @include('layouts.language')
+
+
+
+
+
 
                     </div>
 
                 </div>
 
-            </nav>
 
-        </div>
+
+                <!-- RIGHT MENU (DESKTOP) -->
+
+                <div class="right_menu_desktop">
+
+                    <button type="button" class="btn_3" id="openEnquiryPopup">
+
+                        <span>Enquire Now</span>
+
+                        <span></span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
 
     </header>
 
     <script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-
-
-    const dropdown = document.getElementById("dropdownList");
-
-    const arrow = document.getElementById("lang-arr");
+        document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    const observer = new MutationObserver(function () {
+            const dropdown = document.getElementById("dropdownList");
 
-        if (dropdown.classList.contains("show")) {
-
-            arrow.style.transform = "rotate(180deg)";
-
-        } else {
-
-            arrow.style.transform = "rotate(0deg)";
-
-        }
-
-    });
+            const arrow = document.getElementById("lang-arr");
 
 
 
-    observer.observe(dropdown, { attributes: true });
+            const observer = new MutationObserver(function() {
+
+                if (dropdown.classList.contains("show")) {
+
+                    arrow.style.transform = "rotate(180deg)";
+
+                } else {
+
+                    arrow.style.transform = "rotate(0deg)";
+
+                }
+
+            });
 
 
 
-});
+            observer.observe(dropdown, {
+                attributes: true
+            });
 
-</script>
+
+
+        });
+    </script>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
 
-        document.addEventListener("DOMContentLoaded", function () {
 
-        
 
             const headerBtn = document.getElementById("openEnquiryPopup");
 
             const enquiryPopup = document.getElementById("enqpoup");
 
-        
+
 
             if (!headerBtn || !whatsappPopup) return;
 
-        
+
 
             // Open popup from header button
 
-            headerBtn.addEventListener("click", function (e) {
+            headerBtn.addEventListener("click", function(e) {
 
-             
+
 
                 e.preventDefault();
 
@@ -582,10 +735,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             });
 
-        
+
 
         });
-
     </script>
 
     <main>
@@ -612,7 +764,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-                    <!-- MAIN MENU LEVEL -->
+        <!-- MAIN MENU LEVEL -->
 
         <!--            <div class="menu-level active" id="mainMenu">-->
 
@@ -690,7 +842,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-                    <!-- PRODUCTS SUBMENU LEVEL -->
+        <!-- PRODUCTS SUBMENU LEVEL -->
 
         <!--            <div class="menu-level hidden" id="productsMenu">-->
 
@@ -702,17 +854,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!--                </div>-->
 
-                    
+
 
         <!--                <ul class="menu-list header_product_list">-->
 
-                    
 
-        <!--                    @foreach($categories as $category_id => $categoryGroup)-->
+
+        <!--                    @foreach ($categories as $category_id => $categoryGroup)
+-->
 
         <!--                        @php $category = $categoryGroup->first(); @endphp-->
 
-                    
+
 
         <!--                        <li>-->
 
@@ -722,21 +875,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!--                            </button>-->
 
-                    
+
 
         <!--                            <div class="panel">-->
 
         <!--                                <ul class="submenu-list">-->
 
-                    
 
-        <!--                                    @foreach($categoryGroup as $product)-->
 
-        <!--                                        @if($product->product_id)-->
+        <!--                                    @foreach ($categoryGroup as $product)
+-->
 
-                    
+        <!--                                        @if ($product->product_id)
+-->
 
-        <!--                                            @if(strtolower(trim($product->product_name)) == 'wound filter cartridge machine')-->
+
+
+        <!--                                            @if (strtolower(trim($product->product_name)) == 'wound filter cartridge machine')
+-->
 
         <!--                                                <li>-->
 
@@ -748,7 +904,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!--                                                </li>-->
 
-        <!--                                            @else-->
+    <!--                                            @else-->
 
         <!--                                                <li>-->
 
@@ -760,17 +916,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!--                                                </li>-->
 
-        <!--                                            @endif-->
+        <!--
+@endif-->
 
-                    
 
-        <!--                                        @endif-->
 
-        <!--                                    @endforeach-->
+        <!--
+@endif-->
 
-                                            
+        <!--
+@endforeach-->
 
-        <!--                                    @if($category->category_url == 'water-filter-cartridges')-->
+
+
+        <!--                                    @if ($category->category_url == 'water-filter-cartridges')
+-->
 
         <!--                                        <li>-->
 
@@ -782,7 +942,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!--                                        </li>-->
 
-        <!--                                    @endif-->
+        <!--
+@endif-->
 
         <!--                                </ul>-->
 
@@ -790,13 +951,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!--                        </li>-->
 
-                    
 
-        <!--                    @endforeach-->
 
-                    
+        <!--
+@endforeach-->
 
-                            <!-- Special Static Link -->
+
+
+        <!-- Special Static Link -->
 
         <!--                    <li>-->
 
@@ -808,7 +970,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!--                    </li>-->
 
-                    
+
 
         <!--                </ul>-->
 
@@ -816,7 +978,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-                    <!-- INDUSTRIES SUBMENU LEVEL -->
+        <!-- INDUSTRIES SUBMENU LEVEL -->
 
         <!--            <div class="menu-level hidden" id="industriesMenu">-->
 
@@ -854,7 +1016,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-                    <!-- RESOURCES SUBMENU LEVEL -->
+        <!-- RESOURCES SUBMENU LEVEL -->
 
         <!--            <div class="menu-level hidden" id="resourcesMenu">-->
 
@@ -886,7 +1048,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!--</div>-->
 
-         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
 
             <div class="offcanvas-header">
 
@@ -908,7 +1070,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         <ul class="menu-list">
 
-                           
+
 
                             <li>
 
@@ -946,15 +1108,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
                             </li>
 
-                            
 
-                             <li>
+
+                            <li>
 
                                 <a href="{{ route('about') }}">About Us</a>
 
                             </li>
 
-                            
+
 
                             <li>
 
@@ -998,17 +1160,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         </div>
 
-                    
+
 
                         <ul class="menu-list header_product_list">
 
-                    
 
-                            @foreach($categories as $category_id => $categoryGroup)
 
+                            @foreach ($categories as $category_id => $categoryGroup)
                                 @php $category = $categoryGroup->first(); @endphp
 
-                    
+
 
                                 <li>
 
@@ -1018,22 +1179,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
                                     </button>
 
-                    
+
 
                                     <div class="panel">
 
                                         <ul class="submenu-list">
 
-                    
 
-                                            @foreach($categoryGroup as $product)
 
-                                                @if($product->product_id)
-
-                    
-
-                                                    @if(strtolower(trim($product->product_name)) == 'wound filter cartridge machine')
-
+                                            @foreach ($categoryGroup as $product)
+                                                @if ($product->product_id)
+                                                    @if (strtolower(trim($product->product_name)) == 'wound filter cartridge machine')
                                                         <li>
 
                                                             <a href="{{ route('woundfiltercartridgemachine') }}">
@@ -1043,31 +1199,24 @@ document.addEventListener("DOMContentLoaded", function () {
                                                             </a>
 
                                                         </li>
-
                                                     @else
-
                                                         <li>
 
-                                                            <a href="{{ route('productdetail', ['url' => $product->producturl]) }}">
+                                                            <a
+                                                                href="{{ route('productdetail', ['url' => $product->producturl]) }}">
 
                                                                 {{ $product->product_name }}
 
                                                             </a>
 
                                                         </li>
-
                                                     @endif
-
-                    
-
                                                 @endif
-
                                             @endforeach
 
-                                            
 
-                                            @if($category->category_url == 'water-filter-cartridges')
 
+                                            @if ($category->category_url == 'water-filter-cartridges')
                                                 <li>
 
                                                     <a href="{{ url('/product-detail/liquid-filter-bags') }}">
@@ -1077,7 +1226,6 @@ document.addEventListener("DOMContentLoaded", function () {
                                                     </a>
 
                                                 </li>
-
                                             @endif
 
                                         </ul>
@@ -1085,12 +1233,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </div>
 
                                 </li>
-
-                    
-
                             @endforeach
 
-                    
+
 
                             <!-- Special Static Link -->
 
@@ -1104,7 +1249,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                             </li>
 
-                    
+
 
                         </ul>
 
@@ -1185,7 +1330,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <!-- Custom JavaScript -->
 
         <script>
-
             // Track current menu
 
             let currentMenu = 'mainMenu';
@@ -1380,7 +1524,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Listen for clicks on header nav links with data-menu-target
 
-            document.addEventListener('click', function (e) {
+            document.addEventListener('click', function(e) {
 
                 const trigger = e.target.closest('[data-menu-target]');
 
@@ -1402,43 +1546,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
             document.querySelectorAll('[data-menu-target]').forEach(link => {
 
-    link.addEventListener('click', function (e) {
+                link.addEventListener('click', function(e) {
 
 
 
-        e.preventDefault();
+                    e.preventDefault();
 
 
 
-        const menuTarget = this.getAttribute('data-menu-target');
+                    const menuTarget = this.getAttribute('data-menu-target');
 
 
 
-        const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+                    const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
 
-        offcanvas.show();
-
-
-
-        // Wait for offcanvas animation to finish
-
-        setTimeout(() => {
-
-            resetToMenu(menuTarget);
-
-        }, 300);
+                    offcanvas.show();
 
 
 
-    });
+                    // Wait for offcanvas animation to finish
 
-});
+                    setTimeout(() => {
+
+                        resetToMenu(menuTarget);
+
+                    }, 300);
+
+
+
+                });
+
+            });
 
 
 
             // Delegate click events for menu items
 
-            menuContainer.addEventListener('click', function (e) {
+            menuContainer.addEventListener('click', function(e) {
 
                 // Check if clicked on menu item with submenu
 
@@ -1488,7 +1632,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Listen for offcanvas hide event to reset menu
 
-            offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
+            offcanvasElement.addEventListener('hidden.bs.offcanvas', function() {
 
                 resetToMainMenu();
 
@@ -1497,7 +1641,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             // console.log('Bootstrap Offcanvas menu with header links initialized');
-
         </script>
 
         <!-- offcanvas -->
@@ -1511,7 +1654,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <!-- header script -->
 
         <script>
-
             // gsap
 
             const header = document.querySelector("header");
@@ -1591,20 +1733,18 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             // gsap
-
         </script>
 
         <!-- header script -->
 
-          <script>
-
+        <script>
             var acc = document.getElementsByClassName("customaccordion");
 
 
 
             for (var i = 0; i < acc.length; i++) {
 
-                acc[i].addEventListener("click", function () {
+                acc[i].addEventListener("click", function() {
 
 
 
@@ -1631,7 +1771,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
             }
-
         </script>
 
         <!-- header scripts -->
