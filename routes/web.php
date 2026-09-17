@@ -13,7 +13,6 @@ use App\Http\Controllers\admin\OurBrandsController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProductTrustController;
 use App\Http\Controllers\admin\ReviewController;
-use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\VideoController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\HomeController;
