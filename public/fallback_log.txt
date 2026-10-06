@@ -164,3 +164,12 @@ public/front/images/Pleated_Filter_Bags_Verticle.mp4 GET
 public/newpublic/images/liquid/filter-bg-2.png GET
 .well-known/appspecific/com.chrome.devtools.json GET
 .well-known/appspecific/com.chrome.devtools.json GET
+air-filter-cartridges GET
+category-products/4 GET
+category-products/1 GET
+category-products/1 GET
+category-products/1 GET
+category-products/1 GET
+category-products/1 GET
+category-products/2 GET
+category-products/1 GET
