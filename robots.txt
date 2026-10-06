@@ -1,8 +1,0 @@
-User-Agent: *
-Disallow: /?pid
-Disallow: /?fp
-Disallow: /login
-Disallow: /thank-you
-Disallow: /landing 
-Allow: /
-Sitemap: https://mmpfilter.com/sitemap.xml

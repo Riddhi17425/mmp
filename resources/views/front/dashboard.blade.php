@@ -2960,6 +2960,13 @@
                 } else {
                     readMore.style.display = "none";
                 }
+                
+                // Initialize tooltip for dynamically cloned elements
+                if (window.bootstrap && readMore.hasAttribute("data-bs-toggle")) {
+                    if (!bootstrap.Tooltip.getInstance(readMore)) {
+                        new bootstrap.Tooltip(readMore);
+                    }
+                }
 
             });
 

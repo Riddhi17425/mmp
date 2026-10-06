@@ -55,4 +55,3 @@ $response = tap($kernel->handle(
 $kernel->terminate($request, $response);
 ob_start();
 ?>
-<script></script>

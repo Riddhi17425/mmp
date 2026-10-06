@@ -1,6 +1,7 @@
 <?php
  
 use App\Http\Controllers\admin\adminController;
+use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\CaseStudyController;
 use App\Http\Controllers\admin\CategoryController;
@@ -12,7 +13,6 @@ use App\Http\Controllers\admin\OurBrandsController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProductTrustController;
 use App\Http\Controllers\admin\ReviewController;
-use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\VideoController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\HomeController;
@@ -23,7 +23,8 @@ use App\Models\Review;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
- 
+use App\Http\Controllers\SitemapController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,10 +64,14 @@ Route::get('/clear-cache', function () {
     Artisan::call('cache:clear');
     Artisan::call('route:clear');
     Artisan::call('view:clear');
- 
-    return '✅ All Laravel caches cleared successfully!';
+
+    return 'All Laravel caches cleared successfully!';
 });
- 
+
+// START - DYNAMIC SITEMAP
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+// END - DYNAMIC SITEMAP
+
 //Front route
 Route::get('/', [dashboardController::class, 'index']);
 Route::get('/case-studies', [dashboardController::class, 'casestudy'])->name('casestudy');
