@@ -2800,7 +2800,7 @@
 
 
 
-<script>
+{{-- <script>
     document.addEventListener("DOMContentLoaded", function() {
 
         const modalElement = document.getElementById('autoOpenModal');
@@ -2866,8 +2866,52 @@
         });
 
     });
-</script>
+</script> --}}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
 
+        const modalElement = document.getElementById('autoOpenModal');
+        const videos = document.querySelectorAll('.promoVideo');
+        const myModal = new bootstrap.Modal(modalElement, { focus: false });
+
+        function isUserBusy() {
+            if (document.querySelector('.modal.show, .offcanvas.show')) return true;
+            if (document.querySelector('#whatsappPopup.active')) return true;
+            if (document.querySelector('#enqpoup.active')) return true;
+
+            const active = document.activeElement;
+            if (active && ['INPUT', 'TEXTAREA', 'SELECT'].includes(active.tagName)) return true;
+
+            return false;
+        }
+
+        // 1 second baad modal kholo (agar user busy nahi hai)
+        setTimeout(() => {
+            if (isUserBusy()) return;
+            myModal.show();
+        }, 1000);
+
+        modalElement.addEventListener('shown.bs.modal', function() {
+            videos.forEach(video => {
+                if (window.getComputedStyle(video).display !== 'none') {
+                    video.play().then(() => {
+                        video.classList.add('video-ready');
+                    }).catch(error => {
+                        console.log("Autoplay blocked", error);
+                    });
+                }
+            });
+        });
+
+        modalElement.addEventListener('hidden.bs.modal', function() {
+            videos.forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+                video.classList.remove('video-ready');
+            });
+        });
+    });
+</script>
 
 
 <!-- modal home page vddeo script end-->
