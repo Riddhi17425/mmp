@@ -433,24 +433,26 @@
           </div>
           @php
 
+        $separateCategoryUrls = [
+            'pp-functional-filtration-yarns',
+            'synthetic-filtration-yarns',
+            'technical-textile-yarns',
+        ];
+
         $categorys = \App\Models\Category::with(['products' => function ($query) {
                 $query->where('status', 1)->where('is_delete', '0');
             }])
             ->where('is_delete', '0')
-            ->where('status', 1)
+            ->where(function ($query) use ($separateCategoryUrls) {
+                $query->where('status', 1)
+                    ->orWhereIn('category_url', $separateCategoryUrls);
+            })
             ->get();
             
         @endphp
           <div class="dropdown" id="dd-products">
             <div class="dd-top">
               <div class="products-grid">
-                @php
-                    $separateCategoryUrls = [
-                        'pp-functional-filtration-yarns',
-                        'synthetic-filtration-yarns',
-                        'technical-textile-yarns',
-                    ];
-                @endphp
                 @foreach ($categorys as $item)
                 @php
                     $categoryName = strtolower(trim($item->category_name));
@@ -491,10 +493,19 @@
                                     </a>
                                 </li>
                             @endif
-                
-                            
+
                         </ul>
-                        
+
+                        @if($item->category_url == 'filtration-yarns')
+                            @foreach ($categorys->whereIn('category_url', $separateCategoryUrls) as $extraCategory)
+                                <div class="cat-title mt-3">
+                                    <a href="{{ url('product/' . $extraCategory->category_url) }}">
+                                        {{ $extraCategory->category_name }}
+                                    </a>
+                                </div>
+                            @endforeach
+                        @endif
+
                         {{-- ADD MACHINE UNDER FILTRATION YARN --}}
                             @if(str_contains($categoryName,'air filtration'))
                                 <div class="cat-card mt-2">
@@ -519,30 +530,6 @@
                             @endif
                     </div>
                 @endforeach
-                <div class="cat-card" style="grid-column: 3; grid-row: 2;">
-                    @foreach ($categorys->whereIn('category_url', $separateCategoryUrls) as $extraCategory)
-                        <div class="cat-title">
-                            <a href="{{ url('product/' . $extraCategory->category_url) }}">
-                                {{ $extraCategory->category_name }}
-                            </a>
-                        </div>
-                        <!-- <ul class="cat-items">
-                            @foreach ($extraCategory->products as $product_item)
-                                @php
-                                    $productName = strtolower(trim($product_item->product_name));
-                                @endphp
-                                @if($productName == 'wound filter cartridge machine')
-                                    @continue
-                                @endif
-                                <li>
-                                    <a href="{{ route('productdetail', ['url' => $product_item->producturl]) }}">
-                                        {{ $product_item->product_name }}
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul> -->
-                    @endforeach
-                </div>
                 
                 {{-- <!-- 2: Air Filtration -->
                 <div class="cat-card">

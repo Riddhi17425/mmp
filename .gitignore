@@ -5,6 +5,7 @@
 /public/Product_Mobile_Images
 /storage/*
 /public/storage
+/storage/logs
 /storage/*.key
 /vendor
 .env

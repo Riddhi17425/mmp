@@ -29,7 +29,6 @@ class ProductFrontController extends Controller
      */
     public function index($url)
     {
-    
         $category = Category::where('category_url', $url)
             //->where('status', 1)
             ->where('is_delete', '0')

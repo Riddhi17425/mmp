@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 
 <html>
-
-
-
 <head>
-
     <!-- Google Tag Manager -->
-
     <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -456,22 +451,7 @@
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1683095025802352&ev=PageView&noscript=1" /></noscript>
 
-    <!-- End Meta Pixel Code -->
-
-
-
-
-
-
-
-    <!--Schema tags ends-->
-
-
-
 </head>
-
-
-
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P83LKH6" height="0" width="0"
@@ -489,6 +469,12 @@
 
     @php
 
+        $mobileSeparateCategoryUrls = [
+            'pp-functional-filtration-yarns',
+            'synthetic-filtration-yarns',
+            'technical-textile-yarns',
+        ];
+
         $categories = DB::table('categories')
 
             ->leftJoin('product', function ($join) {
@@ -500,7 +486,10 @@
             })
 
             ->where('categories.is_delete', '0')
-            ->where('categories.status', '1')
+            ->where(function ($query) use ($mobileSeparateCategoryUrls) {
+                $query->where('categories.status', '1')
+                    ->orWhereIn('categories.category_url', $mobileSeparateCategoryUrls);
+            })
 
             ->select(
                 'categories.id as category_id',
@@ -743,313 +732,6 @@
     </script>
 
     <main>
-
-        <!-- offcanvas -->
-
-        <!-- Offcanvas Overlay -->
-
-        <!-- Bootstrap Offcanvas -->
-
-        <!--<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">-->
-
-        <!--    <div class="offcanvas-header">-->
-
-        <!--        <h5 class="offcanvas-title">Menu</h5>-->
-
-        <!--        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>-->
-
-        <!--    </div>-->
-
-        <!--    <div class="offcanvas-body">-->
-
-        <!--        <div class="menu-container">-->
-
-
-
-        <!-- MAIN MENU LEVEL -->
-
-        <!--            <div class="menu-level active" id="mainMenu">-->
-
-        <!--                <ul class="menu-list">-->
-
-        <!--                    <li>-->
-
-        <!--                        <a href="{{ route('about') }}">About</a>-->
-
-        <!--                    </li>-->
-
-        <!--                    <li>-->
-
-        <!--                        <div class="menu-item" data-submenu="productsMenu">-->
-
-        <!--                            <span class="menu-item-text">Products</span>-->
-
-        <!--                            <span class="arrow-right">›</span>-->
-
-        <!--                        </div>-->
-
-        <!--                    </li>-->
-
-        <!--                    <li>-->
-
-        <!--                        <div class="menu-item" data-submenu="industriesMenu">-->
-
-        <!--                            <span class="menu-item-text">Industries We Serve</span>-->
-
-        <!--                            <span class="arrow-right">›</span>-->
-
-        <!--                        </div>-->
-
-        <!--                    </li>-->
-
-        <!--                    <li>-->
-
-        <!--                        <div class="menu-item" data-submenu="resourcesMenu">-->
-
-        <!--                            <span class="menu-item-text">Resources</span>-->
-
-        <!--                            <span class="arrow-right">›</span>-->
-
-        <!--                        </div>-->
-
-        <!--                    </li>-->
-
-        <!--                    <li>-->
-
-        <!--                        <a href="{{ route('partnership') }}">Partnership Opportunities</a>-->
-
-        <!--                    </li>-->
-
-        <!--                    <li>-->
-
-        <!--                        <a href="{{ route('machinery') }}">Videos</a>-->
-
-        <!--                    </li>-->
-
-        <!--                    <li>-->
-
-        <!--                        <a href="{{ route('certifications') }}">Certifications</a>-->
-
-        <!--                    </li>-->
-
-        <!--                    <li>-->
-
-        <!--                        <a href="{{ route('contact') }}">Contact Us</a>-->
-
-        <!--                    </li>-->
-
-        <!--                </ul>-->
-
-        <!--            </div>-->
-
-
-
-        <!-- PRODUCTS SUBMENU LEVEL -->
-
-        <!--            <div class="menu-level hidden" id="productsMenu">-->
-
-        <!--                <div class="submenu-header" data-back="mainMenu">-->
-
-        <!--                    <span class="back-arrow">‹</span>-->
-
-        <!--                    <span class="submenu-title">Products</span>-->
-
-        <!--                </div>-->
-
-
-
-        <!--                <ul class="menu-list header_product_list">-->
-
-
-
-        <!--                    @foreach ($categories as $category_id => $categoryGroup)
--->
-
-        <!--                        @php $category = $categoryGroup->first(); @endphp-->
-
-
-
-        <!--                        <li>-->
-
-        <!--                            <button class="customaccordion">-->
-
-        <!--                                {{ $category->category_name }}-->
-
-        <!--                            </button>-->
-
-
-
-        <!--                            <div class="panel">-->
-
-        <!--                                <ul class="submenu-list">-->
-
-
-
-        <!--                                    @foreach ($categoryGroup as $product)
--->
-
-        <!--                                        @if ($product->product_id)
--->
-
-
-
-        <!--                                            @if (strtolower(trim($product->product_name)) == 'wound filter cartridge machine')
--->
-
-        <!--                                                <li>-->
-
-        <!--                                                    <a href="{{ route('woundfiltercartridgemachine') }}">-->
-
-        <!--                                                        {{ $product->product_name }}-->
-
-        <!--                                                    </a>-->
-
-        <!--                                                </li>-->
-
-    <!--                                            @else-->
-
-        <!--                                                <li>-->
-
-        <!--                                                    <a href="{{ route('productdetail', ['url' => $product->producturl]) }}">-->
-
-        <!--                                                        {{ $product->product_name }}-->
-
-        <!--                                                    </a>-->
-
-        <!--                                                </li>-->
-
-        <!--
-@endif-->
-
-
-
-        <!--
-@endif-->
-
-        <!--
-@endforeach-->
-
-
-
-        <!--                                    @if ($category->category_url == 'water-filter-cartridges')
--->
-
-        <!--                                        <li>-->
-
-        <!--                                            <a href="{{ url('/product-detail/liquid-filter-bags') }}">-->
-
-        <!--                                                Liquid Filter Bag-->
-
-        <!--                                            </a>-->
-
-        <!--                                        </li>-->
-
-        <!--
-@endif-->
-
-        <!--                                </ul>-->
-
-        <!--                            </div>-->
-
-        <!--                        </li>-->
-
-
-
-        <!--
-@endforeach-->
-
-
-
-        <!-- Special Static Link -->
-
-        <!--                    <li>-->
-
-        <!--                        <a href="{{ route('woundfiltercartridgemachine') }}">-->
-
-        <!--                            Wound Filter Cartridge Machine-->
-
-        <!--                        </a>-->
-
-        <!--                    </li>-->
-
-
-
-        <!--                </ul>-->
-
-        <!--            </div>-->
-
-
-
-        <!-- INDUSTRIES SUBMENU LEVEL -->
-
-        <!--            <div class="menu-level hidden" id="industriesMenu">-->
-
-        <!--                <div class="submenu-header" data-back="mainMenu">-->
-
-        <!--                    <span class="back-arrow">‹</span>-->
-
-        <!--                    <span class="submenu-title">Industries We Serve</span>-->
-
-        <!--                </div>-->
-
-        <!--                <ul class="submenu-list">-->
-
-        <!--                    <li><a href="{{ url('/pharma-industry') }}">Pharma Industry</a></li>-->
-
-        <!--                    <li><a href="{{ url('/chemical-industry') }}">Chemical Industry</a></li>-->
-
-        <!--                    <li><a href="{{ url('/water-treatment-industry') }}">Water Treatment Industry</a></li>-->
-
-        <!--                    <li><a href="{{ url('/food-and-beverage-industry') }}">Food and Beverage Industry</a></li>-->
-
-        <!--                    <li><a href="{{ url('/textile-industry') }}">Textile Industry</a></li>-->
-
-        <!--                    <li><a href="{{ url('/dairy-industry') }}">Dairy Industry</a></li>-->
-
-        <!--                    <li><a href="{{ url('/oil-and-gas-industry') }}">Oil and Gas Industry</a></li>-->
-
-        <!--                    <li><a href="{{ url('/cement-industry') }}">Cement Industry</a></li>-->
-
-        <!--                    <li><a href="{{ url('/power-plant-industry') }}">Power Plant Industry</a></li>-->
-
-        <!--                </ul>-->
-
-        <!--            </div>-->
-
-
-
-        <!-- RESOURCES SUBMENU LEVEL -->
-
-        <!--            <div class="menu-level hidden" id="resourcesMenu">-->
-
-        <!--                <div class="submenu-header" data-back="mainMenu">-->
-
-        <!--                    <span class="back-arrow">‹</span>-->
-
-        <!--                    <span class="submenu-title">Resources</span>-->
-
-        <!--                </div>-->
-
-        <!--                <ul class="submenu-list">-->
-
-        <!--                    <li><a href="{{ url('blogs') }}">Blogs</a></li>-->
-
-        <!--                    <li><a href="{{ route('event') }}">Events</a></li>-->
-
-        <!--                    <li><a href="{{ route('casestudy') }}">Case Study</a></li>-->
-
-        <!--                </ul>-->
-
-        <!--            </div>-->
-
-
-
-        <!--        </div>-->
-
-        <!--    </div>-->
-
-        <!--</div>-->
-
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
 
             <div class="offcanvas-header">
@@ -1171,6 +853,9 @@
                             @foreach ($categories as $category_id => $categoryGroup)
                                 @php $category = $categoryGroup->first(); @endphp
 
+                                @if (in_array($category->category_url, $mobileSeparateCategoryUrls, true))
+                                    @continue
+                                @endif
 
 
                                 <li>
@@ -1235,6 +920,33 @@
                                     </div>
 
                                 </li>
+
+                                @if ($category->category_url == 'filtration-yarns')
+                                    @foreach ($categories as $extraCategoryGroup)
+                                        @php $extraCategory = $extraCategoryGroup->first(); @endphp
+                                        @if (in_array($extraCategory->category_url, $mobileSeparateCategoryUrls, true))
+                                            <li>
+                                                <button class="customaccordion">
+                                                    {{ $extraCategory->category_name }}
+                                                </button>
+
+                                                <div class="panel">
+                                                    <ul class="submenu-list">
+                                                        @foreach ($extraCategoryGroup as $product)
+                                                            @if ($product->product_id)
+                                                                <li>
+                                                                    <a href="{{ route('productdetail', ['url' => $product->producturl]) }}">
+                                                                        {{ $product->product_name }}
+                                                                    </a>
+                                                                </li>
+                                                            @endif
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                @endif
                             @endforeach
 
 
