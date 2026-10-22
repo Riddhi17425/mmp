@@ -433,8 +433,11 @@
           </div>
           @php
 
-        $categorys = \App\Models\Category::with('products')
+        $categorys = \App\Models\Category::with(['products' => function ($query) {
+                $query->where('status', 1)->where('is_delete', '0');
+            }])
             ->where('is_delete', '0')
+            ->where('status', 1)
             ->get();
             
         @endphp

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Career;
 use App\Models\CaseStudy;
+use App\Models\Category;
 use App\Models\Contact;
 use App\Models\Event;
 use App\Models\HeaderInquiry;
@@ -54,11 +55,15 @@ class dashboardController extends Controller
             ->get();
 
         // Water Filtration
-        $waterCategory = \App\Models\Category::where('category_url', 'water-filter-cartridges')->first();
+        $waterCategory = \App\Models\Category::where('category_url', 'water-filter-cartridges')
+            ->where('status', 1)
+            ->where('is_delete', '0')
+            ->first();
         $waterProducts = [];
 
         if ($waterCategory) {
             $waterProducts = \App\Models\Product::where('category_id', $waterCategory->id)
+                ->where('status', 1)
                 ->where('is_delete', '0')
                 ->latest()
                 ->take(10)
@@ -66,11 +71,15 @@ class dashboardController extends Controller
         }
 
         // Air Filtration
-        $airCategory = \App\Models\Category::where('category_url', 'air-filter-cartridges')->first();
+        $airCategory = \App\Models\Category::where('category_url', 'air-filter-cartridges')
+            ->where('status', 1)
+            ->where('is_delete', '0')
+            ->first();
         $airProducts = [];
 
         if ($airCategory) {
             $airProducts = \App\Models\Product::where('category_id', $airCategory->id)
+                ->where('status', 1)
                 ->where('is_delete', '0')
                 ->latest()
                 ->take(10)
@@ -320,7 +329,12 @@ class dashboardController extends Controller
     {
         $title       = "Contact us for any kind of filtration requirements";
         $description = "Have questions about filter cartridges or housings? MMP Filtration is here to help with expert support and solutions. Get in touch with us today!";
-        $productname = Product::where('is_delete', '0')->get();
+        $productname = Product::where('status', 1)
+            ->where('is_delete', '0')
+            ->whereIn('category_id', Category::where('status', 1)
+                ->where('is_delete', '0')
+                ->select('id'))
+            ->get();
         //dd($productname);
         return view('front.contact', compact('productname', 'title', 'description'));
     }
@@ -369,7 +383,12 @@ class dashboardController extends Controller
     {
         $title       = "";
         $description = "";
-        $productname = Product::where('is_delete', '0')->get();
+        $productname = Product::where('status', 1)
+            ->where('is_delete', '0')
+            ->whereIn('category_id', Category::where('status', 1)
+                ->where('is_delete', '0')
+                ->select('id'))
+            ->get();
         return view('front.career', compact('productname', 'title', 'description'));
     }
     public function liquidbag()
@@ -382,7 +401,12 @@ class dashboardController extends Controller
     {
         $title       = "Partnership Opportunities: mmp Filtration";
         $description = "With 30+ years of expertise, MMP leads India’s filtration industry, offering raw materials for wound filter cartridges—trusted for quality & innovation.";
-        $productname = Product::get();
+        $productname = Product::where('status', 1)
+            ->where('is_delete', '0')
+            ->whereIn('category_id', Category::where('status', 1)
+                ->where('is_delete', '0')
+                ->select('id'))
+            ->get();
         //dd($productname);
         return view('front.partnership', compact('productname', 'title', 'description'));
     }

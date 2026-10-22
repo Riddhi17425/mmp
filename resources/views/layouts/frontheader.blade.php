@@ -495,10 +495,12 @@
                 $join
                     ->on('categories.id', '=', 'product.category_id')
 
-                    ->where('product.is_delete', '=', '0');
+                    ->where('product.is_delete', '=', '0')
+                    ->where('product.status', '=', '1');
             })
 
             ->where('categories.is_delete', '0')
+            ->where('categories.status', '1')
 
             ->select(
                 'categories.id as category_id',

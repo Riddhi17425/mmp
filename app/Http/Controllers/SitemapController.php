@@ -33,7 +33,8 @@ class SitemapController extends Controller
 
         // 2. PRODUCT CATEGORIES
 
-        $categories = Category::where('is_delete', '0')
+        $categories = Category::where('status', 1)
+            ->where('is_delete', '0')
             ->whereNotNull('category_url')
             ->where('category_url', '!=', '')
             ->get();
@@ -65,7 +66,11 @@ class SitemapController extends Controller
 
         // 3. PRODUCT DETAIL PAGES
 
-        $products = Product::where('is_delete', '0')
+        $products = Product::where('status', 1)
+            ->where('is_delete', '0')
+            ->whereIn('category_id', Category::where('status', 1)
+                ->where('is_delete', '0')
+                ->select('id'))
             ->whereNotNull('producturl')
             ->where('producturl', '!=', '')
             ->get();

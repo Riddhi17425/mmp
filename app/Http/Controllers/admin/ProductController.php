@@ -45,9 +45,11 @@ class ProductController extends Controller
         $validatedData = $request->validate([
             'product_name' => 'required',
             'producturl'   => 'required',
+            'status'       => 'required|in:0,1',
         ]);
 
         $post                           = new Product;
+        $post->status                   = $request->get('status');
         $post->category_id              = $request->get('category_id');
         $post->product_name             = $request->get('product_name');
         $post->alt                      = $request->get('alt');
@@ -117,7 +119,11 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'status' => 'required|in:0,1',
+        ]);
         $post                           = Product::find($id);
+        $post->status                   = $request->get('status');
         $post->category_id              = $request->get('category_id');
         $post->product_name             = $request->get('product_name');
         $post->alt                      = $request->get('alt');
