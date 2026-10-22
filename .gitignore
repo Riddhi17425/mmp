@@ -1,5 +1,9 @@
 /node_modules
 /public/hot
+/public/Product_Banner_Images
+/public/Product_Images
+/public/Product_Mobile_Images
+/storage/*
 /public/storage
 /storage/*.key
 /vendor

@@ -31,7 +31,7 @@ class ProductFrontController extends Controller
     {
     
         $category = Category::where('category_url', $url)
-            ->where('status', 1)
+            //->where('status', 1)
             ->where('is_delete', '0')
             ->first();
         if (!$category) {
@@ -82,7 +82,7 @@ class ProductFrontController extends Controller
             abort(404, 'Product not found');
         }
         $cat = Category::where('id', $data['products']->category_id)
-            ->where('status', 1)
+            //->where('status', 1)
             ->where('is_delete', '0')
             ->first();
     
