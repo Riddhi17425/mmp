@@ -470,7 +470,6 @@
     @php
 
         $mobileSeparateCategoryUrls = [
-            'pp-functional-filtration-yarns',
             'synthetic-filtration-yarns',
             'technical-textile-yarns',
         ];
