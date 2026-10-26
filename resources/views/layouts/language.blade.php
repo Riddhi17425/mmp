@@ -14,10 +14,9 @@
     background: rgba(255, 255, 255, 0.1); /* Subtle glass effect */
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    cursor: default;
+    cursor: pointer;
     transition: all 0.3s ease;
-    width: auto;
-    border:none !important;
+    width: 175px;
 }
 
 .language-select:hover {
@@ -28,20 +27,26 @@
 /* ================= Dropdown Wrapper ================= */
 .language-select .dropdown-wrapper {
     position: relative;
-    flex-grow: 0;
+    flex-grow: 1;
 }
 
 .language-select .dropdown-input-lan {
-    display: none;
-    pointer-events: none;
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: capitalize;
+    padding:0!important;
 }
-
 
 /* ================= Dropdown List Container ================= */
 .language-select .dropdown-list {
     position: absolute;
-    top: calc(100% + 30px);
-    left: -70px; /* Adjusted for better alignment */
+    top: calc(100% + 12px);
+    left: -35px; /* Adjusted for better alignment */
     width: 220px;
     max-height: 300px;
     overflow-y: auto;
@@ -64,7 +69,7 @@
 }
 
 /* ================= Search Box Inside Dropdown ================= */
-.dropdown-wrapper .dropdown-search {
+.dropdown-wrapper .search-box {
     padding: 12px;
     position: sticky;
     top: 0;
@@ -73,7 +78,7 @@
     z-index: 10;
 }
 
-.dropdown-wrapper .dropdown-search input {
+.dropdown-wrapper .search-box input {
     width: 100%;
     padding: 8px 12px;
     border: 1px solid #ddd;
@@ -82,7 +87,7 @@
     transition: border-color 0.2s;
 }
 
-.dropdown-wrapper .dropdown-search input:focus {
+.dropdown-wrapper .search-box input:focus {
     outline: none;
     border-color: #007bff;
 }
@@ -330,19 +335,11 @@ searchInput.oninput = () =>
     )
   );
 
-const languageSelect = document.querySelector('.language-select');
-if (languageSelect) {
-  languageSelect.addEventListener('click', (event) => {
-    if (event.target.closest('.dropdown-list') || event.target.closest('#searchInput')) {
-      return;
-    }
-    event.stopPropagation();
-    dropdownList.classList.toggle('show');
-  });
-}
+dropdownInput.onclick = () =>
+  dropdownList.classList.toggle('show');
 
 document.addEventListener('click', e => {
-  if (!e.target.closest('.language-select')) {
+  if (!e.target.closest('.dropdown-wrapper')) {
     dropdownList.classList.remove('show');
   }
 });

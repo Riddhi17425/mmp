@@ -29,7 +29,6 @@ class ProductFrontController extends Controller
      */
     public function index($url)
     {
-    
         $category = Category::where('category_url', $url)
             ->where('status', 1)
             ->where('is_delete', '0')
@@ -37,6 +36,7 @@ class ProductFrontController extends Controller
         if (!$category) {
             abort(404, 'Category not found');
         }
+        
         $title=$category->meta_title;
         $ogimage = !empty($category->mobile_cat_image) 
         ? asset('public/Category_Mobile_Images/' . $category->mobile_cat_image) 
@@ -62,12 +62,14 @@ class ProductFrontController extends Controller
     
     public function productdetail($url)
     {
-        
         if ($url === 'cages-dust-collector-filter-bags') {
             return redirect('https://mmpfilter.com/product-detail/dust-collector-filter-cages', 301);
         }
         
-        $data['product_name'] = Product::where('status', 1)
+        // $data['product_name'] = Product::where('is_delete', '0')->get();
+        // $data['products'] = Product::where('producturl', $url)->where('is_delete', '0')->first();
+        $data['product_name'] = Product::
+            where('status', 1)
             ->where('is_delete', '0')
             ->whereIn('category_id', Category::where('status', 1)
                 ->where('is_delete', '0')
@@ -77,7 +79,6 @@ class ProductFrontController extends Controller
             ->where('status', 1)
             ->where('is_delete', '0')
             ->first();
-    
         if (!$data['products']) {
             abort(404, 'Product not found');
         }
@@ -93,6 +94,7 @@ class ProductFrontController extends Controller
         $title = $data['products']->meta_title;
         $description = $data['products']->meta_description;
         $ogimage = $data['products']-> mobile_image;
+       
         return view('front.product-detail', compact('data', 'cat', 'title', 'description', 'ogimage'));
     }
     
@@ -179,8 +181,6 @@ class ProductFrontController extends Controller
         if (!$data) {
             abort(404, 'Product not found');
         }
-        //$images = [];
-        // dd($data['cert']->certificate_logo);
         return view('front.productfront',compact('data')); 
 
     }

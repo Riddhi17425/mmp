@@ -120,7 +120,12 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'status' => 'required|in:0,1',
+            'status'                         => 'required|in:0,1',
+            'remove_legacy_product_images'   => 'sometimes|array',
+            'remove_legacy_product_images.*' => 'string',
+            'items'                          => 'sometimes|array',
+            'items.*.remove_product_images'  => 'sometimes|array',
+            'items.*.remove_product_images.*' => 'string',
         ]);
         $post                           = Product::find($id);
         $post->status                   = $request->get('status');
@@ -145,6 +150,18 @@ class ProductController extends Controller
         $post->faq = ! empty($faqs) ? json_encode($faqs) : null;
 
         $post->product_tabs = $this->buildTabs($request, $post->product_tabs);
+
+        $removedLegacyImages = $request->input('remove_legacy_product_images', []);
+        if (is_array($removedLegacyImages) && ! empty($post->product_image)) {
+            $removedLegacyImages = array_map('trim', $removedLegacyImages);
+            $remainingLegacyImages = array_filter(
+                explode(',', $post->product_image),
+                function ($image) use ($removedLegacyImages) {
+                    return ! in_array(trim($image), $removedLegacyImages, true);
+                }
+            );
+            $post->product_image = implode(',', array_map('trim', $remainingLegacyImages)) ?: null;
+        }
 
         if ($request->hasFile('product_banner_image')) {
             $file     = $request->file('product_banner_image');
@@ -191,15 +208,26 @@ class ProductController extends Controller
         $existingTabs = [];
         if ($existingTabsJson) {
             $existingTabs = is_array($existingTabsJson) ? $existingTabsJson : json_decode($existingTabsJson, true);
+            if (is_string($existingTabs)) {
+                $existingTabs = json_decode($existingTabs, true);
+            }
+            if (! is_array($existingTabs)) {
+                $existingTabs = [];
+            }
         }
 
         $tabs = [];
         foreach ($request->get('items') as $index => $item) {
             $images = [];
 
-            // keep previously uploaded images for this block if present
             if (isset($existingTabs[$index]['product_image']) && ! empty($item['keep_existing_image'])) {
-                $images[] = $existingTabs[$index]['product_image'];
+                $existingImages = explode(',', $existingTabs[$index]['product_image']);
+                $removedImages = isset($item['remove_product_images']) && is_array($item['remove_product_images'])
+                    ? array_map('trim', $item['remove_product_images'])
+                    : [];
+                $images = array_values(array_filter($existingImages, function ($image) use ($removedImages) {
+                    return ! in_array(trim($image), $removedImages, true);
+                }));
             }
 
             if ($request->hasFile("items.$index.product_image")) {
