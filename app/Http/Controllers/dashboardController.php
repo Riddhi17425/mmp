@@ -543,7 +543,7 @@ class dashboardController extends Controller
 
         try {
             Http::withHeaders(['Content-Type' => 'application/json'])
-                ->post('https://script.google.com/macros/s/AKfycbzdSw8fxF7U4fJsc8CuT3_KEUwsgj1CqBAw_VJJ7xIedeeHx1bO3WIowVdin2YZhrYzuQ/exec', $sheetsData);
+                ->post('https://script.google.com/macros/s/AKfycbzQXdhHBaHBuKM83CjjblpYwMNKJhh6h5Ii1vC8ou0XNCnBNt9DSlVqRfkFMVM_PJnV/exec', $sheetsData);
         } catch (\Exception $e) {
             \Log::error('Google Sheets Exception:', [
                 'message'   => $e->getMessage(),
@@ -699,7 +699,7 @@ class dashboardController extends Controller
 
         try {
             Http::withHeaders(['Content-Type' => 'application/json'])
-                ->post('https://script.google.com/macros/s/AKfycbzdSw8fxF7U4fJsc8CuT3_KEUwsgj1CqBAw_VJJ7xIedeeHx1bO3WIowVdin2YZhrYzuQ/exec', $sheetsData);
+                ->post('https://script.google.com/macros/s/AKfycbzQXdhHBaHBuKM83CjjblpYwMNKJhh6h5Ii1vC8ou0XNCnBNt9DSlVqRfkFMVM_PJnV/exec', $sheetsData);
         } catch (\Exception $e) {
             \Log::error('Google Sheets Error', ['msg' => $e->getMessage()]);
         }
@@ -738,7 +738,7 @@ class dashboardController extends Controller
         // Send to Google Sheets
         try {
             Http::withHeaders(['Content-Type' => 'application/json'])
-                ->post('https://script.google.com/macros/s/AKfycbxDicdm1Gw3w6-SrEhclAXbJ18Kfmhg3jUhKXCJg2NviqikZJiP8-T61sSXMLnXfBBs/exec',
+                ->post('https://script.google.com/macros/s/AKfycbx3Vfisa8XzJUxG-HAIQaK7_3RSCiEVXBj1ZypkvfmV3Q7JsyFi7AI3Acdx-lCqZEFF/exec',
                     $sheetsData
                 );
         } catch (\Exception $e) {
