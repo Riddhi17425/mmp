@@ -1,6 +1,6 @@
 </main>
 @php
-    $category = DB::select(DB::raw("SELECT id,category_name, category_url from categories WHERE is_delete='0' AND status='1'"));
+    $category = DB::select("SELECT id,category_name, category_url from categories WHERE is_delete='0' AND status='1'");
 @endphp
 @php
     $categories = DB::table('categories')
@@ -21,8 +21,8 @@
         ->groupBy('category_id');
 @endphp
 @php
-    $category = DB::select(DB::raw("SELECT id,category_name, category_url from categories WHERE is_delete='0' AND status='1'"));
-    $product = DB::select(DB::raw("SELECT id,product_name from product WHERE is_delete='0' AND status='1'"));
+    $category = DB::select("SELECT id,category_name, category_url from categories WHERE is_delete='0' AND status='1'");
+    $product = DB::select("SELECT id,product_name from product WHERE is_delete='0' AND status='1'");
 @endphp
 <footer class="mt-100">
     <div class="top_footer_wrapper">
