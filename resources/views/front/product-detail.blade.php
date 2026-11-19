@@ -1287,7 +1287,7 @@ $tabApp = !empty($primaryTab['tab_app']) ? $primaryTab['tab_app'] : $data['produ
           <h2 class="text-start inner-head mb-3">Filter Cartridge Making Machine Manufacturer</h2>
           <p>With over <b>3 decades of expertise, mmp filter</b> is a trusted manufacturer of industrial filter cartridges and advanced cartridge production machines. To meet the growing global demand in countries like the <b>USA, UK, UAE, Australia,</b> and more, mmp has introduced the <b>SMARTWIND 360° (20” Cartridge Machine)</b> designed for high-speed and precision output. This innovative machine features a <b>3-spindle system</b> that produces <b>three 20-inch filter cartridges simultaneously,</b> ensuring faster production, micron-level accuracy, and consistent winding quality. It is an ideal solution for industries looking to improve productivity, reduce manufacturing time, and maintain superior filtration performance.  </p>
 
-          <h3 class="custom_pera">Operation of the SMARTWIND 360° 3-Spindle Machine</h3>
+          <!-- <h3 class="custom_pera">Operation of the SMARTWIND 360° 3-Spindle Machine</h3>
           <p>The <b>SMARTWIND 360°</b> offers complete flexibility to design your own cartridge winding patterns, multi-layer structures, and micron ratings, making it an ideal solution for the <b>modern filtration industry</b> focused on quality, speed, and performance. </p>
           <b>SMARTWIND Machine Key Advantages </b>
           <ul class="dref-spinning mt-2">
@@ -1297,7 +1297,7 @@ $tabApp = !empty($primaryTab['tab_app']) ? $primaryTab['tab_app'] : $data['produ
               <li>Works with PP Yarn and Cotton Yarn </li>
               <li>High-Speed Spindles for Maximum Production Capacity</li>
               <li>Energy-Saving Operation with Minimal Maintenance </li>
-          </ul>
+          </ul> -->
       </div>
 
       <!--<div class="row">-->

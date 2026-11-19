@@ -45,6 +45,13 @@
                     <span class="text-danger">{{ $errors->first('product_name') }}</span>
                     @endif
                 </div>
+                <div class="col-sm-6 form-group">
+                    <label>Status</label>
+                    <select class="form-control" name="status" required>
+                        <option value="0" {{ old('status', '0') == '0' ? 'selected' : '' }}>Inactive</option>
+                        <option value="1" {{ old('status') == '1' ? 'selected' : '' }}>Active</option>
+                    </select>
+                </div>
 
                 <div class="col-sm-12 form-group mt-3">
                     <label>Product Description (Banner)</label>

@@ -34,9 +34,8 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $val->product_name }}</td>
-                                    <?php $images = explode(',', $val->product_image); ?>
                                     <td>
-                                        @foreach ($images as $image)
+                                        @foreach ($val->listing_images as $image)
                                             <img src="{{ asset('public/Product_Images/' . $image) }}" alt="{{ $image }}"
                                                 style="height:60px">
                                         @endforeach

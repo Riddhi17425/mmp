@@ -17,9 +17,13 @@
 </style>
 
 @php
-    $tabs = (!empty($data->product_tabs) && is_string($data->product_tabs))
-        ? json_decode($data->product_tabs, true)
-        : [];
+    $tabs = $data->product_tabs;
+    if (is_string($tabs)) {
+        $tabs = json_decode($tabs, true);
+        if (is_string($tabs)) {
+            $tabs = json_decode($tabs, true);
+        }
+    }
     if (!is_array($tabs)) { $tabs = []; }
 @endphp
 
@@ -50,6 +54,13 @@
                     @if ($errors->has('product_name'))
                     <span class="text-danger">{{ $errors->first('product_name') }}</span>
                     @endif
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label>Status</label>
+                    <select class="form-control" name="status" required>
+                        <option value="0" {{ old('status', $data->status) == '0' ? 'selected' : '' }}>Inactive</option>
+                        <option value="1" {{ old('status', $data->status) == '1' ? 'selected' : '' }}>Active</option>
+                    </select>
                 </div>
                 <div class="col-sm-6 form-group mt-3">
                     <label>Product Alt</label>
@@ -116,7 +127,13 @@
                                     <div class="existing-image-preview">
                                         @foreach(explode(',', $tab['product_image']) as $img)
                                             @if(trim($img) !== '')
-                                            <img src="{{ asset('public/Product_Images/' . trim($img)) }}" alt="Current Image" />
+                                            <div class="d-inline-block">
+                                                <img src="{{ asset('public/Product_Images/' . trim($img)) }}" alt="Current Image" />
+                                                <label class="d-block">
+                                                    <input type="checkbox" name="items[{{ $i }}][remove_product_images][]" value="{{ trim($img) }}">
+                                                    Remove from product
+                                                </label>
+                                            </div>
                                             @endif
                                         @endforeach
                                     </div>
@@ -164,21 +181,30 @@
                                     <label class="custom-file-label" for="tabImage0">Choose image</label>
                                 </div>
 
-                                @if(!empty($data->product_image))
-                                    <input type="hidden" name="items[0][keep_existing_image]" value="1" />
-                                    <div class="existing-image-preview">
-                                        @foreach(explode(',', $data->product_image) as $img)
-                                            @if(trim($img) !== '')
-                                            <img src="{{ asset('public/Product_Images/' . trim($img)) }}" alt="Current Image" />
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                @endif
                             </div>
                         </div>
                     </div>
                 @endif
             </div>
+
+            @if(!empty($data->product_image))
+                <div class="form-group mb-3">
+                    <label>Legacy Product Images</label>
+                    <div class="existing-image-preview">
+                        @foreach(explode(',', $data->product_image) as $img)
+                            @if(trim($img) !== '')
+                                <div class="d-inline-block">
+                                    <img src="{{ asset('public/Product_Images/' . trim($img)) }}" alt="Current Image" />
+                                    <label class="d-block">
+                                        <input type="checkbox" name="remove_legacy_product_images[]" value="{{ trim($img) }}">
+                                        Remove from product
+                                    </label>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+            @endif
 
             <button type="button" id="add-tab" class="btn btn-secondary">
                 <i class="fa fa-plus"></i> Add More

@@ -44,12 +44,14 @@ class CategoryController extends Controller
         //
         $validatedData = $request->validate([
             'category_name' => 'required',    
+            'status' => 'required|in:0,1',
             ], 
             [
                 'category_name.required' => 'Please enter the product name.',
             ]);
         $store = new Category;
         $store->category_name = $request->get('category_name');
+        $store->status = $request->get('status');
         // $store->description = $request->get('description');
         $store->category_url = $request->get('category_url');
         $store->meta_title = $request->get('meta_title');
@@ -110,7 +112,11 @@ class CategoryController extends Controller
     {
         //
         $store = Category::find($id);
+        $request->validate([
+            'status' => 'required|in:0,1',
+        ]);
         $store->category_name = $request->get('category_name');
+        $store->status = $request->get('status');
         // $store->description = $request->get('description');
         $store->category_url = $request->get('category_url');
         $store->meta_title = $request->get('meta_title');

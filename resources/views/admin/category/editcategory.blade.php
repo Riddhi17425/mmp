@@ -66,6 +66,13 @@
                           <span class="text-danger">{{ $errors->first('category_url') }}</span>
                       @endif
                     </div>  
+                    <div class="col-sm-6 form-group">
+                      <label>Status</label>
+                      <select class="form-control" name="status" required>
+                        <option value="0" {{ old('status', $category->status) == '0' ? 'selected' : '' }}>Inactive</option>
+                        <option value="1" {{ old('status', $category->status) == '1' ? 'selected' : '' }}>Active</option>
+                      </select>
+                    </div>
                   </div>
         
                 <div class="row">

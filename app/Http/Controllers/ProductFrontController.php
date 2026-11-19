@@ -29,8 +29,14 @@ class ProductFrontController extends Controller
      */
     public function index($url)
     {
-    
-        $category = Category::where('category_url', $url)->first();
+        $category = Category::where('category_url', $url)
+            ->where('status', 1)
+            ->where('is_delete', '0')
+            ->first();
+        if (!$category) {
+            abort(404, 'Category not found');
+        }
+        
         $title=$category->meta_title;
         $ogimage = !empty($category->mobile_cat_image) 
         ? asset('public/Category_Mobile_Images/' . $category->mobile_cat_image) 
@@ -46,25 +52,40 @@ class ProductFrontController extends Controller
             return view('front.highflow-pleated-filter', ['category' => $category , 'title' => $title , 'description' => $description, 'ogimage'=> $ogimage]);
         }
 
-        $data['product'] = Product::where('category_id', $category->id)->get();
+        $data['product'] = Product::where('category_id', $category->id)
+            ->where('status', 1)
+            ->where('is_delete', '0')
+            ->get();
         //dd($data['product']);
         return view('front.productlist', compact('data', 'category','title','description', 'ogimage'));
     }
     
     public function productdetail($url)
     {
-        
         if ($url === 'cages-dust-collector-filter-bags') {
             return redirect('https://mmpfilter.com/product-detail/dust-collector-filter-cages', 301);
         }
         
-        $data['product_name'] = Product::where('is_delete', '0')->get();
-        $data['products'] = Product::where('producturl', $url)->where('is_delete', '0')->first();
-    
+        // $data['product_name'] = Product::where('is_delete', '0')->get();
+        // $data['products'] = Product::where('producturl', $url)->where('is_delete', '0')->first();
+        $data['product_name'] = Product::
+            where('status', 1)
+            ->where('is_delete', '0')
+            ->whereIn('category_id', Category::where('status', 1)
+                ->where('is_delete', '0')
+                ->select('id'))
+            ->get();
+        $data['products'] = Product::where('producturl', $url)
+            ->where('status', 1)
+            ->where('is_delete', '0')
+            ->first();
         if (!$data['products']) {
             abort(404, 'Product not found');
         }
-        $cat = Category::find($data['products']->category_id);
+        $cat = Category::where('id', $data['products']->category_id)
+            ->where('status', 1)
+            ->where('is_delete', '0')
+            ->first();
     
         if (!$cat) {
             abort(404, 'Category not found');
@@ -73,6 +94,7 @@ class ProductFrontController extends Controller
         $title = $data['products']->meta_title;
         $description = $data['products']->meta_description;
         $ogimage = $data['products']-> mobile_image;
+       
         return view('front.product-detail', compact('data', 'cat', 'title', 'description', 'ogimage'));
     }
     
@@ -149,9 +171,16 @@ class ProductFrontController extends Controller
     public function show($id)
     {
     
-        $data = Product::where('id',$id)->first();
-        //$images = [];
-        // dd($data['cert']->certificate_logo);
+        $data = Product::where('id', $id)
+            ->where('status', 1)
+            ->where('is_delete', '0')
+            ->whereIn('category_id', Category::where('status', 1)
+                ->where('is_delete', '0')
+                ->select('id'))
+            ->first();
+        if (!$data) {
+            abort(404, 'Product not found');
+        }
         return view('front.productfront',compact('data')); 
 
     }

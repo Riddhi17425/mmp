@@ -1,13 +1,14 @@
 </main>
 @php
-    $category = DB::select(DB::raw("SELECT id,category_name, category_url from categories WHERE is_delete='0'"));
+    $category = DB::select("SELECT id,category_name, category_url from categories WHERE is_delete='0' AND status='1'");
 @endphp
 @php
     $categories = DB::table('categories')
         ->leftJoin('product', function ($join) {
-            $join->on('categories.id', '=', 'product.category_id')->where('product.is_delete', '=', '0');
+            $join->on('categories.id', '=', 'product.category_id')->where('product.is_delete', '=', '0')->where('product.status', '=', '1');
         })
         ->where('categories.is_delete', '0')
+        ->where('categories.status', '1')
         ->select(
             'categories.id as category_id',
             'categories.category_name',
@@ -20,8 +21,8 @@
         ->groupBy('category_id');
 @endphp
 @php
-    $category = DB::select(DB::raw("SELECT id,category_name, category_url from categories WHERE is_delete='0'"));
-    $product = DB::select(DB::raw("SELECT id,product_name from product WHERE is_delete='0'"));
+    $category = DB::select("SELECT id,category_name, category_url from categories WHERE is_delete='0' AND status='1'");
+    $product = DB::select("SELECT id,product_name from product WHERE is_delete='0' AND status='1'");
 @endphp
 <footer class="mt-100">
     <div class="top_footer_wrapper">
@@ -174,7 +175,7 @@
                                             stroke="#00A3FF" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
 
-                                    <a href="tel:919830030614">+91 9830030614</a>
+                                    <a href="tel:919925601108">+91 9925601108</a>
                                 </div>
                             </li>
                         </ul>

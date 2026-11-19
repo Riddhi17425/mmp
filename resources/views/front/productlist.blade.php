@@ -81,17 +81,15 @@
     </div>
     <div class="row">
         @foreach($data['product'] as $product)
-        <?php if($product->product_image){
-            if( strpos($product->product_image, ',') !== false ){
-                $image = explode(',',$product->product_image);
-            }else{
-                $image[0] = $product->product_image;
-            }
-        }?>
+        @php
+            $image = $product->listing_images[0] ?? '';
+        @endphp
         <div class="col-md-4">
            <div>
                 <a href="{{ route('productdetail', ['url' => $product->producturl]) }}">
-                <img src="{{ asset('public/Product_Images/' .$image[0]) }}" alt="{{ $product->alt }}" class="img-fluid">
+                @if($image !== '')
+                <img src="{{ asset('public/Product_Images/' . $image) }}" alt="{{ $product->alt }}" class="img-fluid">
+                @endif
                 <h3>{{ $product->product_name }}</h3>
                 </a>
                 <p style="height:auto">{!! $product->product_shortdescription !!}</p>

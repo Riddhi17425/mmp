@@ -660,7 +660,17 @@
 
             </div>
 
-            
+            <h3 class="custom_pera">Operation of the SMARTWIND 360° 3-Spindle Machine</h3>
+              <p>The <b>SMARTWIND 360°</b> offers complete flexibility to design your own cartridge winding patterns, multi-layer structures, and micron ratings, making it an ideal solution for the <b>modern filtration industry</b> focused on quality, speed, and performance. </p>
+              <b>SMARTWIND Machine Key Advantages </b>
+              <ul class="dref-spinning mt-2">
+                  <li>Fully Automated Production Process</li>
+                  <li>Micron Precision Range: 1–100 µm</li>
+                  <li> Cartridge Length Support: 10" to 40" </li>
+                  <li>Works with PP Yarn and Cotton Yarn </li>
+                  <li>High-Speed Spindles for Maximum Production Capacity</li>
+                  <li>Energy-Saving Operation with Minimal Maintenance </li>
+              </ul>
 
 
 
