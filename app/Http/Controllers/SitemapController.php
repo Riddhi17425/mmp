@@ -118,7 +118,6 @@ class SitemapController extends Controller
             'filter-cartridges-in-usa',
             'certifications',
             'partnership',
-            'landing-page',
             'contact',
             'pp-filtration-yarn-in-usa',
             'melt-blown-filter-cartridges-in-usa',
