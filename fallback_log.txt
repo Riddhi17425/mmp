@@ -3,3 +3,12 @@ public/Category_Banner_Images/Synthetic%20Filtration%20Yarns-Main-banner.webp GE
 public/Category_Banner_Images/PP%20&%20Functional%20Filtration%20Yarns-main-banner.webp GET
 public/Category_Mobile_Images/PP%20&%20Functional%20Filtration%20Yarns-main-banner.webp GET
 public/Category_Mobile_Images/PP%20&%20Functional%20Filtration%20Yarns-main-banner.webp GET
+auth/bootstrap/js/popper.js GET
+T
+public/js/app.js GET
+auth/bootstrap/js/popper.js GET
+auth/bootstrap/js/bootstrap.js GET
+auth/js/my-login.js GET
+public/admin_public/plugins/chart.js/Chart.min.js GET
+public/admin_public/plugins/chart.js/Chart.min.js GET
+public/admin_public/plugins/chart.js/Chart.min.js GET
